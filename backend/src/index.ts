@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import "dotenv/config";
 import mongoose from "mongoose";
-import User from "./models/film";
+import City from "./models/city";
 
 const PORT = process.env.PORT || 7010;
 
@@ -12,23 +12,20 @@ mongoose
   .connect(process.env.MONGODB_CONNECTION_STRING as string)
   .then(() => console.log("Connected to database!"));
 
-  getUsers();
-async function getUsers() {
-  try {
-    const users = await User.find();
-    console.log("Users", users);
-  } catch (e) {
-    console.log(e);
-  }
-}
-// addUser();
+//   getUsers();
+// async function getUsers() {
+//   try {
+//     const users = await User.find();
+//     console.log("Users", users);
+//   } catch (e) {
+//     console.log(e);
+//   }
+// }
+addUser();
 async function addUser() {
   try {
-    const user = new User({
-      email: "lyashko@gmail.com",
-      firstname: "Kyle",
-      lastname: "Lyashka",
-      age: 26,
+    const user = new City({
+      name: "Kiyv"
     });
     await user.save();
     console.log("Users", user);
