@@ -15,12 +15,14 @@ final class FilmListViewModel: ObservableObject {
 
 
 struct FilmListView: View {
+    let inProduction: Bool
+    
     let films = [Film(
         id: 1,
         title: "Inception",
         releaseDate: Date(),
         language: "English",
-        duration: 8880, // Довжина фільму у секундах
+        duration: 8880, 
         poster: "inception_poster.jpg",
         director: "Christopher Nolan",
         rating: 8.8
@@ -70,81 +72,85 @@ struct FilmListView: View {
     
     private let userRole: UserRole
     
-    init(userRole: UserRole) {
+    init(inProduction: Bool, userRole: UserRole) {
+        self.inProduction = inProduction
         self.userRole = userRole
     }
     
     var body: some View {
         NavigationStack {
-            VStack {
-                FilmListHeader(filmListModel: filmListModel)
-                ScrollView {
-                    LazyVStack(spacing: 20) {
-                        ForEach(self.films, id: \.id) { film in
-                            NavigationLink(value: film,
-                                           label: {
+            ScrollView {
+                FilmListHeader(filmListModel: filmListModel, inProduction: inProduction)
+                LazyVStack(spacing: 20) {
+                    ForEach(self.films, id: \.id) { film in
+                        NavigationLink(value: film,
+                                       label: {
                                 FilmView(film: film)
-                            })
-                        }
-                        
+                        })
                     }
-                    .padding(.top, 20)
                 }
+                .padding(.top, 20)
             }
             .navigationDestination(
                 for: Film.self,
                 destination: { FilmDeatailsView(film: $0) }
             )
+            .ignoresSafeArea(.all)
         }
     }
     
-    struct FilmListHeader: View {
-        @ObservedObject private var filmListModel: FilmListViewModel
-        var options = ["Cinema", "b", "c", "d", "e"]
+struct FilmListHeader: View {
+    @ObservedObject private var filmListModel: FilmListViewModel
+    let inProduction: Bool
+    var options = ["Cinema", "b", "c", "d", "e"]
         
-        init(filmListModel: FilmListViewModel) {
-            self.filmListModel = filmListModel
-        }
-        var body: some View {
+    init(filmListModel: FilmListViewModel, inProduction: Bool) {
+        self.filmListModel = filmListModel
+        self.inProduction = inProduction
+    }
+    
+    var body: some View {
+        if inProduction {
             HStack {
                 CustomMenu(selectedItem: $filmListModel.city,
                            options: options)
                 CustomMenu(selectedItem: $filmListModel.cinema,
                            options: options)
                 Spacer()
-                
             }
-            .frame(height: 40)
+            .frame(height: 100)
             .background(Color("BackgroundColor"))
-            
+        } else {
+            ScreenTitleHeader(text: "Soon")
         }
     }
+}
     
-    struct CustomMenu: View {
-        @Binding var selectedItem: String
-        let options: [String]
-        
-        init(selectedItem: Binding<String>, options: [String]) {
-            self._selectedItem = selectedItem
-            self.options = options
-        }
-        
-        var body: some View {
-            Menu {
-                ForEach(options, id: \.self) { option in
-                    Button(action: {
-                        selectedItem = option
-                    }, label: {
-                        Text(option)
-                    })
-                }
-            } label: {
-                Text(selectedItem)
-                    .font(.title3)
-                    .bold()
-                    .foregroundStyle(.white)
+struct CustomMenu: View {
+    @Binding var selectedItem: String
+    let options: [String]
+    
+    init(selectedItem: Binding<String>, options: [String]) {
+        self._selectedItem = selectedItem
+        self.options = options
+    }
+    var body: some View {
+        Menu {
+            ForEach(options, id: \.self) { option in
+                Button(action: {
+                    selectedItem = option
+                }, label: {
+                    Text(option)
+                })
             }
-            .padding(.horizontal, 20)
+        } label: {
+            Text(selectedItem)
+                .font(.title2)
+                .bold()
+                .foregroundStyle(.white)
+        }
+        .padding(.horizontal, 20)
+        .padding(.top, 50)
         }
     }
 }

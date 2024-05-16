@@ -15,28 +15,20 @@ struct AuthorizationView: View {
         self._isAuthorized = isAuthorized
     }
     
-    let aspectRatio = UIScreen.main.bounds.width/UIScreen.main.bounds.height
+    let aspectRatio = Const.screenWidth/Const.screenHeight
     
     @State private var email = ""
     @State private var password = ""
     
     var body: some View {
-        ZStack (alignment: .center){
-            Color("BackgroundColor")
-            Text("Login")
-                .foregroundStyle(.white)
-                .font(.title2)
-                .bold()
-                .padding(.top, 35)
-        }
-        .ignoresSafeArea()
-        .frame(height: 40)
+        AuthorizationHeader(text: "Login")
+        
         Image("Logo")
             .resizable()
-            .frame(width: 600 * aspectRatio, height: 350 * aspectRatio)
+            .frame(width: 650 * aspectRatio, height: 350 * aspectRatio)
             .aspectRatio(contentMode: .fill)
             .padding(.top, 90)
-            .padding(.bottom, UIScreen.main.bounds.height/6)
+            .padding(.bottom, Const.screenHeight/6)
         
         
         VStack (spacing: 20){
@@ -53,8 +45,27 @@ struct AuthorizationView: View {
     
 }
 
-
-
 #Preview {
     ContentView()
+}
+
+struct AuthorizationHeader: View {
+    let text: String
+    
+    init(text: String) {
+        self.text = text
+    }
+    
+    var body: some View {
+        VStack (alignment: .center){
+            Text(text)
+                .foregroundStyle(.white)
+                .font(.title2)
+                .bold()
+                .padding(.top, 50)
+        }
+        .ignoresSafeArea()
+        .frame(width: Const.screenWidth, height: 30)
+        .background(Color("BackgroundColor"))
+    }
 }

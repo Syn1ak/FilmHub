@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct TicketListView: View {
+    
     var body: some View {
-        RoundedRectangle(cornerRadius: 10)
-            .foregroundStyle(.white)
-            .frame(height: 200)
-            .padding(.horizontal, 30)
-            .shadow(color: Color.black.opacity(0.5), radius: 5)
+        ScrollView {
+            ScreenTitleHeader(text: "My tickets")
+            LazyVStack(spacing: 20) {
+                TicketView()
+                TicketView()
+                TicketView()
+                TicketView()
+                TicketView()
+                TicketView()
+            }
+            .padding(.top, 20)
+        }.ignoresSafeArea(.all)
+        
     }
 }
+

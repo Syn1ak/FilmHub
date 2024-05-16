@@ -26,7 +26,10 @@ struct FilmDeatailsView: View {
                 }
             FilmTitle(title: film.title)
             AdditionalTitle(text: "\(film.duration) s | Пригоди, екшн")
+                .padding(.leading, 20)
             AdditionalInfo(text: "Release date: \(film.releaseDate)")
+                .padding(.leading, 20)
+                .padding(.top, 1)
             
             Spacer()
             
@@ -108,7 +111,7 @@ struct AdditionalTitle: View {
         Text(text)
             .font(.system(size: 14))
             .foregroundStyle(.gray)
-            .padding(.leading, 20)
+            
     }
 }
 
@@ -123,7 +126,5 @@ struct AdditionalInfo: View {
         Text(text)
             .font(.system(size: 16))
             .bold()
-            .padding(.leading, 20)
-            .padding(.top, 1)
     }
 }

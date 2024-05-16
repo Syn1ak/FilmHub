@@ -10,14 +10,15 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-            FilmListView(userRole: .client)
-                .tabItem { 
+            
+            FilmListView(inProduction: true, userRole: .client)
+                .tabItem {
                     Image(systemName: "movieclapper")
                         .resizable()
                         .foregroundStyle(.red)
                         .frame(width: 50, height: 90)
                 }
-            FilmListView(userRole: .client)
+            FilmListView(inProduction: false, userRole: .client)
                 .tabItem {
                     Image(systemName: "play.rectangle")
                         .foregroundStyle(.gray)

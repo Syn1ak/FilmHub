@@ -15,6 +15,10 @@
 		7E8EE1D92BF63EE300CB8166 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EE1D82BF63EE300CB8166 /* MainScreen.swift */; };
 		7E8EE1DB2BF63FF500CB8166 /* TicketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EE1DA2BF63FF500CB8166 /* TicketList.swift */; };
 		7E8EE1DD2BF6401800CB8166 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EE1DC2BF6401800CB8166 /* ProfileView.swift */; };
+		7E8EE1E12BF658FB00CB8166 /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EE1E02BF658FB00CB8166 /* TicketView.swift */; };
+		7E8EE1E32BF6597800CB8166 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EE1E22BF6597800CB8166 /* Ticket.swift */; };
+		7E8EE1E52BF65CDC00CB8166 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EE1E42BF65CDC00CB8166 /* Const.swift */; };
+		7E8EE1E72BF6682800CB8166 /* ScreenHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EE1E62BF6682800CB8166 /* ScreenHeader.swift */; };
 		7ED3CE022BF5F5360083449F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3CE012BF5F5360083449F /* CustomButton.swift */; };
 		7ED3CE042BF5F54F0083449F /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3CE032BF5F54F0083449F /* CustomSecureField.swift */; };
 		7ED3CE062BF5F5670083449F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3CE052BF5F5670083449F /* CustomTextField.swift */; };
@@ -35,6 +39,10 @@
 		7E8EE1D82BF63EE300CB8166 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		7E8EE1DA2BF63FF500CB8166 /* TicketList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketList.swift; sourceTree = "<group>"; };
 		7E8EE1DC2BF6401800CB8166 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		7E8EE1E02BF658FB00CB8166 /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
+		7E8EE1E22BF6597800CB8166 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		7E8EE1E42BF65CDC00CB8166 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		7E8EE1E62BF6682800CB8166 /* ScreenHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenHeader.swift; sourceTree = "<group>"; };
 		7ED3CE012BF5F5360083449F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		7ED3CE032BF5F54F0083449F /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		7ED3CE052BF5F5670083449F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -100,6 +108,8 @@
 				7ED3CE052BF5F5670083449F /* CustomTextField.swift */,
 				7ED3CE032BF5F54F0083449F /* CustomSecureField.swift */,
 				7ED3CE112BF5F6830083449F /* FilmView.swift */,
+				7E8EE1E02BF658FB00CB8166 /* TicketView.swift */,
+				7E8EE1E62BF6682800CB8166 /* ScreenHeader.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -109,6 +119,8 @@
 			children = (
 				7ED3CE082BF5F5CB0083449F /* User.swift */,
 				7E8EE1D42BF620A500CB8166 /* Film.swift */,
+				7E8EE1E22BF6597800CB8166 /* Ticket.swift */,
+				7E8EE1E42BF65CDC00CB8166 /* Const.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,14 +213,18 @@
 				7E8EE1DB2BF63FF500CB8166 /* TicketList.swift in Sources */,
 				7ED3CE102BF5F6530083449F /* FilmListView.swift in Sources */,
 				7ED3CE042BF5F54F0083449F /* CustomSecureField.swift in Sources */,
+				7E8EE1E72BF6682800CB8166 /* ScreenHeader.swift in Sources */,
 				7ED3CE0E2BF5F62F0083449F /* ContentView.swift in Sources */,
 				7ED3CE092BF5F5CB0083449F /* User.swift in Sources */,
+				7E8EE1E52BF65CDC00CB8166 /* Const.swift in Sources */,
 				7E8EE1D72BF6293E00CB8166 /* FilmDeatailsView.swift in Sources */,
 				7E8A7CDA2BF236C10074CB68 /* FilmHubApp.swift in Sources */,
 				7E8EE1D52BF620A500CB8166 /* Film.swift in Sources */,
 				7ED3CE022BF5F5360083449F /* CustomButton.swift in Sources */,
+				7E8EE1E12BF658FB00CB8166 /* TicketView.swift in Sources */,
 				7ED3CE0C2BF5F6140083449F /* AuthorizationView.swift in Sources */,
 				7ED3CE122BF5F6830083449F /* FilmView.swift in Sources */,
+				7E8EE1E32BF6597800CB8166 /* Ticket.swift in Sources */,
 				7E8EE1DD2BF6401800CB8166 /* ProfileView.swift in Sources */,
 				7ED3CE062BF5F5670083449F /* CustomTextField.swift in Sources */,
 			);
