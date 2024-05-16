@@ -9,7 +9,11 @@ const sessionSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Hall",
     },
-    start_time:{
+    seats: {
+        type: [[Number]],
+        required: true
+    },
+    start_time: {
         type: Date,
         required: true,
     },
