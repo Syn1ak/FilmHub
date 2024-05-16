@@ -1,5 +1,5 @@
 //
-//  FilmView.swift
+//  ProfileView.swift
 //  FilmHub
 //
 //  Created by Zakhar Litvinchuk on 16.05.2024.
@@ -7,15 +7,8 @@
 
 import SwiftUI
 
-
-struct FilmView: View {
-    let film: Film
-    
-    init(film: Film) {
-        self.film = film
-    }
-    
-    var body: some View{
+struct ProfileView: View {
+    var body: some View {
         RoundedRectangle(cornerRadius: 10)
             .foregroundStyle(.white)
             .frame(height: 200)
@@ -23,3 +16,4 @@ struct FilmView: View {
             .shadow(color: Color.black.opacity(0.5), radius: 5)
     }
 }
+

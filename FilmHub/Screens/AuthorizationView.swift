@@ -15,6 +15,8 @@ struct AuthorizationView: View {
         self._isAuthorized = isAuthorized
     }
     
+    let aspectRatio = UIScreen.main.bounds.width/UIScreen.main.bounds.height
+    
     @State private var email = ""
     @State private var password = ""
     
@@ -25,26 +27,30 @@ struct AuthorizationView: View {
                 .foregroundStyle(.white)
                 .font(.title2)
                 .bold()
-                .offset(y: 20)
+                .padding(.top, 35)
         }
         .ignoresSafeArea()
         .frame(height: 40)
         Image("Logo")
-            .scaleEffect(0.5)
-            .padding(.top, 50)
+            .resizable()
+            .frame(width: 600 * aspectRatio, height: 350 * aspectRatio)
+            .aspectRatio(contentMode: .fill)
+            .padding(.top, 90)
+            .padding(.bottom, UIScreen.main.bounds.height/6)
         
         
         VStack (spacing: 20){
             CustomTextField(textValue: $email,
                             placeholder: "Email")
             
-            CustomTextField(textValue: $password,
+            CustomSecureField(textValue: $password,
                             placeholder: "Password")
             CustomButton(buttonTitlte: "Login", buttonAction: { isAuthorized.toggle() })
                 
         }
         Spacer()
     }
+    
 }
 
 

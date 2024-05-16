@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7E8A7CDA2BF236C10074CB68 /* FilmHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A7CD92BF236C10074CB68 /* FilmHubApp.swift */; };
-		7E8A7CDC2BF236C10074CB68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A7CDB2BF236C10074CB68 /* ContentView.swift */; };
 		7E8A7CDE2BF236C20074CB68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8A7CDD2BF236C20074CB68 /* Assets.xcassets */; };
 		7E8A7CE92BF2636F0074CB68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E8A7CE82BF2636F0074CB68 /* LaunchScreen.storyboard */; };
+		7E8EE1D52BF620A500CB8166 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EE1D42BF620A500CB8166 /* Film.swift */; };
+		7E8EE1D72BF6293E00CB8166 /* FilmDeatailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EE1D62BF6293E00CB8166 /* FilmDeatailsView.swift */; };
+		7E8EE1D92BF63EE300CB8166 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EE1D82BF63EE300CB8166 /* MainScreen.swift */; };
+		7E8EE1DB2BF63FF500CB8166 /* TicketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EE1DA2BF63FF500CB8166 /* TicketList.swift */; };
+		7E8EE1DD2BF6401800CB8166 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EE1DC2BF6401800CB8166 /* ProfileView.swift */; };
 		7ED3CE022BF5F5360083449F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3CE012BF5F5360083449F /* CustomButton.swift */; };
 		7ED3CE042BF5F54F0083449F /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3CE032BF5F54F0083449F /* CustomSecureField.swift */; };
 		7ED3CE062BF5F5670083449F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3CE052BF5F5670083449F /* CustomTextField.swift */; };
@@ -24,9 +28,13 @@
 /* Begin PBXFileReference section */
 		7E8A7CD62BF236C10074CB68 /* FilmHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8A7CD92BF236C10074CB68 /* FilmHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmHubApp.swift; sourceTree = "<group>"; };
-		7E8A7CDB2BF236C10074CB68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7E8A7CDD2BF236C20074CB68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E8A7CE82BF2636F0074CB68 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7E8EE1D42BF620A500CB8166 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		7E8EE1D62BF6293E00CB8166 /* FilmDeatailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDeatailsView.swift; sourceTree = "<group>"; };
+		7E8EE1D82BF63EE300CB8166 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		7E8EE1DA2BF63FF500CB8166 /* TicketList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketList.swift; sourceTree = "<group>"; };
+		7E8EE1DC2BF6401800CB8166 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		7ED3CE012BF5F5360083449F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		7ED3CE032BF5F54F0083449F /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		7ED3CE052BF5F5670083449F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -67,10 +75,9 @@
 		7E8A7CD82BF236C10074CB68 /* FilmHub */ = {
 			isa = PBXGroup;
 			children = (
+				7E8A7CD92BF236C10074CB68 /* FilmHubApp.swift */,
 				7ED3CE0A2BF5F5EF0083449F /* Screens */,
 				7ED3CE072BF5F5A90083449F /* Model */,
-				7E8A7CD92BF236C10074CB68 /* FilmHubApp.swift */,
-				7E8A7CDB2BF236C10074CB68 /* ContentView.swift */,
 				7ED3CE002BF5F5190083449F /* CustomViews */,
 				7E8A7CDD2BF236C20074CB68 /* Assets.xcassets */,
 				7E8A7CDF2BF236C20074CB68 /* Preview Content */,
@@ -101,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				7ED3CE082BF5F5CB0083449F /* User.swift */,
+				7E8EE1D42BF620A500CB8166 /* Film.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +119,10 @@
 				7ED3CE0B2BF5F6140083449F /* AuthorizationView.swift */,
 				7ED3CE0D2BF5F62F0083449F /* ContentView.swift */,
 				7ED3CE0F2BF5F6530083449F /* FilmListView.swift */,
+				7E8EE1D82BF63EE300CB8166 /* MainScreen.swift */,
+				7E8EE1DA2BF63FF500CB8166 /* TicketList.swift */,
+				7E8EE1DC2BF6401800CB8166 /* ProfileView.swift */,
+				7E8EE1D62BF6293E00CB8166 /* FilmDeatailsView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -185,15 +197,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8EE1D92BF63EE300CB8166 /* MainScreen.swift in Sources */,
+				7E8EE1DB2BF63FF500CB8166 /* TicketList.swift in Sources */,
 				7ED3CE102BF5F6530083449F /* FilmListView.swift in Sources */,
 				7ED3CE042BF5F54F0083449F /* CustomSecureField.swift in Sources */,
-				7E8A7CDC2BF236C10074CB68 /* ContentView.swift in Sources */,
 				7ED3CE0E2BF5F62F0083449F /* ContentView.swift in Sources */,
 				7ED3CE092BF5F5CB0083449F /* User.swift in Sources */,
+				7E8EE1D72BF6293E00CB8166 /* FilmDeatailsView.swift in Sources */,
 				7E8A7CDA2BF236C10074CB68 /* FilmHubApp.swift in Sources */,
+				7E8EE1D52BF620A500CB8166 /* Film.swift in Sources */,
 				7ED3CE022BF5F5360083449F /* CustomButton.swift in Sources */,
 				7ED3CE0C2BF5F6140083449F /* AuthorizationView.swift in Sources */,
 				7ED3CE122BF5F6830083449F /* FilmView.swift in Sources */,
+				7E8EE1DD2BF6401800CB8166 /* ProfileView.swift in Sources */,
 				7ED3CE062BF5F5670083449F /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

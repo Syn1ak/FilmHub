@@ -16,18 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="YCy-pD-IDm">
-                                <rect key="frame" x="76.666666666666686" y="347" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="NQS-lh-mlM"/>
-                                    <constraint firstAttribute="height" constant="128" id="xPC-aU-SkL"/>
-                                </constraints>
+                                <rect key="frame" x="50" y="259" width="293.00000000000006" height="359"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" red="0.12156862745098039" green="0.1764705882352941" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="YCy-pD-IDm" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="288" id="Jwq-8K-du1"/>
-                            <constraint firstItem="YCy-pD-IDm" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="gsk-Cr-LB5"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="YCy-pD-IDm" secondAttribute="trailing" constant="50" id="0GM-pc-O9G"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="YCy-pD-IDm" secondAttribute="bottom" constant="200" id="JnZ-ll-8G3"/>
+                            <constraint firstItem="YCy-pD-IDm" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="50" id="QbU-Vg-tuV"/>
+                            <constraint firstItem="YCy-pD-IDm" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="200" id="Znu-Un-IpF"/>
                         </constraints>
                     </view>
                 </viewController>
