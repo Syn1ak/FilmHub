@@ -50,7 +50,7 @@ struct TicketView: View {
             }
             .padding(.top, 30)
         }
-        .frame(width: Const.screenWidth * 0.9, height: 200)
+        .frame(width: Const.screenWidth * 0.95, height: 200)
         .background(RoundedRectangle(cornerRadius: 10)
             .foregroundStyle(.white)
             .shadow(color: Color.black.opacity(0.5), radius: 5))

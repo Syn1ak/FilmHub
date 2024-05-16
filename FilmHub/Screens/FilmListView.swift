@@ -11,6 +11,9 @@ import SwiftUI
 final class FilmListViewModel: ObservableObject {
     @Published var city: String = "City"
     @Published var cinema: String = "Cinema"
+    @Published var isSearching: Bool = false
+    @Published var searchingFilmString: String = ""
+    @Published var isFiltering: Bool = false
 }
 
 
@@ -81,6 +84,16 @@ struct FilmListView: View {
         NavigationStack {
             ScrollView {
                 FilmListHeader(filmListModel: filmListModel, inProduction: inProduction)
+                if filmListModel.isSearching {
+                    CustomTextField(textValue: $filmListModel.searchingFilmString, placeholder: "Enter film title, actor")
+                    .padding(.leading, 15)
+                    .frame(height: 40)
+                    .overlay {
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color("BackgroundColor"))
+                    }
+                    .transition(.move(edge: .top))
+                }
                 LazyVStack(spacing: 20) {
                     ForEach(self.films, id: \.id) { film in
                         NavigationLink(value: film,
@@ -96,11 +109,16 @@ struct FilmListView: View {
                 destination: { FilmDeatailsView(film: $0) }
             )
             .ignoresSafeArea(.all)
+            .animation(.easeInOut, value: filmListModel.isSearching)
         }
     }
+
+    
     
 struct FilmListHeader: View {
+    
     @ObservedObject private var filmListModel: FilmListViewModel
+    
     let inProduction: Bool
     var options = ["Cinema", "b", "c", "d", "e"]
         
@@ -112,19 +130,40 @@ struct FilmListHeader: View {
     var body: some View {
         if inProduction {
             HStack {
+                
                 CustomMenu(selectedItem: $filmListModel.city,
                            options: options)
                 CustomMenu(selectedItem: $filmListModel.cinema,
                            options: options)
                 Spacer()
+                
+                Button(action: {
+                    filmListModel.isSearching.toggle()
+                }, label: {
+                    Image(systemName: "magnifyingglass")
+                        .scaleEffect(1.2)
+                        .foregroundStyle(.white)
+                })
+                .padding(.top, 50)    
+                
+                Button(action: {
+                }, label: {
+                    Image(systemName: "slider.horizontal.3")
+                        .scaleEffect(1.2)
+                        .foregroundStyle(.white)
+                })
+                .padding(.horizontal, 20)
+                .padding(.top, 50)
             }
-            .frame(height: 100)
+            .frame(width: Const.screenWidth, height: 100)
             .background(Color("BackgroundColor"))
         } else {
             ScreenTitleHeader(text: "Soon")
         }
     }
 }
+    
+    
     
 struct CustomMenu: View {
     @Binding var selectedItem: String

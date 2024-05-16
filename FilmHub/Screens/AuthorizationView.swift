@@ -34,9 +34,17 @@ struct AuthorizationView: View {
         VStack (spacing: 20){
             CustomTextField(textValue: $email,
                             placeholder: "Email")
+            .padding(.leading, 7)
+            .frame(height: 30)
+            .overlay {
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color("BackgroundColor"))
+            }
+            .padding(.horizontal, 35)
             
             CustomSecureField(textValue: $password,
                             placeholder: "Password")
+
             CustomButton(buttonTitlte: "Login", buttonAction: { isAuthorized.toggle() })
                 
         }
