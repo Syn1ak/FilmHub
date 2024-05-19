@@ -1,13 +1,17 @@
 import mongoose from "mongoose";
 
 const actorSchema = new mongoose.Schema({
-    name: {
+    first_name:{
         type: String,
         required: true,
     },
-    popular_movies:{
-        type: [String],
-        default: []
+    last_name:{
+        type: String,
+        required: true,
+    },
+    photo:{
+        type: String,
+        required: true,
     }
 
 })
