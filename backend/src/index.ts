@@ -3,6 +3,9 @@ import cors from "cors";
 import "dotenv/config";
 import mongoose from "mongoose";
 import City from "./models/city";
+import Actor from "./models/actor";
+import Movie from "./models/movie";
+import ActorMovie from "./models/actor_movie";
 
 const PORT = process.env.PORT || 7010;
 
@@ -12,27 +15,35 @@ mongoose
   .connect(process.env.MONGODB_CONNECTION_STRING as string)
   .then(() => console.log("Connected to database!"));
 
-//   getUsers();
-// async function getUsers() {
+
+// addActor();
+// async function addActor(){
 //   try {
-//     const users = await User.find();
-//     console.log("Users", users);
+//     const actor = new ActorMovie({
+//       movie:"664672c4cf84d0736ecdf072",
+//       actor: "66466decb9279ea92a3049e0",
+//     });
+//     const savedActor = await actor.save();
+//     console.log("Actor", savedActor);
 //   } catch (e) {
 //     console.log(e);
 //   }
 // }
-addUser();
-async function addUser() {
-  try {
-    const user = new City({
-      name: "Kiyv"
-    });
-    await user.save();
-    console.log("Users", user);
-  } catch (e) {
-    console.log(e);
-  }
+
+getActors();
+async function getActors() {
+  await Actor.find();
 }
+
+getMovie();
+async function getMovie() {
+  const movie = await Movie.find({ _id: "664672c4cf84d0736ecdf06b" });
+  const actorsByMovie = await ActorMovie.find({ movie: "664672c4cf84d0736ecdf072" }).populate("actor");
+
+  console.log(movie);
+  console.log(actorsByMovie);
+}
+
 
 const app = express();
 app.use(express.json());

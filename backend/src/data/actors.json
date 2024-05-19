@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Catherine Missal",
+    "popular_movies": ["Vacation", "The Next Big Thing"]
+  },
+  {
+    "name": "Catherine Missal",
+    "popular_movies": ["Vacation", "The Next Big Thing"]
+  },
+  {
+    "name": "Michael Doven",
+    "popular_movies": ["Mission: Impossible III", "The Last Samurai"]
+  },
+  {
+    "name": "Jasmine Reate",
+    "popular_movies": ["The Outfield"]
+  },
+  {
+    "name": "Tom Cruise",
+    "popular_movies": ["Mission: Impossible"]
+  },
+  {
+    "name": "Scarlett Johansson",
+    "popular_movies": ["Lost in Translation", "Marriage Story"]
+  },
+  {
+    "name": "Anna Raadsveld",
+    "popular_movies": ["Brammetje Baas", "Sara's Notebook"]
+  },
+  {
+    "name": "Jason Statham",
+    "popular_movies": ["The Transporter", "Snatch"]
+  },
+  {
+    "name": "Emilia Clarke",
+    "popular_movies": ["Game of Thrones", "Me Before You"]
+  },
+  {
+    "name": "Wentworth Miller",
+    "popular_movies": ["Prison Break", "The Loft"]
+  },
+  {
+    "name": "Dwayne Johnson",
+    "popular_movies": ["Jumanji: Welcome to the Jungle", "Fast & Furious Presents: Hobbs & Shaw"]
+  },
+  {
+    "name": "Rose Byrne",
+    "popular_movies": ["Bridesmaids", "Neighbors"]
+  },
+  {
+    "name": "Rachel McAdams",
+    "popular_movies": ["Mean Girls"]
+  },
+  {
+    "name": "Michelle Rodriguez",
+    "popular_movies": ["The Fast and the Furious", "Avatar"]
+  },
+  {
+    "name": "Tom Hanks",
+    "popular_movies": ["Forrest Gump", "Cast Away"]
+  },
+  {
+    "name": "Jake Gyllenhaal",
+    "popular_movies": ["Brokeback Mountain", "Nightcrawler"]
+  },
+  {
+    "name": "Tom Hardy",
+    "popular_movies": ["The Dark Knight Rises" ]
+  },
+  {
+    "name": "Chloë Grace Moretz",
+    "popular_movies": ["Kick-Ass", "Let Me In"]
+  },
+  {
+    "name": "Johnny Depp",
+    "popular_movies": ["Pirates of the Caribbean: The Curse of the Black Pearl", "Edward Scissorhands"]
+  },
+  {
+    "name": "Arnold Schwarzenegger",
+    "popular_movies": ["Terminator 2: Judgment Day", "Predator"]
+  },
+  {
+    "name": "Sarah Wayne Callies",
+    "popular_movies": ["Prison Break", "The Walking Dead"]
+  },
+  {
+    "name": "Vincent Cassel",
+    "popular_movies": ["La Haine", "Black Swan"]
+  },
+  {
+    "name": "Lisa Ulliel",
+    "popular_movies": ["Hannibal Rising"]
+  },
+  {
+    "name": "Rachel Weisz",
+    "popular_movies": ["The Constant Gardener", "The Mummy"]
+  },
+  {
+    "name": "Robin Williams",
+    "popular_movies": ["Good Will Hunting", "Dead Poets Society"]
+  },
+  {
+    "name": "Chris Hemsworth",
+    "popular_movies": ["Thor"]
+  }
+]
