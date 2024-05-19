@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct FilmDeatailsView: View {
-    
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     let film: Film
     
@@ -30,37 +28,9 @@ struct FilmDeatailsView: View {
             AdditionalInfo(text: "Release date: \(film.releaseDate)")
                 .padding(.leading, 20)
                 .padding(.top, 1)
-            
             Spacer()
-            
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading){
-                Button(action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                }, label: {
-                    Image(systemName: "arrow.left")
-                        .foregroundStyle(Color("BackgroundColor"))
-                })
-            }
-            
-            ToolbarItem(placement: .topBarLeading){
-                Text(film.title)
-                    .font(.title2)
-                    .bold()
-            }
-            
-            ToolbarItem(placement: .topBarTrailing){
-                Button(action: {
-                    
-                }, label: {
-                    Image(systemName: "square.and.arrow.up")
-                        .foregroundStyle(Color("BackgroundColor"))
-                })
-            }
-        }
+
     }
 }
 

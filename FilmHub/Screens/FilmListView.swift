@@ -12,14 +12,19 @@ final class FilmListViewModel: ObservableObject {
     @Published var city: String = "City"
     @Published var cinema: String = "Cinema"
     @Published var isSearching: Bool = false
-    @Published var searchingFilmString: String = ""
+    @Published var searchingTitle: String = ""
     @Published var isFiltering: Bool = false
 }
 
 
 struct FilmListView: View {
-    let inProduction: Bool
+        
+    init(inProduction: Bool, userRole: UserRole) {
+        self.inProduction = inProduction
+        self.userRole = userRole
+    }
     
+    let inProduction: Bool
     let films = [Film(
         id: 1,
         title: "Inception",
@@ -35,7 +40,7 @@ struct FilmListView: View {
                     title: "The Shawshank Redemption",
                     releaseDate: Date(timeIntervalSince1970: 747859200),
                     language: "English",
-                    duration: 8520, // Довжина фільму у секундах
+                    duration: 8520,
                     poster: "shawshank_redemption_poster.jpg",
                     director: "Frank Darabont",
                     rating: 9.3
@@ -75,23 +80,20 @@ struct FilmListView: View {
     
     private let userRole: UserRole
     
-    init(inProduction: Bool, userRole: UserRole) {
-        self.inProduction = inProduction
-        self.userRole = userRole
-    }
-    
     var body: some View {
         NavigationStack {
+            FilmListHeader(filmListModel: filmListModel,
+                           inProduction: inProduction)
             ScrollView {
-                FilmListHeader(filmListModel: filmListModel, inProduction: inProduction)
                 if filmListModel.isSearching {
-                    CustomTextField(textValue: $filmListModel.searchingFilmString, placeholder: "Enter film title, actor")
+                    CustomTextField(textValue: $filmListModel.searchingTitle, placeholder: "Enter film title")
                     .padding(.leading, 15)
                     .frame(height: 40)
                     .overlay {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color("BackgroundColor"))
                     }
+                    .padding(.top, 10)
                     .transition(.move(edge: .top))
                 }
                 LazyVStack(spacing: 20) {
@@ -106,9 +108,11 @@ struct FilmListView: View {
             }
             .navigationDestination(
                 for: Film.self,
-                destination: { FilmDeatailsView(film: $0) }
-            )
+                destination: {
+                    FilmDeatailsView(film: $0)  
+                })
             .ignoresSafeArea(.all)
+            .padding(.top, -8)
             .animation(.easeInOut, value: filmListModel.isSearching)
         }
     }
@@ -122,7 +126,8 @@ struct FilmListHeader: View {
     let inProduction: Bool
     var options = ["Cinema", "b", "c", "d", "e"]
         
-    init(filmListModel: FilmListViewModel, inProduction: Bool) {
+    init(filmListModel: FilmListViewModel,
+         inProduction: Bool) {
         self.filmListModel = filmListModel
         self.inProduction = inProduction
     }
@@ -130,7 +135,6 @@ struct FilmListHeader: View {
     var body: some View {
         if inProduction {
             HStack {
-                
                 CustomMenu(selectedItem: $filmListModel.city,
                            options: options)
                 CustomMenu(selectedItem: $filmListModel.cinema,
@@ -144,18 +148,19 @@ struct FilmListHeader: View {
                         .scaleEffect(1.2)
                         .foregroundStyle(.white)
                 })
-                .padding(.top, 50)    
+                .padding(.bottom, 5)
                 
-                Button(action: {
-                }, label: {
+                NavigationLink {
+                    FilterView()
+                } label: {
                     Image(systemName: "slider.horizontal.3")
                         .scaleEffect(1.2)
                         .foregroundStyle(.white)
-                })
+                }
                 .padding(.horizontal, 20)
-                .padding(.top, 50)
+                .padding(.bottom, 5)
             }
-            .frame(width: Const.screenWidth, height: 100)
+            .frame(width: Const.screenWidth, height: 35)
             .background(Color("BackgroundColor"))
         } else {
             ScreenTitleHeader(text: "Soon")
@@ -189,7 +194,7 @@ struct CustomMenu: View {
                 .foregroundStyle(.white)
         }
         .padding(.horizontal, 20)
-        .padding(.top, 50)
+        .padding(.bottom, 5)
         }
     }
 }

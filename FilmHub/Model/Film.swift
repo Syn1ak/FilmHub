@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias Filters = (actor: String?, genre: String?, date: Date?)
+
 struct Film: Codable, Hashable {
     let id: Int
     let title: String
