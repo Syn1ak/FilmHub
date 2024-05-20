@@ -21,9 +21,9 @@ struct TicketView: View {
                 .padding(.all, 10)
             VStack (alignment: .leading){
                 HStack {
-                    AdditionalTitle(text: "2D")
+                    AdditionalTitle(title: "2D")
                     Spacer()
-                    AdditionalTitle(text: "#864394")
+                    AdditionalTitle(title: "#864394")
                         .padding(.trailing, 10)
                 }
                 HStack {
@@ -33,15 +33,15 @@ struct TicketView: View {
                 }
                 HStack(spacing: 10) {
                     VStack(alignment: .leading) {
-                        AdditionalTitle(text: "Дата")
+                        AdditionalTitle(title: "Дата")
                         AdditionalInfo(text: "3 листопада 2023")
                     }
                     VStack(alignment: .leading) {
-                        AdditionalTitle(text: "Час")
+                        AdditionalTitle(title: "Час")
                         AdditionalInfo(text: "19:00")
                     }
                     VStack(alignment: .leading) {
-                        AdditionalTitle(text: "Зал")
+                        AdditionalTitle(title: "Зал")
                         AdditionalInfo(text: "3")
                     }
                 }
@@ -54,8 +54,6 @@ struct TicketView: View {
         .background(RoundedRectangle(cornerRadius: 10)
             .foregroundStyle(.white)
             .shadow(color: Color.black.opacity(0.5), radius: 5))
-        
-        
     }
 }
 

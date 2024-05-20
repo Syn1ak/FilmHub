@@ -9,9 +9,9 @@ import SwiftUI
 
 
 struct FilmView: View {
-    let film: Film
+    let film: Movie
     
-    init(film: Film) {
+    init(film: Movie) {
         self.film = film
     }
     
