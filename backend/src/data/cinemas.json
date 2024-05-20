@@ -1,0 +1,52 @@
+[
+  {
+    "city_id": "664b0e987440d69bc0faea56",
+    "name": "Cinema Kyiv",
+    "address": "Khreshchatyk St, 19"
+  },
+  {
+    "city_id": "664b0e987440d69bc0faea57",
+    "name": "Lviv Film Center",
+    "address": "Svobody Ave, 45"
+  },
+  {
+    "city_id": "664b0e987440d69bc0faea58",
+    "name": "Odesa Movie House",
+    "address": "Deribasivska St, 16"
+  },
+  {
+    "city_id": "664b0e987440d69bc0faea59",
+    "name": "Kharkiv Cinema",
+    "address": "Sumskaya St, 34"
+  },
+  {
+    "city_id": "664b0e987440d69bc0faea5a",
+    "name": "Dnipro Film Studio",
+    "address": "Dmytro Yavornytsky Ave, 23"
+  },
+  {
+    "city_id": "664b0e987440d69bc0faea5b",
+    "name": "Zaporizhzhia Cinemas",
+    "address": "Sobornyi Ave, 15"
+  },
+  {
+    "city_id": "664b0e987440d69bc0faea5c",
+    "name": "Vinnytsia Movie Theater",
+    "address": "Soborna St, 9"
+  },
+  {
+    "city_id": "664b0e987440d69bc0faea5d",
+    "name": "Chernihiv Cinema Hall",
+    "address": "Myru Ave, 32"
+  },
+  {
+    "city_id": "664b0e987440d69bc0faea5e",
+    "name": "Kherson Film Center",
+    "address": "Ushakova Ave, 15"
+  },
+  {
+    "city_id": "664b0e987440d69bc0faea5f",
+    "name": "Rivne Cinema",
+    "address": "Soborna St, 22"
+  }
+]

@@ -9,6 +9,10 @@ const sessionSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Hall",
     },
+    price: {
+        type: Number,
+        required: true,
+    },
     seats: {
         type: [[Number]],
         required: true

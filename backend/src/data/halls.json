@@ -1,0 +1,152 @@
+[
+  {
+    "cinema_id": "664b12617440d69bc0faea61",
+    "name": "Hall A1",
+    "number_of_seats": 44
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea61",
+    "name": "Hall A2",
+    "number_of_seats": 36
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea61",
+    "name": "Hall B1",
+    "number_of_seats": 28
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea61",
+    "name": "Hall B2",
+    "number_of_seats": 48
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea62",
+    "name": "Hall A1",
+    "number_of_seats": 32
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea62",
+    "name": "Hall A2",
+    "number_of_seats": 46
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea62",
+    "name": "Hall B1",
+    "number_of_seats": 24
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea62",
+    "name": "Hall B2",
+    "number_of_seats": 38
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea63",
+    "name": "Hall A1",
+    "number_of_seats": 40
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea63",
+    "name": "Hall A2",
+    "number_of_seats": 30
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea63",
+    "name": "Hall B1",
+    "number_of_seats": 22
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea63",
+    "name": "Hall B2",
+    "number_of_seats": 34
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea64",
+    "name": "Hall A1",
+    "number_of_seats": 42
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea64",
+    "name": "Hall A2",
+    "number_of_seats": 26
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea64",
+    "name": "Hall B1",
+    "number_of_seats": 36
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea64",
+    "name": "Hall B2",
+    "number_of_seats": 48
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea65",
+    "name": "Hall A1",
+    "number_of_seats": 34
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea65",
+    "name": "Hall A2",
+    "number_of_seats": 28
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea65",
+    "name": "Hall B1",
+    "number_of_seats": 44
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea65",
+    "name": "Hall B2",
+    "number_of_seats": 32
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea66",
+    "name": "Hall A1",
+    "number_of_seats": 38
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea66",
+    "name": "Hall A2",
+    "number_of_seats": 24
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea66",
+    "name": "Hall B1",
+    "number_of_seats": 30
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea66",
+    "name": "Hall B2",
+    "number_of_seats": 40
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea67",
+    "name": "Hall A1",
+    "number_of_seats": 26
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea67",
+    "name": "Hall A2",
+    "number_of_seats": 36
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea67",
+    "name": "Hall B1",
+    "number_of_seats": 48
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea67",
+    "name": "Hall B2",
+    "number_of_seats": 22
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea68",
+    "name": "Hall A1",
+    "number_of_seats": 32
+  },
+  {
+    "cinema_id": "664b12617440d69bc0faea68",
+    "name": "Hall A2",
+    "number_of_seats": 46
+  }
+]
