@@ -9,18 +9,19 @@ const ticketSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
     },
-    seat_number:{
+    seat_row:{
         type: Number,
         required: true
+    },
+    seat_number: {
+        type: Number,
+        required: true,
     },
     purchase_date:{
         type: Date,
         default: Date.now(),
         required: true
     },
-    // TODO: price??
-
-
 })
 const Ticket = mongoose.model("Ticket", ticketSchema);
 export default Ticket;

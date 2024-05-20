@@ -1,5 +1,7 @@
 ### Node ###
 # Logs
+.idea
+target
 logs
 *.log
 npm-debug.log*
