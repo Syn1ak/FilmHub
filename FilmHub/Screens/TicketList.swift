@@ -10,19 +10,20 @@ import SwiftUI
 struct TicketListView: View {
     
     var body: some View {
-        ScrollView {
+        VStack{
             ScreenTitleHeader(text: "My tickets")
-            LazyVStack(spacing: 20) {
-                TicketView()
-                TicketView()
-                TicketView()
-                TicketView()
-                TicketView()
-                TicketView()
-            }
-            .padding(.top, 20)
-        }.ignoresSafeArea(.all)
-        
+            ScrollView {
+                LazyVStack(spacing: 20) {
+                    TicketView()
+                    TicketView()
+                    TicketView()
+                    TicketView()
+                    TicketView()
+                    TicketView()
+                }
+                .padding(.top, 20)
+            }.ignoresSafeArea(.all)
+        }
     }
 }
 

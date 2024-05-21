@@ -15,15 +15,16 @@ struct ScreenTitleHeader: View {
     }
     
     var body: some View {
+        
         VStack (alignment: .center){
             Text(text)
                 .foregroundStyle(.white)
                 .font(.title2)
                 .bold()
-                .padding(.top, 50)
+                .padding(.bottom, 5)
         }
         .ignoresSafeArea()
-        .frame(width: Const.screenWidth, height: 100)
+        .frame(width: Const.screenWidth, height: 35)
         .background(Color("BackgroundColor"))
     }
 }
