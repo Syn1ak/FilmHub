@@ -3,8 +3,12 @@ import cors from "cors";
 import "dotenv/config";
 import mongoose from "mongoose";
 
-import movieRouter from './routes/MovieRoute';
 import movieRoute from "./routes/MovieRoute";
+import cityRoute from "./routes/CityRoute";
+import genreRoute from "./routes/GenreRoute";
+import cinemaRoute from "./routes/CinemaRoute";
+import User from "./models/user";
+import userRoute from "./routes/UserRoute";
 
 const PORT = process.env.PORT || 7010;
 
@@ -13,40 +17,21 @@ mongoose
   .then(() => console.log("Connected to database!"));
 
 
-// addActor();
-// async function addActor(){
-//   try {
-//     const actor = new ActorMovie({
-//       movie:"664672c4cf84d0736ecdf072",
-//       actor: "66466decb9279ea92a3049e0",
-//     });
-//     const savedActor = await actor.save();
-//     console.log("Actor", savedActor);
-//   } catch (e) {
-//     console.log(e);
-//   }
-// }
-
-// getActors();
-// async function getActors() {
-//   await Actor.find();
-// }
-//
-// getMovie();
-// async function getMovie() {
-//   const movie = await Movie.find({ _id: "664672c4cf84d0736ecdf06b" });
-//   const actorsByMovie = await ActorMovie.find({ movie: "664672c4cf84d0736ecdf072" }).populate("actor");
-//
-//   console.log(movie);
-//   console.log(actorsByMovie);
-// }
+getActors();
+async function getActors() {
+  await User.find();
+}
 
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use('/api/movies', movieRoute);
+app.use("/api/movies", movieRoute);
+app.use("/api/cities", cityRoute);
+app.use("/api/genres", genreRoute);
+app.use("/api/cinemas", cinemaRoute);
+app.use("/api/user", userRoute);
 
 app.get("/test", async (req: Request, res: Response) => {
   res.json({ message: "Hello" });

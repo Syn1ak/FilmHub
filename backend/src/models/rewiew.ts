@@ -1,16 +1,16 @@
 import mongoose from "mongoose";
 
 const reviewSchema = new mongoose.Schema({
-    user:{
+    user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
-    movie:{
+    movie: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Movie'
     },
     rating:{
-        type: Number, min:0, max:10,
+        type: Number, min:0, max:5,
     },
     comment:{
         type: String,

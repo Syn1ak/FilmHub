@@ -9,7 +9,7 @@ const movieSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    release_year:{
+    releaseDate:{
         type: Date,
         required: true,
     },
@@ -20,14 +20,14 @@ const movieSchema = new mongoose.Schema({
     duration:{
         type: String,
     },
-    poster:{
+    thumbnail:{
         type: String
     },
     director:{
         type:String
     },
     rating:{
-        type: Number, min: 1, max: 10
+        type: Number, min: 0, max: 5
     }
 })
 const Movie = mongoose.model("Movie", movieSchema);
