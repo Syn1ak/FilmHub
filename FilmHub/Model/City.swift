@@ -7,9 +7,18 @@
 
 import Foundation
 
-struct City: Codable {
+struct City: Hashable, Codable, CustomStringConvertible {
+    var description: String {
+        return name
+    }
+    
     let id: String
     let name: String
+    
+    init(id: String, name: String) {
+        self.id = id
+        self.name = name
+    }
     
     enum CodingKeys: String, CodingKey{
         case id = "_id"

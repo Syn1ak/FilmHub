@@ -12,20 +12,26 @@ final class FilterViewModel: ObservableObject {
     @Published var searchingActor = false
     @Published var choosingGenre = false
     @Published var choosingDate = false
-    
     @Published var bool = false
-    @Published var actorName = ""
-    @Published var genre = ""
-    @Published var date = Date()
 }
-
 
 struct FilterView: View {
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject private var filterViewModel = FilterViewModel()
     
-    var filters: Filters = (actor: nil, genre: nil, date: nil)
-
+    @ObservedObject private var filterViewModel = FilterViewModel()
+    @ObservedObject private var filmListDataService: FilmListDataService
+    @ObservedObject private var filterDataService: FilterDataService
+   
+    init(filmListDataService: FilmListDataService) {
+        self.filmListDataService = filmListDataService
+        let actor = filmListDataService.filters["actor"] ?? ""
+        let genresIds = filmListDataService.filters["genres"]?.split(separator: ",") ?? []
+        let date = filmListDataService.filters["date"] ?? ""
+        self.filterDataService = FilterDataService(actorName: actor,
+                                                   cureentGenresIds: genresIds.map { String($0) },
+                                                   date: date)
+    }
+    
     var body: some View {
         VStack {
             createFilterListElement(imageName: "person",
@@ -33,7 +39,7 @@ struct FilterView: View {
                               buttonTitle: "Search",
                               buttonAction: { filterViewModel.searchingActor.toggle() })
             if filterViewModel.searchingActor {
-                CustomTextField(textValue: $filterViewModel.actorName, placeholder: "Enter actor name")
+                CustomTextField(textValue: $filterDataService.actorName, placeholder: "Enter actor name")
                     .padding(.leading, 15)
                     .frame(height: 40)
                     .overlay {
@@ -59,7 +65,7 @@ struct FilterView: View {
             
             if filterViewModel.choosingDate {
                 DatePicker("Select a date",
-                           selection: $filterViewModel.date,
+                           selection: $filterDataService.date,
                            displayedComponents: [.date])
                 .datePickerStyle(CompactDatePickerStyle())
                 .transition(.opacity)
@@ -117,7 +123,6 @@ struct FilterView: View {
                     .frame(width: 80, height: 30)
                     .background(Color("BackgroundColor"))
                     .clipShape(RoundedRectangle(cornerRadius: 10))
-
             })
         }
         .frame(height: 50)
@@ -125,32 +130,20 @@ struct FilterView: View {
     
     @ViewBuilder
     private func createListOfGenres() -> some View {
-        LazyVStack {
-            HStack {
-                CheckBox(isOn: $filterViewModel.bool)
-                Text("Some genre")
-                
-                Spacer()
-            }
-            HStack {
-                CheckBox(isOn: $filterViewModel.bool)
-                Text("Some genre")
-                Spacer()
-            }
-            HStack {
-                CheckBox(isOn: $filterViewModel.bool)
-                Text("Some genre")
-                Spacer()
-            }
-            HStack {
-                CheckBox(isOn: $filterViewModel.bool)
-                Text("Some genre")
-                Spacer()
+        ScrollView {
+            LazyVStack {
+                ForEach(Array(filterDataService.allGenres.enumerated()), id: \.element.id) { index, genre in
+                    HStack {
+                        CheckBox(isOn: Binding(
+                            get: { self.filterDataService.currentGenres.contains(where: { $0.id  == genre.id })},
+                            set: { $0 ? self.filterDataService.currentGenres.append(genre) :
+                                self.filterDataService.currentGenres.removeAll(where: { $0.id  == genre.id })}))
+                        Text(genre.name)
+                        Spacer()
+                    }
+                }
             }
         }
     }
-    
-    
-    
     
 }

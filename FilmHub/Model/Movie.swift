@@ -7,15 +7,13 @@
 
 import Foundation
 
-typealias Filters = (actor: String?, genre: String?, date: Date?)
-
 struct Movie: Codable, Hashable {
-    let id: Int
+    let id: String
     let title: String
     let releaseDate: Date
     let description: String
     let posterLink: URL
-    let duration: TimeInterval
+    //let duration: TimeInterval
     let director: String
     let rating: Double
     
@@ -25,7 +23,7 @@ struct Movie: Codable, Hashable {
         case releaseDate
         case description
         case posterLink = "thumbnail"
-        case duration
+        //case duration
         case director
         case rating
     }

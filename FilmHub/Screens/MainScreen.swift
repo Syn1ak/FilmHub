@@ -32,6 +32,7 @@ struct MainView: View {
         }
         .tint(Color("BackgroundColor"))
         
+        
     }
 }
 

@@ -6,19 +6,25 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 
 struct FilmView: View {
-    let film: Movie
+    let movie: Movie
     
-    init(film: Movie) {
-        self.film = film
+    init(movie: Movie) {
+        self.movie = movie
     }
     
-    var body: some View{
-        RoundedRectangle(cornerRadius: 10)
-            .foregroundStyle(.white)
-            .frame(width: Const.screenWidth * 0.95, height: 200)
-            .shadow(color: Color.black.opacity(0.5), radius: 5)
+    var body: some View {
+        ZStack {
+            FilmPosterView(posterLink: movie.posterLink)
+                .scaledToFill()
+                .frame(width: Const.screenWidth * 0.9)
+            Text(movie.title)
+                .foregroundStyle(.white)
+                .font(.title)
+                .bold()
+        }
     }
 }

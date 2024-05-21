@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct FilmDeatailsView: View {
 
@@ -17,39 +18,42 @@ struct FilmDeatailsView: View {
     
     var body: some View {
         ScrollView {
-            Color.blue
-                .frame(height: 200)
+            WebImage(url: movie.posterLink)
+                .resizable()
+                .scaledToFill()
+                .frame(width: Const.screenWidth)
                 .overlay { createPlayButton() }
             VStack (alignment: .leading){
                 createFilmTitle(title: movie.title)
-                AdditionalTitle(title: "\(movie.duration) s | Пригоди, екшн")
-                AdditionalInfo(text: "Анді Дюфрейн, успішний банкір, несправедливо засуджений до довічного ув'язнення за вбивство своєї дружини та її коханця. Потрапивши до суворої в'язниці Шоушенк, він зіштовхується з жорстокістю тюремного життя, але знаходить друзів і надію. Завдяки своїм навичкам та незламній вірі в справедливість, Анді змінює життя багатьох ув'язнених, готуючи шлях до своєї неймовірної втечі.")
+                AdditionalTitle(title: "1432423 s | Пригоди, екшн")
+                AdditionalInfo(text: movie.description)
                     .padding(.top, 15)
                 AdditionalTitle(title: "Release date")
                     .padding(.top, 15)
-                AdditionalInfo(text: movie.releaseDate.description)
+                AdditionalInfo(text: "some date")
                 AdditionalTitle(title: "Director")
                     .padding(.top, 15)
                 AdditionalInfo(text: movie.director)
             }
             .padding(.leading, 20)
+            .padding(.bottom, 30)
         }
         .navigationTitle("Details")
-        .padding(.bottom, 30)
-        NavigationLink(destination: SessionsView(movie: movie),
-                       label: {
-            Text("Sessions")
-                .font(.title3)
-                .bold()
-                .foregroundStyle(.white)
-                .frame(maxWidth: .infinity)
-                .frame(height: 35)
-                .background(Color("BackgroundColor"))
-                .clipShape(RoundedRectangle(cornerRadius: 5))
-                .padding(.horizontal, 30)
-                .padding(.bottom, 20)
-                
-        })
+        //if movie.releaseDate < Date() {
+            NavigationLink(destination: SessionsView(movie: movie),
+                           label: {
+                Text("Sessions")
+                    .font(.title3)
+                    .bold()
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 35)
+                    .background(Color("BackgroundColor"))
+                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                    .padding(.horizontal, 30)
+                    .padding(.bottom, 20)
+            })
+        //}
     }
     
     @ViewBuilder
