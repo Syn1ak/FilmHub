@@ -4,10 +4,12 @@ const sessionSchema = new mongoose.Schema({
     movie: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Movie",
+        required: true,
     },
     hall:{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Hall",
+        required: true,
     },
     price: {
         type: Number,
