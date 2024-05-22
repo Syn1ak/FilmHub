@@ -25,6 +25,5 @@ struct CustomTextField: View {
             .focused($emailFieldIsFocused)
             .textInputAutocapitalization(.never)
             .disableAutocorrection(true)
-            
     }
 }

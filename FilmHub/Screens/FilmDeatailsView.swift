@@ -34,9 +34,14 @@ struct FilmDeatailsView: View {
                 AdditionalTitle(title: "Director")
                     .padding(.top, 15)
                 AdditionalInfo(text: movie.director)
+                Divider()
+                LazyVStack {
+                    ReviewListView()
+                }
             }
-            .padding(.leading, 20)
+            .padding(.horizontal, 20)
             .padding(.bottom, 30)
+            
         }
         .navigationTitle("Details")
         if movie.releaseDate < Date() {
@@ -80,6 +85,9 @@ struct FilmDeatailsView: View {
             .padding(.top, 30)
             .padding(.bottom, 7)
     }
+    
+
+    
 }
 
 struct AdditionalTitle: View {
@@ -109,4 +117,31 @@ struct AdditionalInfo: View {
             .bold()
     }
 }
+
+struct CustomTextEditor: View {
+    @Binding var textValue: String
+    @FocusState private var focusedState: Bool
+
+    init(textValue: Binding<String>) {
+        self._textValue = textValue
+    }
+    
+    var body: some View {
+        TextEditor(text: $textValue)
+            .focused($focusedState)
+            .textInputAutocapitalization(.never)
+            .disableAutocorrection(true)
+            .onReceive(textValue.publisher.last()) {
+                if ($0 as Character).asciiValue == 10 {
+                    focusedState = false
+                    textValue.removeLast()
+                }
+            }
+    }
+}
+
+
+
+
+
 

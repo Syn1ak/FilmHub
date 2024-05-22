@@ -26,5 +26,6 @@ struct FilmView: View {
                 .font(.title)
                 .bold()
         }
+        
     }
 }

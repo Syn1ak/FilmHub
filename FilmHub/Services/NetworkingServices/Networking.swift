@@ -112,6 +112,22 @@ class Networking {
         }
     }
     
+    func getMovieReviews(for movieId: String) async throws -> [Review]? {
+        guard let reqUrl = createUrl(for: "movie", params: [URLQueryItem(name: "movie_id", value: movieId)])
+        else { throw NetworkingErrors.invalidURL }
+        print(reqUrl)
+        let (data, response) = try await URLSession.shared.data(from: reqUrl)
+        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+            throw NetworkingErrors.invalidResponse
+        }
+        do {
+            let reviews = try JSONDecoder().decode([Review].self, from: data)
+            return reviews
+        } catch {
+            throw NetworkingErrors.invalidData
+        }
+    }
+    
 }
 
 
