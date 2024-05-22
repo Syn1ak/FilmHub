@@ -17,6 +17,13 @@ struct Movie: Codable, Hashable {
     let director: String
     let rating: Double
     
+    var formattedDate: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.date(from: formatter.string(from: releaseDate))
+        return formatter.string(from: releaseDate)
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case title

@@ -106,6 +106,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E3B55CB2BFD41E60097D526 /* NetworkingServices */ = {
+			isa = PBXGroup;
+			children = (
+				7EE99BEF2BFCD46A00804D2A /* Networking.swift */,
+				7EE99BF32BFCD89E00804D2A /* MovieFetcher.swift */,
+				7E1D63D32BFD116900B9A979 /* GenreFetcher.swift */,
+				7EE99BFA2BFCEB9900804D2A /* CityFetcher.swift */,
+				7EE99BFC2BFCEE2100804D2A /* CinemaFetcher.swift */,
+			);
+			path = NetworkingServices;
+			sourceTree = "<group>";
+		};
+		7E3B55CC2BFD42070097D526 /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				7EE99BF52BFCE20900804D2A /* FilmListDataService.swift */,
+				7E1D63D52BFD11FE00B9A979 /* FilterDataService.swift */,
+			);
+			path = DataServices;
+			sourceTree = "<group>";
+		};
 		7E8A7CCD2BF236C10074CB68 = {
 			isa = PBXGroup;
 			children = (
@@ -198,13 +219,8 @@
 		7EE99BEE2BFCD45B00804D2A /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7EE99BEF2BFCD46A00804D2A /* Networking.swift */,
-				7EE99BF32BFCD89E00804D2A /* MovieFetcher.swift */,
-				7E1D63D52BFD11FE00B9A979 /* FilterDataService.swift */,
-				7E1D63D32BFD116900B9A979 /* GenreFetcher.swift */,
-				7EE99BFA2BFCEB9900804D2A /* CityFetcher.swift */,
-				7EE99BFC2BFCEE2100804D2A /* CinemaFetcher.swift */,
-				7EE99BF52BFCE20900804D2A /* FilmListDataService.swift */,
+				7E3B55CC2BFD42070097D526 /* DataServices */,
+				7E3B55CB2BFD41E60097D526 /* NetworkingServices */,
 			);
 			path = Services;
 			sourceTree = "<group>";

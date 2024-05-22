@@ -30,7 +30,7 @@ struct FilmDeatailsView: View {
                     .padding(.top, 15)
                 AdditionalTitle(title: "Release date")
                     .padding(.top, 15)
-                AdditionalInfo(text: "some date")
+                AdditionalInfo(text: movie.formattedDate)
                 AdditionalTitle(title: "Director")
                     .padding(.top, 15)
                 AdditionalInfo(text: movie.director)
@@ -39,7 +39,7 @@ struct FilmDeatailsView: View {
             .padding(.bottom, 30)
         }
         .navigationTitle("Details")
-        //if movie.releaseDate < Date() {
+        if movie.releaseDate < Date() {
             NavigationLink(destination: SessionsView(movie: movie),
                            label: {
                 Text("Sessions")
@@ -53,7 +53,7 @@ struct FilmDeatailsView: View {
                     .padding(.horizontal, 30)
                     .padding(.bottom, 20)
             })
-        //}
+        }
     }
     
     @ViewBuilder

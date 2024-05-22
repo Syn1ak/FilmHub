@@ -96,6 +96,22 @@ class Networking {
         }
     }
     
+    func getFutureMovies() async throws -> [Movie]? {
+        guard let reqUrl = createUrl(for: "future_movie", params: [])
+        else { throw NetworkingErrors.invalidURL }
+        print(reqUrl)
+        let (data, response) = try await URLSession.shared.data(from: reqUrl)
+        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+            throw NetworkingErrors.invalidResponse
+        }
+        do {
+            let futureMovies = try JSONDecoder().decode([Movie].self, from: data)
+            return futureMovies
+        } catch {
+            throw NetworkingErrors.invalidData
+        }
+    }
+    
 }
 
 
