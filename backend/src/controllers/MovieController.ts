@@ -8,8 +8,7 @@ import Cinema from "../models/cinema";
 import Hall from "../models/hall";
 import Review from "../models/rewiew";
 import mongoose from "mongoose";
-import user from "../models/user";
-import movie from "../models/movie";
+import Rewiew from "../models/rewiew";
 
 const getListOfMovies = async (req: Request, res: Response) => {
     try {
@@ -64,7 +63,8 @@ const getListOfMovies = async (req: Request, res: Response) => {
         }
 
         if (genres) {
-            const moviesIdsWithGenre = await GenreMovie.find({genre: {$in: genres}});
+            const genresArr = (genres as string).split(',');
+            const moviesIdsWithGenre = await GenreMovie.find({genre: {$in: genresArr}});
             const ids = moviesIdsWithGenre.map(item => item.movie.toString());
             if (!city && !cinema) moviesIds = new Set<string>([...ids]);
             else moviesIds = new Set<string>(ids.filter(i => moviesIds.has(i)));
@@ -172,8 +172,17 @@ const addReviewToMovie = async (req: Request, res: Response) => {
             rating: +rating,
             comment: comment
         });
-        await newReview.save();
 
+        await newReview.save();
+        const allRatings = await Review.find({ movie: movie_id}, 'rating');
+        const totalRating = allRatings.reduce((accumulator, currentValue) => {
+            return currentValue.rating != null ? accumulator + currentValue.rating : accumulator;
+        }, 0);
+        const averageRating = totalRating / allRatings.length;
+        await Movie.updateOne(
+                { _id: movie_id },
+                { $set: { rating: averageRating }
+                });
         return res.status(201).json(newReview);
     } catch (error) {
         console.error(error);

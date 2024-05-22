@@ -16,7 +16,7 @@ const sessionSchema = new mongoose.Schema({
         required: true,
     },
     seats: {
-        type: [[Number]],
+        type: [[Boolean]],
         required: true
     },
     start_time: {
