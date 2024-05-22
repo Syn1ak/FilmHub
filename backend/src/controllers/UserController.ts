@@ -2,6 +2,7 @@ import {Request, Response} from "express";
 import User from "../models/user";
 import Ticket from "../models/ticket";
 import mongoose from "mongoose";
+import Session from "../models/session";
 
 const getUserById = async (req: Request, res: Response) => {
     try {
@@ -33,7 +34,7 @@ const getAllUserTickets = async (req: Request, res: Response) => {
 
 const addTicket = async (req: Request, res: Response) => {
     try{
-        const {session_id, user_id, seat_row, seat_number} =  req.query;
+        const {session_id, user_id, seat_row, seat_number} =  req.body;
 
         const newTicket = new Ticket({
             session: new mongoose.Types.ObjectId(session_id as string),
@@ -42,14 +43,14 @@ const addTicket = async (req: Request, res: Response) => {
             seat_number: seat_number
         })
         await newTicket.save();
-
+        await Session.updateOne({_id: session_id},
+            {$set: { [`seats.${seat_row}.${seat_number}`] : true }});
         return res.status(201).json(newTicket);
     } catch (error){
         console.log(error);
         return res.status(500).json({ message: "Something went wrong" });
     }
 }
-
 export default {
     getUserById,
     getAllUserTickets,
