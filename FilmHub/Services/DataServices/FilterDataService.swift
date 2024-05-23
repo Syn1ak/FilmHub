@@ -38,12 +38,14 @@ class FilterDataService: ObservableObject {
         filmListDataService.filters["actor"] = actorName
         filmListDataService.filters["genres"] = currentGenres.map { $0.id }.joined(separator: ",")
         filmListDataService.filters["date"] = date.description
+        filmListDataService.downloadMovies()
     }
     
     func resetFilters(filmListDataService: FilmListDataService) {
         filmListDataService.filters["actor"] = ""
         filmListDataService.filters["genres"] = ""
         filmListDataService.filters["date"] = ""
+        filmListDataService.downloadMovies()
     }
 
 }

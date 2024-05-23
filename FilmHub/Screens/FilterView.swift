@@ -74,6 +74,7 @@ struct FilterView: View {
             Spacer()
             HStack(spacing: 50){
                 Button(action: {
+                    filterDataService.resetFilters(filmListDataService: filmListDataService)
                     presentationMode.wrappedValue.dismiss()
                 }, label: {
                     Text("Reset")
@@ -84,6 +85,7 @@ struct FilterView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 5))
                 })
                 Button(action: {
+                    filterDataService.applyFilters(filmListDataService: filmListDataService)
                     presentationMode.wrappedValue.dismiss()
                 }, label: {
                     Text("Apply")

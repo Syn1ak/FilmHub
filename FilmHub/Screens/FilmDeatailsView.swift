@@ -34,9 +34,12 @@ struct FilmDeatailsView: View {
                 AdditionalTitle(title: "Director")
                     .padding(.top, 15)
                 AdditionalInfo(text: movie.director)
-                Divider()
-                LazyVStack {
-                    ReviewListView()
+                
+                if movie.releaseDate < Date() {
+                    Divider()
+                    LazyVStack {
+                        ReviewListView()
+                    }
                 }
             }
             .padding(.horizontal, 20)
@@ -45,7 +48,8 @@ struct FilmDeatailsView: View {
         }
         .navigationTitle("Details")
         if movie.releaseDate < Date() {
-            NavigationLink(destination: SessionsView(movie: movie),
+            NavigationLink(
+                destination: SessionsView(movie: movie),
                            label: {
                 Text("Sessions")
                     .font(.title3)

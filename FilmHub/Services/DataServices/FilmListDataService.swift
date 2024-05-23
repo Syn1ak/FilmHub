@@ -41,7 +41,6 @@ class FilmListDataService: ObservableObject {
 
     
     init() {
-        downloadMovies()
         downloadCities()
     }
     
@@ -50,6 +49,15 @@ class FilmListDataService: ObservableObject {
             let movies = await movieFetcher.getMovies(filters: filters)
             await MainActor.run {
                 self.currentMovies = movies ?? []
+            }
+        }
+    }
+    
+    func downloadFutureMovies() {
+        Task {
+            let futureMovies = await movieFetcher.getFutureMovies()
+            await MainActor.run {
+                self.currentMovies = futureMovies ?? []
             }
         }
     }
@@ -71,9 +79,4 @@ class FilmListDataService: ObservableObject {
             }
         }
     }
-    
-    func applyFilters() {
-        
-    }
-    
 }

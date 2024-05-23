@@ -57,6 +57,6 @@ struct AuthorizationView: View {
 }
 
 #Preview {
-    ContentView()
+    MainView()
 }
 

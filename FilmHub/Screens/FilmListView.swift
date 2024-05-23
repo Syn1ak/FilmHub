@@ -19,6 +19,7 @@ struct FilmListView: View {
     init(inProduction: Bool, userRole: UserRole) {
         self.inProduction = inProduction
         self.userRole = userRole
+        self.inProduction ? filmListDataService.downloadMovies() : filmListDataService.downloadFutureMovies()
     }
     
     let inProduction: Bool

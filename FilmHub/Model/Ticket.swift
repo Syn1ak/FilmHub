@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum TicketType {
+    case `default`
+    case lux
+}
+
 struct Ticket {
     let id: String
     let session: Session

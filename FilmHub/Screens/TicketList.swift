@@ -10,7 +10,7 @@ import SwiftUI
 struct TicketListView: View {
     
     var body: some View {
-        VStack{
+        VStack {
             ScreenTitleHeader(text: "My tickets")
             ScrollView {
                 LazyVStack(spacing: 20) {

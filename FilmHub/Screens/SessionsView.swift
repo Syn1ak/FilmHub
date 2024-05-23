@@ -10,131 +10,98 @@ import SwiftUI
 struct SessionsView: View {
     
     let movie: Movie
-    @State private var
-        activeDate = Date()
+    @State private var activeDate = Date()
+//    @State private var selectedTime = 
     
     init(movie: Movie) {
         self.movie = movie
     }
     
     var body: some View {
-        Color.blue
-            .frame(height: Const.screenHeight/3)
-        createDatesList()
-        HStack {
-            Text("City center")
-                .font(.title3)
-                .bold()
-            Spacer()
-            Text("fdlsnfdksgf")
-                .font(.system(size: 12))
-                .foregroundStyle(.gray)
+        VStack {
+            HallView()
+            createFooter()
+                .offset(y: -40)
         }
-        .padding(.top, 20)
-        .padding(.horizontal, 20)
-        Divider()
-            .padding(.horizontal, 20)
-        ScrollView(.horizontal) {
-            HStack (spacing: 30){
-                NavigationLink(destination: { SessionView() },
-                               label: {
-                    Text("10:30")
-                        .font(.title2)
-                        .bold()
-                        .frame(height: 44)
-                })
-                NavigationLink(destination: { SessionView() },
-                               label: {
-                    Text("10:30")
-                        .font(.title2)
-                        .bold()
-                        .frame(height: 44)
-                })
-                NavigationLink(destination: { SessionView() },
-                               label: {
-                    Text("10:30")
-                        .font(.title2)
-                        .bold()
-                        .frame(height: 44)
-                })
-                NavigationLink(destination: { SessionView() },
-                               label: {
-                    Text("10:30")
-                        .font(.title2)
-                        .bold()
-                        .frame(height: 44)
-                })
-                NavigationLink(destination: { SessionView() },
-                               label: {
-                    Text("10:30")
-                        .font(.title2)
-                        .bold()
-                        .frame(height: 44)
-                })
+        .background(Color("SessionBakgroundColor"))
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text(movie.title)
+                .font(.title2)
+                .bold()
+                .foregroundColor(.white)
                 
             }
         }
-        .padding(.horizontal, 30)
-        .navigationTitle("Sessions")
-        Spacer()
     }
     
-    private let currentDates: [Date] = {
-        var dates = [Date]()
-        let calendar = Calendar.current
-        let now = Date()
-        dates.append(now)
-        for i in 1...7 {
-            if let date = calendar.date(byAdding: .day, value: i, to: now) {
-                dates.append(date)
-            }
-        }
-        return dates
-    }()
-    
-    private let dateFormatter: DateFormatter = {
-           let formatter = DateFormatter()
-           formatter.dateFormat = "d"
-           return formatter
-       }()
-
-    private let dayOfWeekShortFormatter: DateFormatter = {
-           let formatter = DateFormatter()
-           formatter.dateFormat = "E"
-           return formatter
-    }()
-    
-    
     @ViewBuilder
-    private func createDatesList() -> some View {
+    private func createFooter() -> some View {
+        creteDateChoosingView()
+        createTimeList()
+        HStack() {
+            VStack(alignment: .leading) {
+                Text("Price:")
+                    .foregroundStyle(.white)
+                Text("560")
+                    .font(.title2)
+                    .bold()
+                    .foregroundStyle(.yellow)
+            }
+            Spacer()
+            Button(action: {
+                
+            }, label: {
+                Text("Buy ticket")
+                    .font(.title3)
+                    .bold()
+                    .foregroundStyle(.white)
+                    .frame(width: Const.screenWidth/3 * 2, height: 40)
+                    .background(Color("SeatColor"))
+                    .clipShape(RoundedRectangle(cornerRadius: 5))
+            })
+        }
+        .padding(.top, 20)
+        .padding(.horizontal, 20)
+    }
+    
+    private func createTimeList() -> some View {
         ScrollView(.horizontal) {
-            HStack(spacing: 10){
-                ForEach(currentDates, id: \.self){ date in
+            HStack (spacing: 20){
+                ForEach(0...5, id: \.self) { index in
                     Button(action: {
-                        activeDate = date
                     }, label: {
-                        VStack {
-                            Text("\(dayOfWeekShortFormatter.string(from: date))")
-                                .font(.system(size: 14))
-                                .bold()
-                                .foregroundStyle(Color("TabbarColor"))
-                            Text("\(dateFormatter.string(from: date))")
-                                .font(.title2)
-                                .foregroundStyle(activeDate == date ? .white : .black)
-                                .bold()
-                        }
-                        .frame(width: 50, height: 50)
-                        .background(activeDate == date ? .red : .white)
-                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                        Text("10:30")
+                            .foregroundStyle(.white)
+                            .font(.title3)
+                            .bold()
+                            .frame(width: 90, height: 44)
+                            .background(Color("SeatColor"))
+                            .clipShape(RoundedRectangle(cornerRadius: 5))
                     })
                 }
             }
-            .padding(.vertical, 10)
         }
         .padding(.horizontal, 20)
     }
-  
     
-  
+    @ViewBuilder
+    private func creteDateChoosingView() -> some View {
+        HStack {
+            Text("Date:")
+                .foregroundStyle(.white)
+                .font(.title3)
+                .bold()
+            Spacer()
+            DatePicker("",
+                       selection: $activeDate,
+                       displayedComponents: [.date])
+            .datePickerStyle(CompactDatePickerStyle())
+            .colorInvert()
+            .colorMultiply(Color.white)
+        }
+        .padding(.top, 20)
+        .padding(.horizontal, 20)
+    }
 }
 

@@ -11,7 +11,7 @@ import SwiftUI
 struct FilmHubApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .onAppear{
                     let tabBarAppearance = UITabBarAppearance()
                     tabBarAppearance.backgroundColor = UIColor(named: "TabbarColor")

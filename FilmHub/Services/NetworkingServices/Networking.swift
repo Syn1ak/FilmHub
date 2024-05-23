@@ -40,7 +40,6 @@ class Networking {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
             decoder.dateDecodingStrategy = .formatted(dateFormatter)
-            
             let movies = try decoder.decode([Movie].self, from: data)
             return movies
         } catch {
@@ -97,7 +96,7 @@ class Networking {
     }
     
     func getFutureMovies() async throws -> [Movie]? {
-        guard let reqUrl = createUrl(for: "future_movie", params: [])
+        guard let reqUrl = createUrl(for: "movies/future_movie", params: [])
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
@@ -105,8 +104,12 @@ class Networking {
             throw NetworkingErrors.invalidResponse
         }
         do {
-            let futureMovies = try JSONDecoder().decode([Movie].self, from: data)
-            return futureMovies
+            let decoder = JSONDecoder()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            decoder.dateDecodingStrategy = .formatted(dateFormatter)
+            let movies = try decoder.decode([Movie].self, from: data)
+            return movies
         } catch {
             throw NetworkingErrors.invalidData
         }

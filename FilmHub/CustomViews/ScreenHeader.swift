@@ -15,7 +15,6 @@ struct ScreenTitleHeader: View {
     }
     
     var body: some View {
-        
         VStack (alignment: .center){
             Text(text)
                 .foregroundStyle(.white)

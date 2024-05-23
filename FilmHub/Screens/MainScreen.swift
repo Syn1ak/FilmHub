@@ -8,31 +8,44 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var isTabViewPresent: Bool = true
+    @State var isAuthorized = false
     
     var body: some View {
-        TabView {
-            FilmListView(inProduction: true, userRole: .client)
-                .tabItem {
-                    Image(systemName: "movieclapper")
+        VStack {
+            if isAuthorized {
+                TabView {
+                    FilmListView(inProduction: true, userRole: .client)
+                        .tabItem {
+                            Image(systemName: "movieclapper")
+                        }
+                        .tint(.gray)
+                    FilmListView(inProduction: false, userRole: .client)
+                        .tabItem {
+                            Image(systemName: "play.rectangle")
+                        }
+                    TicketListView()
+                        .tabItem {
+                            Image(systemName: "ticket")
+                        }
+                    ProfileView(isAuthorized: $isAuthorized)
+                        .tabItem {
+                            Image(systemName: "person.crop.circle.fill")
+                            
+                        }
                 }
-            FilmListView(inProduction: false, userRole: .client)
-                .tabItem {
-                    Image(systemName: "play.rectangle")
+                .tint(Color("BackgroundColor"))
+            } else {
+                VStack {
+                    if !isAuthorized {
+                        AuthorizationView(isAuthorized: $isAuthorized)
+                            .transition(.opacity)
+                    } else {
+                        MainView()
+                    }
                 }
-            TicketListView()
-                .tabItem {
-                    Image(systemName: "ticket")
-                }
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person.crop.circle.fill")
-                        
-                }
+            }
         }
-        .tint(Color("BackgroundColor"))
-        
-        
+        .animation(.easeInOut, value: isAuthorized)
     }
 }
 
