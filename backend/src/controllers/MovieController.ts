@@ -8,19 +8,21 @@ import Cinema from "../models/cinema";
 import Hall from "../models/hall";
 import Review from "../models/rewiew";
 import mongoose from "mongoose";
-import Rewiew from "../models/rewiew";
 
 const getListOfMovies = async (req: Request, res: Response) => {
     try {
-        const {cinema,
+        const {
+            cinema,
             city,
             genres,
             date,
             actor,
-            query} = req.query;
+            query
+        } = req.query;
+        const today = new Date();
 
-        if(!city && !genres && !cinema && !date && !actor && !query) {
-            const allMovies = await Movie.find();
+        if (!city && !genres && !cinema && !date && !actor && !query) {
+            const allMovies = await Movie.find({releaseDate: {$lt: today}});
             res.json(allMovies);
             return;
         }
@@ -30,8 +32,6 @@ const getListOfMovies = async (req: Request, res: Response) => {
         if (city) {
             const cinemas = await Cinema.find({city_id: city});
             let cinemasIds = cinemas.map(item => item._id);
-
-            console.log(cinemasIds)
             const halls = await Hall.find({
                 cinema_id: {$in: cinemasIds}
             })
@@ -47,8 +47,6 @@ const getListOfMovies = async (req: Request, res: Response) => {
         if (cinema) {
             const cinemas = await Cinema.find({_id: cinema});
             let cinemasIds = cinemas.map(item => item._id);
-
-            console.log(cinemasIds)
             const halls = await Hall.find({
                 cinema_id: {$in: cinemasIds}
             })
@@ -68,7 +66,7 @@ const getListOfMovies = async (req: Request, res: Response) => {
             const ids = moviesIdsWithGenre.map(item => item.movie.toString());
             if (!city && !cinema) moviesIds = new Set<string>([...ids]);
             else moviesIds = new Set<string>(ids.filter(i => moviesIds.has(i)));
-            console.log("moviesIdsWithGenre", moviesIds)
+            console.log("moviesIdsWithGenre", moviesIds);
         }
 
         if (date) {
@@ -95,17 +93,19 @@ const getListOfMovies = async (req: Request, res: Response) => {
             console.log("moviesIdsWithActor", moviesIds)
         }
 
-        if(query) {
+        if (query) {
             const moviesByQuery = await Movie.aggregate([{
                 $match: {
                     title: {$regex: query as string, $options: "i"}
                 }
             }])
-            res.json(moviesByQuery);
-            return;
+            const ids = moviesByQuery.map(item => item.movie.toString());
+            if (!city && !cinema && !genres && !date && !actor) moviesIds = new Set<string>([...ids]);
+            else moviesIds = new Set<string>(ids.filter(i => moviesIds.has(i)));
+            console.log("query", moviesIds)
         }
 
-        const movies = await Movie.find({_id: {$in: Array.from(moviesIds)}});
+        const movies = await Movie.find({_id: {$in: Array.from(moviesIds)}, releaseDate: {$lt: today}});
 
         res.json(movies);
     } catch (error) {
@@ -118,23 +118,14 @@ const getMovieById = async (req: Request, res: Response) => {
     try {
         const {movie_id} = req.query;
 
-        const movie = await Movie.findOne({ _id: movie_id});
-        if(!movie) return res.status(401).json({ message: "Cannot find movie by that id "});
-        const actorsMovie = await ActorMovie.find({ movie: movie_id}).populate("actor");
+        const movie = await Movie.findOne({_id: movie_id});
+        if (!movie) return res.status(401).json({message: "Cannot find movie by that id "});
+        const actorsMovie = await ActorMovie.find({movie: movie_id}).populate("actor");
         const actors = actorsMovie.map(item => item.actor);
-        const genresMovies = await GenreMovie.find({ movie: movie_id}).populate("genre");
+        const genresMovies = await GenreMovie.find({movie: movie_id}).populate("genre");
         const genres = genresMovies.map(item => item.genre);
-        const reviews = await Review.find({ movie: movie_id}).populate("user");
-
+        const reviews = await Review.find({movie: movie_id}).populate("user");
         const result = {
-            _id: movie._id,
-            title: movie.title,
-            releaseDate: movie.releaseDate,
-            thumbnail: movie.thumbnail,
-            description: movie.description,
-            duration: movie.duration,
-            director: movie.director,
-            rating: movie.rating,
             actors,
             genres,
             reviews
@@ -149,7 +140,7 @@ const getMovieById = async (req: Request, res: Response) => {
 const getFuturePremiere = async (req: Request, res: Response) => {
     try {
         const today = new Date();
-        const futureMovie = await Movie.find({releaseDate: { $gt: today }});
+        const futureMovie = await Movie.find({releaseDate: {$gt: today}});
         res.json(futureMovie);
     } catch (error) {
         console.error(error);
@@ -160,10 +151,10 @@ const getFuturePremiere = async (req: Request, res: Response) => {
 const addReviewToMovie = async (req: Request, res: Response) => {
     try {
         console.log(req.body)
-        const { movie_id, user_id, comment, rating } = req.body;
+        const {movie_id, user_id, comment, rating} = req.body;
         console.log(movie_id, user_id, comment, rating);
         if (!movie_id || !user_id || !comment || !rating) {
-            return res.status(400).json({ error: 'All fields are required and rating must be a number' });
+            return res.status(400).json({error: 'All fields are required and rating must be a number'});
         }
 
         const newReview = new Review({
@@ -174,15 +165,16 @@ const addReviewToMovie = async (req: Request, res: Response) => {
         });
 
         await newReview.save();
-        const allRatings = await Review.find({ movie: movie_id}, 'rating');
+        const allRatings = await Review.find({movie: movie_id}, 'rating');
         const totalRating = allRatings.reduce((accumulator, currentValue) => {
             return currentValue.rating != null ? accumulator + currentValue.rating : accumulator;
         }, 0);
         const averageRating = totalRating / allRatings.length;
         await Movie.updateOne(
-                { _id: movie_id },
-                { $set: { rating: averageRating }
-                });
+            {_id: movie_id},
+            {
+                $set: {rating: averageRating}
+            });
         return res.status(201).json(newReview);
     } catch (error) {
         console.error(error);
