@@ -9,6 +9,8 @@ import genreRoute from "./routes/GenreRoute";
 import cinemaRoute from "./routes/CinemaRoute";
 import User from "./models/user";
 import userRoute from "./routes/UserRoute";
+import sessionRoute from "./routes/SessionRoute";
+import Hall from "./models/hall";
 
 const PORT = process.env.PORT || 7010;
 
@@ -32,9 +34,13 @@ app.use("/api/cities", cityRoute);
 app.use("/api/genres", genreRoute);
 app.use("/api/cinemas", cinemaRoute);
 app.use("/api/user", userRoute);
+app.use("/api/sessions", sessionRoute)
 
 app.get("/test", async (req: Request, res: Response) => {
-  res.json({ message: "Hello" });
+  const allHalls = await Hall.find({ cinema_id: req.query.id });
+
+  console.log(allHalls.length);
+  res.json(allHalls);
 });
 
 app.listen(PORT, () => {

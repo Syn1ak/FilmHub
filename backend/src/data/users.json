@@ -1,0 +1,110 @@
+[{
+  "_id": {
+    "$oid": "664b19e163705e4f9374abcc"
+  },
+  "first_name": "Ivan",
+  "last_name": "Petrenko",
+  "age": 21,
+  "phone": "+3809768907674",
+  "password": "password123",
+  "email": "ivan.petrenko@example.com"
+},
+{
+  "_id": {
+    "$oid": "664b19e163705e4f9374abcd"
+  },
+  "first_name": "Olena",
+  "last_name": "Shevchenko",
+  "age": 18,
+  "phone": "+380111850764",
+  "password": "securepass456",
+  "email": "olena.shevchenko@example.com"
+},
+{
+  "_id": {
+    "$oid": "664b19e163705e4f9374abce"
+  },
+  "first_name": "Dmytro",
+  "last_name": "Kovalenko",
+  "age": 26,
+  "phone": "+38050890767",
+  "password": "mypassword789",
+  "email": "dmytro.kovalenko@example.com"
+},
+{
+  "_id": {
+    "$oid": "664b19e163705e4f9374abcf"
+  },
+  "first_name": "Natalia",
+  "last_name": "Boyko",
+  "age": 43,
+  "phone": "+380451850764",
+  "password": "natpass321",
+  "email": "natalia.boyko@example.com"
+},
+{
+  "_id": {
+    "$oid": "664b19e163705e4f9374abd0"
+  },
+  "first_name": "Serhiy",
+  "last_name": "Moroz",
+  "age": 31,
+  "phone": "+380681821744",
+  "password": "serhiypass654",
+  "email": "serhiy.moroz@example.com"
+},
+{
+  "_id": {
+    "$oid": "664b19e163705e4f9374abd1"
+  },
+  "first_name": "Oksana",
+  "last_name": "Lysenko",
+  "password": "oksanapass987",
+  "email": "oksana.lysenko@example.com",
+  "age": 39,
+  "phone": "+3809712907674"
+},
+{
+  "_id": {
+    "$oid": "664b19e163705e4f9374abd2"
+  },
+  "first_name": "Andriy",
+  "last_name": "Fedorov",
+  "password": "andriypass123",
+  "email": "andriy.fedorov@example.com",
+  "age": 29,
+  "phone": "+3809768907674"
+},
+{
+  "_id": {
+    "$oid": "664b19e163705e4f9374abd3"
+  },
+  "first_name": "Yulia",
+  "last_name": "Ivanova",
+  "password": "yuliapass456",
+  "email": "yulia.ivanova@example.com",
+  "age": 18,
+  "phone": "+3809668208878"
+},
+{
+  "_id": {
+    "$oid": "664b19e163705e4f9374abd4"
+  },
+  "first_name": "Viktor",
+  "last_name": "Tkachenko",
+  "password": "viktorpass789",
+  "email": "viktor.tkachenko@example.com",
+  "age": 45,
+  "phone": "+3806667217674"
+},
+{
+  "_id": {
+    "$oid": "664b19e163705e4f9374abd5"
+  },
+  "first_name": "Lidiya",
+  "last_name": "Polishchuk",
+  "password": "lidiypass321",
+  "email": "lidiya.polishchuk@example.com",
+  "age": 14,
+  "phone": "+380966892747"
+}]

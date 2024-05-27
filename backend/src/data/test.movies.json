@@ -1,0 +1,612 @@
+[{
+  "_id": {
+    "$oid": "664672c4cf84d0736ecdf069"
+  },
+  "title": "The Grudge",
+  "releaseDate": {
+    "$date": "2024-02-19T00:00:00.000Z"
+  },
+  "description": "The Grudge is a 2020 American psychological supernatural horror film written and directed by Nicolas Pesce. Originally announced as a reboot of the 2004 American remake and the original 2002 Japanese horror film Ju-On: The Grudge, the film ended up taking place before and during the events of the 2004 film and its two direct sequels, and is the fourth installment in the American The Grudge film series. The film stars Andrea Riseborough, Demián Bichir, John Cho, Betty Gilpin, Lin Shaye, and Jacki Weaver, and follows a police officer who investigates several murders that are seemingly connected to a single house.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/34/The_Grudge_2020_Poster.jpeg",
+  "duration": 5400,
+  "director": "Nicolas Pesce",
+  "rating": 0,
+  "trailer": "https://www.youtube.com/watch?v=tqn2t3PefdY",
+  "age_limit": 14
+},
+{
+  "_id": {
+    "$oid": "664672c4cf84d0736ecdf06a"
+  },
+  "title": "Underwater",
+  "releaseDate": {
+    "$date": "2020-01-10T00:00:00.000Z"
+  },
+  "description": "Underwater is a 2020 American science fiction action horror film directed by William Eubank. The film stars Kristen Stewart, Vincent Cassel, Jessica Henwick, John Gallagher Jr., Mamoudou Athie, and T.J. Miller.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/4a/Underwater_poster.jpeg",
+  "duration": 5580,
+  "director": "William Eubank",
+  "rating": 0},
+{
+  "_id": {
+    "$oid": "664672c4cf84d0736ecdf06b"
+  },
+  "title": "Like a Boss",
+  "releaseDate": {
+    "$date": "2020-01-10T00:00:00.000Z"
+  },
+  "description": "Like a Boss is a 2020 American comedy film directed by Miguel Arteta, written by Sam Pitman and Adam Cole-Kelly, and starring Tiffany Haddish, Rose Byrne, and Salma Hayek. The plot follows two friends who attempt to take back control of their cosmetics company from an industry titan.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/9/9a/LikeaBossPoster.jpg",
+  "duration": 4428,
+  "director": "Miguel Arteta",
+  "rating": 0
+},
+{
+  "_id": {
+    "$oid": "664672c4cf84d0736ecdf06c"
+  },
+  "title": "Three Christs",
+  "releaseDate": {
+    "$date": "2026-01-10T00:00:00.000Z"
+  },
+  "description": "Three Christs, also known as State of Mind, is a 2020 American drama film directed, co-produced, and co-written by Jon Avnet and based on Milton Rokeach's nonfiction book The Three Christs of Ypsilanti. It screened in the Gala Presentations section at the 2017 Toronto International Film Festival.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/a/a1/Three_Christs_poster.jpg",
+  "duration": 6084,
+  "director": "Jon Avnet",
+  "rating": 0
+},
+{
+  "_id": {
+    "$oid": "664672c4cf84d0736ecdf06d"
+  },
+  "title": "Inherit the Viper",
+  "releaseDate": {
+    "$date": "2024-05-22T00:00:00.000Z"
+  },
+  "description": "Inherit the Viper is a 2020 American crime drama film directed by Anthony Jerjen, in his feature directorial debut, from a screenplay by Andrew Crabtree. It stars Josh Hartnett, Margarita Levieva, Chandler Riggs, Bruce Dern, Valorie Curry, Owen Teague, and Dash Mihok.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/1c/Inherit_the_Viper_%282019%29_Film_Poster.jpg",
+  "duration": 6084,
+  "director": "Anthony Jerjen",
+  "rating": 0
+},
+{
+  "_id": {
+    "$oid": "664672c4cf84d0736ecdf06e"
+  },
+  "title": "The Sonata",
+  "releaseDate": {
+    "$date": "2020-01-10T00:00:00.000Z"
+  },
+  "description": "The Sonata is a 2018 mystery thriller film, directed by Andrew Desmond, from a screenplay by Desmond and Arthur Morin. It stars Freya Tingley, Simon Abkarian, James Faulkner, Rutger Hauer, Matt Barber and James Kermack. It was released in the United States on January 10, 2020, by Screen Media Films.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/13/The_Sonata_%282018%29_Film_Poster.jpg",
+  "duration": 5400,
+  "director": "Andrew Desmond",
+  "rating": 0
+},
+{
+  "_id": {
+    "$oid": "664672c4cf84d0736ecdf06f"
+  },
+  "title": "The Murder of Nicole Brown Simpson",
+  "releaseDate": {
+    "$date": "2020-01-10T00:00:00.000Z"
+  },
+  "description": "The Murder of Nicole Brown Simpson is a 2019 American crime horror film directed by Daniel Farrands. The film is loosely based on the murder of Nicole Brown Simpson, presenting a version of events in which Brown Simpson is murdered by serial killer Glen Edward Rogers, and not by O. J. Simpson, her ex-husband and the primary suspect in the case.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/e/ed/The_Murder_of_Nicole_Brown_Simpson_poster.jpg",
+  "duration": 4356,
+  "director": "Daniel Farrands",
+  "rating": 0
+},
+{
+  "_id": {
+    "$oid": "664672c4cf84d0736ecdf070"
+  },
+  "title": "Bad Boys for Life",
+  "releaseDate": {
+    "$date": "2020-01-17T00:00:00.000Z"
+  },
+  "description": "Bad Boys for Life is a 2020 American buddy cop action comedy film directed by Adil & Bilall. It is the sequel to Bad Boys II (2003) and the third installment in the Bad Boys franchise. Will Smith, Martin Lawrence, Joe Pantoliano and Theresa Randle reprise their roles in the film and are joined by Paola Núñez, Vanessa Hudgens, Jacob Scipio, Alexander Ludwig, Charles Melton, Kate del Castillo and Nicky Jam.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/9/90/Bad_Boys_for_Life_poster.jpg",
+  "duration": 7344,
+  "director": "Adil & Bilall",
+  "rating": 4.75
+},
+{
+  "_id": {
+    "$oid": "664672c4cf84d0736ecdf071"
+  },
+  "title": "Dolittle",
+  "releaseDate": {
+    "$date": "2020-01-17T00:00:00.000Z"
+  },
+  "description": "Dolittle is a 2020 American fantasy adventure film directed by Stephen Gaghan from a screenplay by Gaghan, Dan Gregor, and Doug Mand, based on a story by Thomas Shepherd. Dolittle is based on the title character created by Hugh Lofting and is primarily inspired by the author's second Doctor Dolittle book, The Voyages of Doctor Dolittle (1922). Robert Downey Jr. stars as the title character, alongside Antonio Banderas and Michael Sheen in live-action roles, with Emma Thompson, Rami Malek, John Cena, Kumail Nanjiani, Octavia Spencer, Tom Holland, Craig Robinson, Ralph Fiennes, Selena Gomez, and Marion Cotillard voicing an array of creatures.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/1f/Dolittle_%282020_film_poster%29.png",
+  "duration": 5076,
+  "director": "Stephen Gaghan",
+  "rating": 0
+},
+{
+  "_id": {
+    "$oid": "664672c4cf84d0736ecdf072"
+  },
+  "title": "A Fall from Grace",
+  "releaseDate": {
+    "$date": "2020-01-17T00:00:00.000Z"
+  },
+  "description": "A Fall from Grace is a 2020 American thriller film produced, written, and directed by Tyler Perry and his first to be released by Netflix. The film follows a woman who finds a dangerous new love and the novice attorney who defends her in a sensational court case. This was the final film of actor Cicely Tyson before her death in January 2021.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/4e/AFallFromGrace.png",
+  "duration": 7200,
+  "director": "Tyler Perry",
+  "rating": 0
+},
+{
+  "_id": {
+    "$oid": "664672c4cf84d0736ecdf073"
+  },
+  "title": "The Gentlemen",
+  "releaseDate": {
+    "$date": "2020-01-24T00:00:00.000Z"
+  },
+  "description": "The Gentlemen is a 2019 action comedy film written, directed and produced by Guy Ritchie, who developed the story along with Ivan Atkinson and Marn Davies. The film stars Matthew McConaughey, Charlie Hunnam, Henry Golding, Michelle Dockery, Jeremy Strong, Eddie Marsan, Colin Farrell, and Hugh Grant. It follows an American cannabis wholesaler in England who is looking to sell his business, setting off a chain of blackmail and schemes to undermine him.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/0/06/The_Gentlemen_poster.jpg",
+  "duration": 6588,
+  "director": "Guy Ritchie",
+  "rating": 0
+},
+  {
+    "title": "Timmy Failure: Mistakes Were Made",
+    "description": "Timmy Failure: Mistakes Were Made is a 2020 American adventure fantasy comedy-drama family film based on the book series of the same name by Stephan Pastis that debuted on Disney+ on February 7, 2020. The film is directed by Tom McCarthy, produced by Alexander Dostal, McCarthy and Jim Whitaker from a screenplay written by McCarthy and Pastis and stars Winslow Fegley, Ophelia Lovibond, Craig Robinson and Wallace Shawn.",
+    "releaseDate": "2020-02-07",
+    "language": "English",
+    "duration": 6000,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/c8/Timmy_Failure_Mistakes_Were_Made_Poster.jpeg",
+    "director": "Tom McCarthy",
+    "rating": 4.5,
+    "trailer": "https://www.youtube.com/watch?v=trailer1",
+    "age_limit": 10
+  },
+  {
+    "title": "Horse Girl",
+    "description": "Horse Girl is a 2020 American psychological drama film directed and produced by Jeff Baena, from a screenplay written by Baena and Alison Brie. It stars Brie, Debby Ryan, John Reynolds, Molly Shannon, John Ortiz, and Paul Reiser.",
+    "releaseDate": "2020-01-27",
+    "language": "English",
+    "duration": 5400,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/37/Horse_Girl_poster.jpg",
+    "director": "Jeff Baena",
+    "rating": 4.0,
+    "trailer": "https://www.youtube.com/watch?v=trailer2",
+    "age_limit": 13
+  },
+  {
+    "title": "To All the Boys: P.S. I Still Love You",
+    "description": "To All the Boys: P.S. I Still Love You is a 2020 American teen romantic comedy film directed by Michael Fimognari and written by Sofia Alvarez and J. Mills Goodloe. The film stars Lana Condor, Noah Centineo, Janel Parrish, Anna Cathcart, Trezzo Mahoro, Madeleine Arthur, Emilija Baranac, Kelcey Mawema, Jordan Fisher, Ross Butler, Julie Tao, Sarayu Blue, John Corbett, and Holland Taylor. The film is based on Jenny Han's 2015 novel P.S. I Still Love You.",
+    "releaseDate": "2020-02-12",
+    "language": "English",
+    "duration": 6300,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/b/bc/To_All_the_Boys_-_P.S._I_Still_Love_You_official_release_poster.jpg",
+    "director": "Michael Fimognari",
+    "rating": 4.3,
+    "trailer": "https://www.youtube.com/watch?v=trailer3",
+    "age_limit": 12
+  },
+  {
+    "title": "Sonic the Hedgehog",
+    "description": "Sonic the Hedgehog is a 2020 action-adventure comedy film based on the video game series published by Sega. Directed by Jeff Fowler and written by Pat Casey and Josh Miller, it stars Ben Schwartz as the voice of Sonic the Hedgehog, alongside Jim Carrey and James Marsden, with supporting roles by Tika Sumpter, Natasha Rothwell, Adam Pally, Lee Majdoub and Neal McDonough. The film follows Sonic, a blue anthropomorphic hedgehog who can run at supersonic speeds. He teams up with a town sheriff, Tom Wachowski (Marsden), to stop the mad scientist Dr. Robotnik (Carrey).",
+    "releaseDate": "2020-02-14",
+    "language": "English",
+    "duration": 6900,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/45/Sonic_the_Hedgehog_film_poster.jpg",
+    "director": "Jeff Fowler",
+    "rating": 4.6,
+    "trailer": "https://www.youtube.com/watch?v=trailer4",
+    "age_limit": 10
+  },
+  {
+    "title": "Fantasy Island",
+    "description": "Fantasy Island, also known as Blumhouse's Fantasy Island, is a 2020 American supernatural horror film directed and co-written by Jeff Wadlow. Serving both as a horror reimagining and a prequel to ABC's 1977 television series of the same name, it stars Michael Peña, Maggie Q, Lucy Hale, Austin Stowell, Jimmy O. Yang, Ryan Hansen, Portia Doubleday, and Michael Rooker and follows a group of people who, while visiting the eponymous island, discover that their dream-like fantasies brought to life begin to turn into horrific living nightmares and they must try to survive.",
+    "releaseDate": "2020-02-14",
+    "language": "English",
+    "duration": 6600,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/7/7e/Fantasy_Island_poster.jpg",
+    "director": "Jeff Wadlow",
+    "rating": 3.8,
+    "trailer": "https://www.youtube.com/watch?v=trailer5",
+    "age_limit": 15
+  },
+  {
+    "title": "The Photograph",
+    "description": "The Photograph is a 2020 American romantic drama film written and directed by Stella Meghie. It follows the estranged daughter of a famous photographer who falls in love with the journalist who is investigating her late mother's life. Chelsea Peretti, Lil Rel Howery and Courtney B. Vance also star.",
+    "releaseDate": "2020-02-14",
+    "language": "English",
+    "duration": 6000,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/c4/The_Photograph_poster.jpg",
+    "director": "Stella Meghie",
+    "rating": 4.2,
+    "trailer": "https://www.youtube.com/watch?v=trailer6",
+    "age_limit": 13
+  },
+  {
+    "title": "Downhill",
+    "description": "Downhill is a 2020 American black comedy-drama film directed by Nat Faxon and Jim Rash, who also co-wrote the script with Jesse Armstrong. The film is a remake of Force Majeure (2014) by Swedish director Ruben Östlund. It stars Julia Louis-Dreyfus and Will Ferrell as a married couple going through a rough patch after a near-death encounter during a family ski outing.",
+    "releaseDate": "2020-02-14",
+    "language": "English",
+    "duration": 5100,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/6/6a/Downhill_poster.jpeg",
+    "director": "Nat Faxon, Jim Rash",
+    "rating": 3.9,
+    "trailer": "https://www.youtube.com/watch?v=trailer7",
+    "age_limit": 14
+  },
+  {
+    "title": "Spy Intervention",
+    "description": "Spy Intervention is a 2020 American action comedy spy film directed by Drew Mylrea and written by Mark Famiglietti and Lane Garrison. The film stars Drew Van Acker, Poppy Delevingne and Blake Anderson.",
+    "releaseDate": "2020-02-14",
+    "language": "English",
+    "duration": 5400,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/cf/Spy_Intervention_%282020%29_Film_Poster.jpg",
+    "director": "Drew Mylrea",
+    "rating": 4.1,
+    "trailer": "https://www.youtube.com/watch?v=trailer8",
+    "age_limit": 12
+  },
+  {
+    "title": "The Kindness of Strangers",
+    "description": "The Kindness of Strangers is a 2019 internationally co-produced drama film, written and directed by Lone Scherfig. It stars Zoe Kazan, Tahar Rahim, Esben Smed, Andrea Riseborough, and Caleb Landry Jones.",
+    "releaseDate": "2020-02-14",
+    "language": "English",
+    "duration": 6300,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/8/8d/The_Kindness_of_Strangers_poster.jpg",
+    "director": "Lone Scherfig",
+    "rating": 4.0,
+    "trailer": "https://www.youtube.com/watch?v=trailer9",
+    "age_limit": 13
+  },
+  {
+    "title": "The Call of the Wild",
+    "description": "The Call of the Wild is a 2020 American adventure film based on Jack London's 1903 novel of the same name. Directed by Chris Sanders, in his live-action directorial debut, and his first film without a co-director, the film was written by Michael Green, and stars Harrison Ford, Omar Sy, Cara Gee, Dan Stevens, Karen Gillan, and Bradley Whitford. Set during the 1890s Klondike Gold Rush, the film follows a dog named Buck as he is stolen from his home in California and sent to the Yukon, where he befriends an old outdoorsman and begins a life-altering adventure.",
+    "releaseDate": "2020-02-21",
+    "language": "English",
+    "duration": 6900,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/43/The_Call_of_the_Wild_poster.jpg",
+    "director": "Chris Sanders",
+    "rating": 4.4,
+    "trailer": "https://www.youtube.com/watch?v=trailer10",
+    "age_limit": 10
+  },
+  {
+    "title": "Emma",
+    "description": "Emma is a 2020 period romantic comedy film directed by Autumn de Wilde, from a screenplay by Eleanor Catton, based on Jane Austen's 1815 novel of the same name. It stars Anya Taylor-Joy as Miss Emma Woodhouse, a wealthy and elegant young woman living with her father in Regency-era England who amuses herself with matchmaking and meddles in the romantic lives of those closest to her. The film also stars Johnny Flynn, Josh O'Connor, Callum Turner, Mia Goth, Miranda Hart, and Bill Nighy.",
+    "releaseDate": "2020-02-21",
+    "language": "English",
+    "duration": 7200,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/5/53/Emma_poster.jpeg",
+    "director": "Autumn de Wilde",
+    "rating": 4.5,
+    "trailer": "https://www.youtube.com/watch?v=trailer11",
+    "age_limit": 12
+  },
+  {
+    "title": "The Last Thing He Wanted",
+    "description": "The Last Thing He Wanted is a 2020 political thriller film directed by Dee Rees, based on the 1996 novel of the same name by Joan Didion, from a screenplay by Rees and Marco Villalobos. The film stars Anne Hathaway, Ben Affleck, Rosie Perez, Edi Gathegi, Mel Rodriguez, Toby Jones, and Willem Dafoe.",
+    "releaseDate": "2020-01-27",
+    "language": "English",
+    "duration": 6600,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/4e/The_Last_Thing_He_Wanted.jpg",
+    "director": "Dee Rees",
+    "rating": 3.7,
+    "trailer": "https://www.youtube.com/watch?v=trailer12",
+    "age_limit": 15
+  },
+  {
+    "title": "Brahms: The Boy II",
+    "description": "Brahms: The Boy II is a 2020 American supernatural horror film starring Katie Holmes, Ralph Ineson, Christopher Convery and Owain Yeoman. A sequel to the 2016 film The Boy, it is directed by William Brent Bell and written by Stacey Menear, the respective director and writer of the original film.",
+    "releaseDate": "2020-02-21",
+    "language": "English",
+    "duration": 5400,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/5/51/Brahms_The_Boy_Poster.jpg",
+    "director": "William Brent Bell",
+    "rating": 3.5,
+    "trailer": "https://www.youtube.com/watch?v=trailer13",
+    "age_limit": 16
+  },
+  {
+    "title": "The Night Clerk",
+    "description": "The Night Clerk is a 2020 American crime drama film, written and directed by Michael Cristofer. It stars Tye Sheridan, Ana de Armas, John Leguizamo and Helen Hunt, and follows a hotel night clerk who becomes the center of a murder investigation. The film was released on February 21, 2020, by Saban Films. On June 6, 2020, Netflix released the film on its platform. The film has received negative reviews from critics who criticized it for its lackluster story, deriative, and undeveloped characters; however, Sheridan's performance did receive praise.",
+    "releaseDate": "2020-02-21",
+    "language": "English",
+    "duration": 6000,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/9/9f/The_Night_Clerk_poster.jpeg",
+    "director": "Michael Cristofer",
+    "rating": 3.2,
+    "trailer": "https://www.youtube.com/watch?v=trailer14",
+    "age_limit": 16
+  },
+  {
+    "title": "Impractical Jokers: The Movie",
+    "description": "Impractical Jokers: The Movie is a 2020 American reality comedy film directed by Chris Henchy, based on the truTV television series Impractical Jokers. The film stars Brian Quinn, James Murray, Sal Vulcano, and Joe Gatto, also known as The Tenderloins. It was theatrically released on February 21, 2020. The film received generally mixed reviews and was a box office success, grossing $10 million against a budget of $3 million.",
+    "releaseDate": "2020-02-21",
+    "language": "English",
+    "duration": 5700,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/6/6a/Impractical_Jokers_The_Movie_poster.png",
+    "director": "Chris Henchy",
+    "rating": 3.8,
+    "trailer": "https://www.youtube.com/watch?v=trailer15",
+    "age_limit": 14
+  },
+  {
+    "title": "The Invisible Man",
+    "description": "The Invisible Man is a 2020 science fiction horror film written and directed by Leigh Whannell. Inspired by H. G. Wells' novel of the same name, it stars Elisabeth Moss as a woman who believes she is being stalked and gaslit by her seemingly deceased ex-boyfriend after he acquires the ability to become invisible. Aldis Hodge, Storm Reid, Harriet Dyer, and Michael Dorman appear in supporting roles.",
+    "releaseDate": "2020-02-28",
+    "language": "English",
+    "duration": 6900,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/3a/The_Invisible_Man_%282020_film%29_-_release_poster.jpg",
+    "director": "Leigh Whannell",
+    "rating": 4.6,
+    "trailer": "https://www.youtube.com/watch?v=trailer16",
+    "age_limit": 16
+  },
+  {
+    "title": "All the Bright Places",
+    "description": "All the Bright Places is a 2020 American teen romantic drama film, directed by Brett Haley, from a screenplay by Jennifer Niven and Liz Hannah, adapted from the novel of the same name by Niven. It stars Elle Fanning, Justice Smith, Alexandra Shipp, Kelli O'Hara, Lamar Johnson, Virginia Gardner, Felix Mallard, Sofia Hasmik, Keegan-Michael Key, and Luke Wilson.",
+    "releaseDate": "2020-02-28",
+    "language": "English",
+    "duration": 7200,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/8/8c/All_the_Bright_Places.jpeg",
+    "director": "Brett Haley",
+    "rating": 4.3,
+    "trailer": "https://www.youtube.com/watch?v=trailer17",
+    "age_limit": 12
+  },
+  {
+    "title": "Wendy",
+    "description": "Wendy is a 2020 American fantasy drama film directed by Benh Zeitlin, from a screenplay by Zeitlin and Eliza Zeitlin. The film stars Devin France, Yashua Mack, Gage Naquin, Gavin Naquin, Ahmad Cage, Krzysztof Meyn, and Romyri Ross. It is intended to be a re-imagining of J. M. Barrie's Peter Pan.",
+    "releaseDate": "2020-02-28",
+    "language": "English",
+    "duration": 6900,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/a/ac/Wendy_poster.jpg",
+    "director": "Benh Zeitlin",
+    "rating": 4.1,
+    "trailer": "https://www.youtube.com/watch?v=trailer18",
+    "age_limit": 10
+  },
+  {
+    "title": "Guns Akimbo",
+    "description": "Guns Akimbo is a 2019 action comedy film written and directed by Jason Lei Howden. It stars Daniel Radcliffe, Samara Weaving, Ned Dennehy, Natasha Liu Bordizzo, Grant Bowler, Edwin Wright, Rhys Darby, Milo Cawthorne, Richard Knowles, and Mark Rowley.",
+    "releaseDate": "2020-02-28",
+    "language": "English",
+    "duration": 6000,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/1f/Guns_Akimbo_poster.jpg",
+    "director": "Jason Lei Howden",
+    "rating": 4.0,
+    "trailer": "https://www.youtube.com/watch?v=trailer19",
+    "age_limit": 14
+  },
+  {
+    "title": "Onward",
+    "description": "Onward is a 2020 American computer-animated urban fantasy adventure film produced by Pixar Animation Studios and distributed by Walt Disney Studios Motion Pictures. The film was directed by Dan Scanlon, produced by Kori Rae, and written by Scanlon, Jason Headley, and Keith Bunin. The film stars the voices of Tom Holland, Chris Pratt, Julia Louis-Dreyfus, and Octavia Spencer. Set in a suburban fantasy world for the modern day, the film follows two elf brothers named Ian and Barley Lightfoot who set out on a quest to find an artifact that will temporarily bring back their deceased father named Wilden (Bornheimer) for twenty-four hours before the time is up. Along the way, their journey is filled with cryptic maps, impossible obstacles and unimaginable discoveries.",
+    "releaseDate": "2020-03-06",
+    "language": "English",
+    "duration": 6300,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/0/03/Onward_poster.jpg",
+    "director": "Dan Scanlon",
+    "rating": 4.7,
+    "trailer": "https://www.youtube.com/watch?v=trailer20",
+    "age_limit": 10
+  },
+  {
+    "title": "The Way Back",
+    "description": "The Way Back is a 2020 American sports drama film directed by Gavin O'Connor and written by Brad Ingelsby. It stars Ben Affleck, Al Madrigal, Michaela Watkins, and Janina Gavankar, and follows an alcoholic construction worker who is recruited to become head coach of the basketball team at the high school where he was a star.",
+    "releaseDate": "2020-03-06",
+    "language": "English",
+    "duration": 7200,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/c3/The_Way_Back_poster.jpeg",
+    "director": "Gavin O'Connor",
+    "rating": 4.4,
+    "trailer": "https://www.youtube.com/watch?v=trailer21",
+    "age_limit": 14
+  },
+  {
+    "title": "Spenser Confidential",
+    "description": "Spenser Confidential is a 2020 American action comedy film directed by Peter Berg and with a screenplay written by Sean O'Keefe and Brian Helgeland. The film stars Mark Wahlberg, Winston Duke, Alan Arkin, Iliza Shlesinger, Bokeem Woodbine, Donald Cerrone, Marc Maron, and Post Malone and marks the fifth collaboration between Wahlberg and Berg after Lone Survivor, Deepwater Horizon, Patriots Day, and Mile 22.",
+    "releaseDate": "2020-03-06",
+    "language": "English",
+    "duration": 6600,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/c6/Spenser_Confidential_poster.jpg",
+    "director": "Peter Berg",
+    "rating": 4.1,
+    "trailer": "https://www.youtube.com/watch?v=trailer22",
+    "age_limit": 15
+  },
+  {
+    "title": "The Banker",
+    "description": "The Banker is a 2020 American period drama film directed, co-written and produced by George Nolfi. The film stars Anthony Mackie, Nicholas Hoult, Nia Long, Jessie T. Usher and Samuel L. Jackson. The story follows Joe Morris (Jackson) and Bernard Garrett (Mackie), two of the first African-American bankers in the United States.",
+    "releaseDate": "2020-03-06",
+    "language": "English",
+    "duration": 6900,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/7/72/The_Banker_poster.jpeg",
+    "director": "George Nolfi",
+    "rating": 4.3,
+    "trailer": "https://www.youtube.com/watch?v=trailer23",
+    "age_limit": 14
+  },
+  {
+    "title": "The Burnt Orange Heresy",
+    "description": "The Burnt Orange Heresy is a 2019 crime thriller film directed by Giuseppe Capotondi and with a screenplay by Scott Smith. The film is based on the book of the same name by Charles Willeford and stars Claes Bang, Elizabeth Debicki, Mick Jagger, and Donald Sutherland.",
+    "releaseDate": "2020-03-06",
+    "language": "English",
+    "duration": 6000,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/2/26/The_Burnt_Orange_Heresey.jpeg",
+    "director": "Giuseppe Capotondi",
+    "rating": 4.0,
+    "trailer": "https://www.youtube.com/watch?v=trailer24",
+    "age_limit": 15
+  },
+  {
+    "title": "Swallow",
+    "description": "Swallow is a 2019 psychological thriller film written and directed by Carlo Mirabella-Davis and starring Haley Bennett, Austin Stowell, Elizabeth Marvel, David Rasche, and Denis O'Hare. Its plot follows a young woman who, emotionally stifled in her marriage and domestic life, develops an impulse to consume inedible objects.",
+    "releaseDate": "2020-03-06",
+    "language": "English",
+    "duration": 5700,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/7/7f/Swallow_film_poster.png",
+    "director": "Carlo Mirabella-Davis",
+    "rating": 3.8,
+    "trailer": "https://www.youtube.com/watch?v=trailer25",
+    "age_limit": 16
+  },
+  {
+    "title": "First Cow",
+    "description": "First Cow is a 2019 American drama film directed by Kelly Reichardt, from a screenplay by Reichardt and Jonathan Raymond based on Raymond's 2004 novel The Half-Life. It stars John Magaro, Orion Lee, Toby Jones, Ewen Bremner, Scott Shepherd, Gary Farmer, Stephen Malkmus, Alia Shawkat, and Lily Gladstone. It also features René Auberjonois in one of his final film roles.",
+    "releaseDate": "2020-03-06",
+    "language": "English",
+    "duration": 6300,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/43/First_Cow_poster.jpeg",
+    "director": "Kelly Reichardt",
+    "rating": 4.5,
+    "trailer": "https://www.youtube.com/watch?v=trailer26",
+    "age_limit": 14
+  },
+  {
+    "title": "Bloodshot",
+    "description": "Bloodshot is a 2020 American superhero film based on the Valiant Comics character of the same name. It is intended to be the first installment in a series of films set within a Valiant Comics shared cinematic universe. Directed by David S. F. Wilson from a screenplay by Jeff Wadlow and Eric Heisserer and a story by Wadlow, the film stars Vin Diesel in the main role, Eiza González, Sam Heughan, Toby Kebbell, and Guy Pearce. It follows a soldier who was killed in action, only to be brought back to life with superpowers by an organization that wants to use him as a weapon.",
+    "releaseDate": "2020-03-13",
+    "language": "English",
+    "duration": 6600,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/45/Bloodshot_-_official_film_poster.jpeg",
+    "director": "David S. F. Wilson",
+    "rating": 4.0,
+    "trailer": "https://www.youtube.com/watch?v=trailer27",
+    "age_limit": 15
+  },
+  {
+    "title": "The Hunt",
+    "description": "The Hunt is a 2020 American horror thriller film directed by Craig Zobel and written by Nick Cuse and Damon Lindelof. The film stars Betty Gilpin, Hilary Swank, Ike Barinholtz, and Emma Roberts. Jason Blum was a producer under his Blumhouse Productions banner, along with Lindelof. Zobel and Lindelof have said that the film is intended as a satire on the profound political divide between the American left and right. It is about a group of elites who kidnap working class people to hunt them.",
+    "releaseDate": "2020-03-13",
+    "language": "English",
+    "duration": 6000,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/a/a9/The_Hunt_2020_poster.png",
+    "director": "Craig Zobel",
+    "rating": 4.2,
+    "trailer": "https://www.youtube.com/watch?v=trailer28",
+    "age_limit": 16
+  },
+  {
+    "title": "I Still Believe",
+    "description": "I Still Believe is a 2020 American Christian romantic drama film directed by the Erwin brothers and starring KJ Apa, Britt Robertson, Shania Twain, Melissa Roxburgh, and Gary Sinise. It is based on the life of American contemporary Christian music singer-songwriter Jeremy Camp and his first wife, Melissa Lynn Henning-Camp, who was diagnosed with ovarian cancer shortly before they married. Camp's song \"I Still Believe\" is the film's namesake.",
+    "releaseDate": "2020-03-13",
+    "language": "English",
+    "duration": 6300,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/18/I_Still_Believe_promotional_poster.jpg",
+    "director": "Erwin brothers",
+    "rating": 4.3,
+    "trailer": "https://www.youtube.com/watch?v=trailer29",
+    "age_limit": 12
+  },
+  {
+    "title": "Lost Girls",
+    "description": "Lost Girls is a 2020 American mystery drama film. Lost Girls was directed by Liz Garbus, from a screenplay by Michael Werwie, and based on the book Lost Girls: An Unsolved American Mystery by Robert Kolker. The film revolves around the murders of young female sex workers on the South Shore barrier islands of Long Island, committed by the Long Island serial killer, who remains unidentified.",
+    "releaseDate": "2020-03-13",
+    "language": "English",
+    "duration": 6900,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/37/Lost_Girls_poster.jpeg",
+    "director": "Liz Garbus",
+    "rating": 3.9,
+    "trailer": "https://www.youtube.com/watch?v=trailer30",
+    "age_limit": 15
+  },
+  {
+    "title": "Stargirl",
+    "description": "Stargirl is a 2020 American jukebox musical romance film based on the 2000 novel of the same name by Jerry Spinelli that debuted on Disney+. The film explores the tense emotions, non-conformity and self-expression of teenagers in high school, and the exuberance of first love.",
+    "releaseDate": "2020-03-13",
+    "language": "English",
+    "duration": 6000,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/1f/Star_girl_Movie_Poster.jpeg",
+    "director": "Julia Hart",
+    "rating": 4.1,
+    "trailer": "https://www.youtube.com/watch?v=trailer31",
+    "age_limit": 10
+  },
+  {
+    "title": "The Roads Not Taken",
+    "description": "The Roads Not Taken is a 2020 drama film written and directed by Sally Potter. The film stars Javier Bardem, Elle Fanning, Salma Hayek and Laura Linney.",
+    "releaseDate": "2020-03-13",
+    "language": "English",
+    "duration": 5700,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/12/The_Roads_Not_Taken_poster.jpeg",
+    "director": "Sally Potter",
+    "rating": 3.8,
+    "trailer": "https://www.youtube.com/watch?v=trailer32",
+    "age_limit": 14
+  },
+  {
+    "title": "Never Rarely Sometimes Always",
+    "description": "Never Rarely Sometimes Always is a 2020 drama film written and directed by Eliza Hittman. It stars Sidney Flanigan, Talia Ryder, Théodore Pellerin, Ryan Eggold, and Sharon Van Etten. It had its world premiere at the Sundance Film Festival on January 24, 2020. It was also selected to compete for the Golden Bear in the main competition section at the 70th Berlin International Film Festival, where it won the Silver Bear Grand Jury Prize. The film was released in the United States on March 13, 2020, by Focus Features. It received widespread acclaim from critics, with praise for Flanigan's performance and Hittman's direction.",
+    "releaseDate": "2020-03-13",
+    "language": "English",
+    "duration": 6900,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/44/Never_Rarely_Sometimes_Always.png",
+    "director": "Eliza Hittman",
+    "rating": 4.7,
+    "trailer": "https://www.youtube.com/watch?v=trailer33",
+    "age_limit": 14
+  },
+  {
+    "title": "Big Time Adolescence",
+    "description": "Big Time Adolescence is a 2019 American coming-of-age comedy film written and directed by Jason Orley, in his directorial debut. It stars Pete Davidson, Griffin Gluck, Emily Arlook, Colson Baker, Sydney Sweeney and Jon Cryer.",
+    "releaseDate": "2020-03-13",
+    "language": "English",
+    "duration": 6300,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/4d/Big_Time_Adolescences_poster.jpeg",
+    "director": "Jason Orley",
+    "rating": 4.1,
+    "trailer": "https://www.youtube.com/watch?v=trailer34",
+    "age_limit": 13
+  },
+  {
+    "title": "Lost Transmissions",
+    "description": "Lost Transmissions is a 2019 drama film written and directed by Katharine O'Brien. It stars Simon Pegg, Juno Temple, and Alexandra Daddario. It premiered at the Tribeca Film Festival on April 28, 2019 ati was released on March 13, 2020 by Gravitas Ventures.",
+    "releaseDate": "2020-03-13",
+    "language": "English",
+    "duration": 5700,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/e/ee/LostTransmissionTribeca.png",
+    "director": "Katharine O'Brien",
+    "rating": 3.6,
+    "trailer": "https://www.youtube.com/watch?v=trailer35",
+    "age_limit": 14
+  },
+  {
+    "title": "Resistance",
+    "description": "Resistance is a 2020 biographical drama film written and directed by Jonathan Jakubowicz, inspired by the life of Marcel Marceau. It stars Jesse Eisenberg as Marceau, with Clémence Poésy, Matthias Schweighöfer, Alicia von Rittberg, Félix Moati, Géza Röhrig, Karl Markovics, Vica Kerekes, Bella Ramsey, Ed Harris and Édgar Ramírez.",
+    "releaseDate": "2020-03-13",
+    "language": "English",
+    "duration": 6600,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/1b/Resistance_poster.jpg",
+    "director": "Jonathan Jakubowicz",
+    "rating": 4.2,
+    "trailer": "https://www.youtube.com/watch?v=trailer36",
+    "age_limit": 14
+  },
+  {
+    "title": "Uncorked",
+    "description": "Uncorked is a 2020 American drama film, written and directed by Prentice Penny. It stars Mamoudou Athie, Courtney B. Vance, Niecy Nash, Matt McGorry, Sasha Compère, Gil Ozeri, Kelly Jenrette, Bernard David Jones, Melisia Lomax and Meera Rohit Kumbhani.",
+    "releaseDate": "2024-05-17",
+    "language": "English",
+    "duration": 6300,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/9/92/Uncorked_poster.jpeg",
+    "director": "Prentice Penny",
+    "rating": 0,
+    "trailer": "https://youtu.be/s0sZtjE2MXg?si=80SRsQjyjkodkY-1",
+    "age_limit": 13
+  },
+  {
+    "title": "Vivarium",
+    "description": "Vivarium is a 2019 science fiction film directed by Lorcan Finnegan, from a story by Finnegan and Garret Shanley. An international co-production between Ireland, Denmark and Belgium, it stars Imogen Poots and Jesse Eisenberg. It premiered at the Cannes Film Festival on 18 May 2019, and was released in Ireland on 27 March 2020 by Vertigo Releasing. The film follows a couple that is forced to care for a mysterious child while trapped in a seemingly perfect neighbourhood.",
+    "releaseDate": "2024-05-21",
+    "language": "English",
+    "duration": 6900,
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/11/Vivarium_film_theatrical_poster.jpg",
+    "director": "Lorcan Finnegan",
+    "rating": 0,
+    "trailer": "https://youtu.be/bHWtbO_KAOU?si=UdPB2lOwU0RFC71h",
+    "age_limit": 15
+  }
+]
