@@ -34,6 +34,7 @@ const movieSchema = new mongoose.Schema({
     },
     age_limit: {
         type: Number,
+        min: 0, max: 32,
         required: true
     }
 })

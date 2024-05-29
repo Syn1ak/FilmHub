@@ -4,8 +4,10 @@ import Session from "../models/session";
 const getAllSessionByMovie = async (req: Request, res: Response) => {
     try {
         const {movie_id} = req.query;
+        console.log(movie_id);
 
-        const allSessions = await Session.find({movie: movie_id});
+        const allSessions = await Session.find();
+        console.log(allSessions);
 
         res.json(allSessions)
     } catch (error) {
