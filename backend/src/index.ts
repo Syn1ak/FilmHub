@@ -11,6 +11,8 @@ import User from "./models/user";
 import userRoute from "./routes/UserRoute";
 import sessionRoute from "./routes/SessionRoute";
 import Hall from "./models/hall";
+import authRoute from "./routes/auth/AuthRoute";
+import {webcrypto} from "crypto";
 
 const PORT = process.env.PORT || 7010;
 
@@ -29,6 +31,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use("/api/auth", authRoute);
 app.use("/api/movies", movieRoute);
 app.use("/api/cities", cityRoute);
 app.use("/api/genres", genreRoute);
