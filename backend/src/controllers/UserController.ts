@@ -50,10 +50,41 @@ const addTicket = async (req: Request, res: Response) => {
         console.log(error);
         return res.status(500).json({ message: "Something went wrong" });
     }
+};
+
+const onUpdateUser = async (req: Request, res: Response) => {
+    const {
+        _id,
+        first_name,
+        last_name,
+        phone,
+        email,
+        age
+    } = req.body;
+
+    if (!_id || !first_name || !last_name || !email || !phone || !age)
+        return res
+            .status(400)
+            .json({message: "Fields are required."});
+
+    const foundUser = await User.findOne({ _id });
+
+    if(!foundUser) res.status(401).json({ message: "User not found" });
+    else {
+        foundUser.first_name = first_name;
+        foundUser.last_name = last_name;
+        foundUser.phone = phone;
+        foundUser.email = email;
+        foundUser.age = age as number;
+        await foundUser.save();
+    }
+    res.status(200).json(foundUser);
 }
+
 export default {
     getUserById,
     getAllUserTickets,
-    addTicket
+    addTicket,
+    onUpdateUser
 }
 

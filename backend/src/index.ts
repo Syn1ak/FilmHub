@@ -9,6 +9,10 @@ import genreRoute from "./routes/GenreRoute";
 import cinemaRoute from "./routes/CinemaRoute";
 import User from "./models/user";
 import userRoute from "./routes/UserRoute";
+import sessionRoute from "./routes/SessionRoute";
+import Hall from "./models/hall";
+import authRoute from "./routes/auth/AuthRoute";
+import {webcrypto} from "crypto";
 
 const PORT = process.env.PORT || 7010;
 
@@ -27,14 +31,19 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use("/api/auth", authRoute);
 app.use("/api/movies", movieRoute);
 app.use("/api/cities", cityRoute);
 app.use("/api/genres", genreRoute);
 app.use("/api/cinemas", cinemaRoute);
 app.use("/api/user", userRoute);
+app.use("/api/sessions", sessionRoute)
 
 app.get("/test", async (req: Request, res: Response) => {
-  res.json({ message: "Hello" });
+  const allHalls = await Hall.find({ cinema_id: req.query.id });
+
+  console.log(allHalls.length);
+  res.json(allHalls);
 });
 
 app.listen(PORT, () => {

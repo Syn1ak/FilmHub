@@ -18,7 +18,7 @@ const movieSchema = new mongoose.Schema({
         required: true,
     },
     duration:{
-        type: String,
+        type: Number,
     },
     thumbnail:{
         type: String
@@ -26,8 +26,16 @@ const movieSchema = new mongoose.Schema({
     director:{
         type:String
     },
-    rating:{
+    rating: {
         type: Number, min: 0, max: 5
+    },
+    trailer: {
+        type: String
+    },
+    age_limit: {
+        type: Number,
+        min: 0, max: 32,
+        required: true
     }
 })
 const Movie = mongoose.model("Movie", movieSchema);

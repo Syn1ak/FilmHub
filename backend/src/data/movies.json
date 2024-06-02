@@ -1,0 +1,866 @@
+[{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a16"
+  },
+  "title": "The Grudge",
+  "releaseDate": {
+    "$date": "2024-02-19T00:00:00.000Z"
+  },
+  "description": "The Grudge is a 2020 American psychological supernatural horror film written and directed by Nicolas Pesce. Originally announced as a reboot of the 2004 American remake and the original 2002 Japanese horror film Ju-On: The Grudge, the film ended up taking place before and during the events of the 2004 film and its two direct sequels, and is the fourth installment in the American The Grudge film series. The film stars Andrea Riseborough, Demián Bichir, John Cho, Betty Gilpin, Lin Shaye, and Jacki Weaver, and follows a police officer who investigates several murders that are seemingly connected to a single house.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/34/The_Grudge_2020_Poster.jpeg",
+  "duration": 5400,
+  "director": "Nicolas Pesce",
+  "rating": 0,
+  "trailer": "https://www.youtube.com/watch?v=tqn2t3PefdY",
+  "age_limit": 14,
+  "language": "English"
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a17"
+  },
+  "title": "Underwater",
+  "releaseDate": {
+    "$date": "2020-01-10T00:00:00.000Z"
+  },
+  "description": "Underwater is a 2020 American science fiction action horror film directed by William Eubank. The film stars Kristen Stewart, Vincent Cassel, Jessica Henwick, John Gallagher Jr., Mamoudou Athie, and T.J. Miller.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/4a/Underwater_poster.jpeg",
+  "duration": 5580,
+  "director": "William Eubank",
+  "rating": 0,
+  "trailer": "https://www.youtube.com/watch?v=jCFWEzIVILc&t=1s",
+  "age_limit": 14,
+  "language": "English"
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a18"
+  },
+  "title": "Like a Boss",
+  "releaseDate": {
+    "$date": "2020-01-10T00:00:00.000Z"
+  },
+  "description": "Like a Boss is a 2020 American comedy film directed by Miguel Arteta, written by Sam Pitman and Adam Cole-Kelly, and starring Tiffany Haddish, Rose Byrne, and Salma Hayek. The plot follows two friends who attempt to take back control of their cosmetics company from an industry titan.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/9/9a/LikeaBossPoster.jpg",
+  "duration": 4428,
+  "director": "Miguel Arteta",
+  "trailer": "https://www.youtube.com/watch?v=9ESkyRFEso4&t=18s",
+  "rating": 0,
+  "age_limit": 16,
+  "language": "English"
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a19"
+  },
+  "title": "Three Christs",
+  "releaseDate": {
+    "$date": "2026-01-10T00:00:00.000Z"
+  },
+  "description": "Three Christs, also known as State of Mind, is a 2020 American drama film directed, co-produced, and co-written by Jon Avnet and based on Milton Rokeach's nonfiction book The Three Christs of Ypsilanti. It screened in the Gala Presentations section at the 2017 Toronto International Film Festival.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/a/a1/Three_Christs_poster.jpg",
+  "duration": 6084,
+  "director": "Jon Avnet",
+  "rating": 0,
+  "trailer": "https://www.youtube.com/watch?v=09zYzvKkCOA",
+  "age_limit": 16,
+  "language": "English"
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a1a"
+  },
+  "title": "Inherit the Viper",
+  "releaseDate": {
+    "$date": "2024-05-22T00:00:00.000Z"
+  },
+  "description": "Inherit the Viper is a 2020 American crime drama film directed by Anthony Jerjen, in his feature directorial debut, from a screenplay by Andrew Crabtree. It stars Josh Hartnett, Margarita Levieva, Chandler Riggs, Bruce Dern, Valorie Curry, Owen Teague, and Dash Mihok.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/1c/Inherit_the_Viper_%282019%29_Film_Poster.jpg",
+  "duration": 6084,
+  "director": "Anthony Jerjen",
+  "rating": 0,
+  "trailer": "https://www.youtube.com/watch?v=yKnB0QpLQkk",
+  "age_limit": 16,
+  "language": "English"
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a1b"
+  },
+  "title": "The Sonata",
+  "releaseDate": {
+    "$date": "2020-01-10T00:00:00.000Z"
+  },
+  "description": "The Sonata is a 2018 mystery thriller film, directed by Andrew Desmond, from a screenplay by Desmond and Arthur Morin. It stars Freya Tingley, Simon Abkarian, James Faulkner, Rutger Hauer, Matt Barber and James Kermack. It was released in the United States on January 10, 2020, by Screen Media Films.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/13/The_Sonata_%282018%29_Film_Poster.jpg",
+  "duration": 5400,
+  "director": "Andrew Desmond",
+  "rating": 0,
+  "trailer": "https://www.youtube.com/watch?v=afdy7scrYgk",
+  "age_limit": 18,
+  "language": "English"
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a1c"
+  },
+  "title": "The Murder of Nicole Brown Simpson",
+  "releaseDate": {
+    "$date": "2020-01-10T00:00:00.000Z"
+  },
+  "description": "The Murder of Nicole Brown Simpson is a 2019 American crime horror film directed by Daniel Farrands. The film is loosely based on the murder of Nicole Brown Simpson, presenting a version of events in which Brown Simpson is murdered by serial killer Glen Edward Rogers, and not by O. J. Simpson, her ex-husband and the primary suspect in the case.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/e/ed/The_Murder_of_Nicole_Brown_Simpson_poster.jpg",
+  "duration": 4356,
+  "director": "Daniel Farrands",
+  "rating": 0,
+  "trailer": "https://www.youtube.com/watch?v=W__PTBEmmTA",
+  "age_limit": 18,
+  "language": "English"
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a1d"
+  },
+  "title": "Bad Boys for Life",
+  "releaseDate": {
+    "$date": "2020-01-17T00:00:00.000Z"
+  },
+  "description": "Bad Boys for Life is a 2020 American buddy cop action comedy film directed by Adil & Bilall. It is the sequel to Bad Boys II (2003) and the third installment in the Bad Boys franchise. Will Smith, Martin Lawrence, Joe Pantoliano and Theresa Randle reprise their roles in the film and are joined by Paola Núñez, Vanessa Hudgens, Jacob Scipio, Alexander Ludwig, Charles Melton, Kate del Castillo and Nicky Jam.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/9/90/Bad_Boys_for_Life_poster.jpg",
+  "duration": 7344,
+  "director": "Adil & Bilall",
+  "rating": 0,
+  "trailer": "https://youtu.be/jKCj3XuPG8M?si=zyDeCo5cmKGi-We1",
+  "age_limit": 15,
+  "language": "English"
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a1e"
+  },
+  "title": "Dolittle",
+  "releaseDate": {
+    "$date": "2020-01-17T00:00:00.000Z"
+  },
+  "description": "Dolittle is a 2020 American fantasy adventure film directed by Stephen Gaghan from a screenplay by Gaghan, Dan Gregor, and Doug Mand, based on a story by Thomas Shepherd. Dolittle is based on the title character created by Hugh Lofting and is primarily inspired by the author's second Doctor Dolittle book, The Voyages of Doctor Dolittle (1922). Robert Downey Jr. stars as the title character, alongside Antonio Banderas and Michael Sheen in live-action roles, with Emma Thompson, Rami Malek, John Cena, Kumail Nanjiani, Octavia Spencer, Tom Holland, Craig Robinson, Ralph Fiennes, Selena Gomez, and Marion Cotillard voicing an array of creatures.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/1f/Dolittle_%282020_film_poster%29.png",
+  "duration": 5076,
+  "director": "Stephen Gaghan",
+  "rating": 0,
+  "trailer": "https://youtu.be/FEf412bSPLs?si=usfBUneWf8s5G-qx",
+  "age_limit": 15,
+  "language": "English"
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a1f"
+  },
+  "title": "A Fall from Grace",
+  "releaseDate": {
+    "$date": "2020-01-17T00:00:00.000Z"
+  },
+  "description": "A Fall from Grace is a 2020 American thriller film produced, written, and directed by Tyler Perry and his first to be released by Netflix. The film follows a woman who finds a dangerous new love and the novice attorney who defends her in a sensational court case. This was the final film of actor Cicely Tyson before her death in January 2021.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/4e/AFallFromGrace.png",
+  "duration": 7200,
+  "director": "Tyler Perry",
+  "rating": 0,
+  "trailer": "https://youtu.be/mNixVHejlc0?si=NhwGZFp9xQwvLK3Q",
+  "age_limit": 14,
+  "language": "English"
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a20"
+  },
+  "title": "The Gentlemen",
+  "releaseDate": {
+    "$date": "2020-01-24T00:00:00.000Z"
+  },
+  "description": "The Gentlemen is a 2019 action comedy film written, directed and produced by Guy Ritchie, who developed the story along with Ivan Atkinson and Marn Davies. The film stars Matthew McConaughey, Charlie Hunnam, Henry Golding, Michelle Dockery, Jeremy Strong, Eddie Marsan, Colin Farrell, and Hugh Grant. It follows an American cannabis wholesaler in England who is looking to sell his business, setting off a chain of blackmail and schemes to undermine him.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/0/06/The_Gentlemen_poster.jpg",
+  "duration": 6588,
+  "director": "Guy Ritchie",
+  "rating": 0,
+  "trailer": "https://youtu.be/wyEOwHrpZH4?si=wCBcAWZm5ARQXXpM",
+  "age_limit": 14,
+  "language": "English"
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a21"
+  },
+  "title": "Timmy Failure: Mistakes Were Made",
+  "description": "Timmy Failure: Mistakes Were Made is a 2020 American adventure fantasy comedy-drama family film based on the book series of the same name by Stephan Pastis that debuted on Disney+ on February 7, 2020. The film is directed by Tom McCarthy, produced by Alexander Dostal, McCarthy and Jim Whitaker from a screenplay written by McCarthy and Pastis and stars Winslow Fegley, Ophelia Lovibond, Craig Robinson and Wallace Shawn.",
+  "releaseDate": {
+    "$date": "2020-02-07T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6000,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/c8/Timmy_Failure_Mistakes_Were_Made_Poster.jpeg",
+  "director": "Tom McCarthy",
+  "rating": 0,
+  "trailer": "https://youtu.be/4loOtFz--J0?si=rSaohQfb03k_Y0Tr",
+  "age_limit": 10
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a22"
+  },
+  "title": "Horse Girl",
+  "description": "Horse Girl is a 2020 American psychological drama film directed and produced by Jeff Baena, from a screenplay written by Baena and Alison Brie. It stars Brie, Debby Ryan, John Reynolds, Molly Shannon, John Ortiz, and Paul Reiser.",
+  "releaseDate": {
+    "$date": "2020-01-27T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 5400,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/37/Horse_Girl_poster.jpg",
+  "director": "Jeff Baena",
+  "rating": 0,
+  "trailer": "https://youtu.be/ieqemSsMxek?si=KmJtaJxiShqlrUCL",
+  "age_limit": 13
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a23"
+  },
+  "title": "To All the Boys: P.S. I Still Love You",
+  "description": "To All the Boys: P.S. I Still Love You is a 2020 American teen romantic comedy film directed by Michael Fimognari and written by Sofia Alvarez and J. Mills Goodloe. The film stars Lana Condor, Noah Centineo, Janel Parrish, Anna Cathcart, Trezzo Mahoro, Madeleine Arthur, Emilija Baranac, Kelcey Mawema, Jordan Fisher, Ross Butler, Julie Tao, Sarayu Blue, John Corbett, and Holland Taylor. The film is based on Jenny Han's 2015 novel P.S. I Still Love You.",
+  "releaseDate": {
+    "$date": "2020-02-12T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6300,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/b/bc/To_All_the_Boys_-_P.S._I_Still_Love_You_official_release_poster.jpg",
+  "director": "Michael Fimognari",
+  "rating": 4.3,
+  "trailer": "https://youtu.be/LIU4xb61PHc?si=uUxbUh_lXvDQ1KUv",
+  "age_limit": 12
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a24"
+  },
+  "title": "Sonic the Hedgehog",
+  "description": "Sonic the Hedgehog is a 2020 action-adventure comedy film based on the video game series published by Sega. Directed by Jeff Fowler and written by Pat Casey and Josh Miller, it stars Ben Schwartz as the voice of Sonic the Hedgehog, alongside Jim Carrey and James Marsden, with supporting roles by Tika Sumpter, Natasha Rothwell, Adam Pally, Lee Majdoub and Neal McDonough. The film follows Sonic, a blue anthropomorphic hedgehog who can run at supersonic speeds. He teams up with a town sheriff, Tom Wachowski (Marsden), to stop the mad scientist Dr. Robotnik (Carrey).",
+  "releaseDate": {
+    "$date": "2020-02-14T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6900,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/45/Sonic_the_Hedgehog_film_poster.jpg",
+  "director": "Jeff Fowler",
+  "rating": 0,
+  "trailer": "https://youtu.be/szby7ZHLnkA?si=vQQ5RVse6Sz5u78w",
+  "age_limit": 10
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a25"
+  },
+  "title": "Fantasy Island",
+  "description": "Fantasy Island, also known as Blumhouse's Fantasy Island, is a 2020 American supernatural horror film directed and co-written by Jeff Wadlow. Serving both as a horror reimagining and a prequel to ABC's 1977 television series of the same name, it stars Michael Peña, Maggie Q, Lucy Hale, Austin Stowell, Jimmy O. Yang, Ryan Hansen, Portia Doubleday, and Michael Rooker and follows a group of people who, while visiting the eponymous island, discover that their dream-like fantasies brought to life begin to turn into horrific living nightmares and they must try to survive.",
+  "releaseDate": {
+    "$date": "2020-02-14T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6600,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/7/7e/Fantasy_Island_poster.jpg",
+  "director": "Jeff Wadlow",
+  "rating": 0,
+  "trailer": "https://youtu.be/a6O30nJ02PU?si=Agxwa_cYpFm_kVVG",
+  "age_limit": 15
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a26"
+  },
+  "title": "The Photograph",
+  "description": "The Photograph is a 2020 American romantic drama film written and directed by Stella Meghie. It follows the estranged daughter of a famous photographer who falls in love with the journalist who is investigating her late mother's life. Chelsea Peretti, Lil Rel Howery and Courtney B. Vance also star.",
+  "releaseDate": {
+    "$date": "2020-02-14T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6000,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/c4/The_Photograph_poster.jpg",
+  "director": "Stella Meghie",
+  "rating": 0,
+  "trailer": "https://youtu.be/954b9vLAT6Y?si=07WtupSggstblyCM",
+  "age_limit": 13
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a27"
+  },
+  "title": "Downhill",
+  "description": "Downhill is a 2020 American black comedy-drama film directed by Nat Faxon and Jim Rash, who also co-wrote the script with Jesse Armstrong. The film is a remake of Force Majeure (2014) by Swedish director Ruben Östlund. It stars Julia Louis-Dreyfus and Will Ferrell as a married couple going through a rough patch after a near-death encounter during a family ski outing.",
+  "releaseDate": {
+    "$date": "2020-02-14T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 5100,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/6/6a/Downhill_poster.jpeg",
+  "director": "Nat Faxon, Jim Rash",
+  "rating": 0,
+  "trailer": "https://youtu.be/AY5SrKf_2ic?si=P1nrLAWZIFDrqcsN",
+  "age_limit": 14
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a28"
+  },
+  "title": "Spy Intervention",
+  "description": "Spy Intervention is a 2020 American action comedy spy film directed by Drew Mylrea and written by Mark Famiglietti and Lane Garrison. The film stars Drew Van Acker, Poppy Delevingne and Blake Anderson.",
+  "releaseDate": {
+    "$date": "2020-02-14T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 5400,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/cf/Spy_Intervention_%282020%29_Film_Poster.jpg",
+  "director": "Drew Mylrea",
+  "rating": 0,
+  "trailer": "https://youtu.be/bGQ2_sc-pDk?si=Aw6lR3tuDbimSGqj",
+  "age_limit": 12
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a29"
+  },
+  "title": "The Kindness of Strangers",
+  "description": "The Kindness of Strangers is a 2019 internationally co-produced drama film, written and directed by Lone Scherfig. It stars Zoe Kazan, Tahar Rahim, Esben Smed, Andrea Riseborough, and Caleb Landry Jones.",
+  "releaseDate": {
+    "$date": "2020-02-14T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6300,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/8/8d/The_Kindness_of_Strangers_poster.jpg",
+  "director": "Lone Scherfig",
+  "rating": 0,
+  "trailer": "https://youtu.be/LKCQ7gECxpk?si=RPDH-Uz_iRYIlqzX",
+  "age_limit": 13
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a2a"
+  },
+  "title": "The Call of the Wild",
+  "description": "The Call of the Wild is a 2020 American adventure film based on Jack London's 1903 novel of the same name. Directed by Chris Sanders, in his live-action directorial debut, and his first film without a co-director, the film was written by Michael Green, and stars Harrison Ford, Omar Sy, Cara Gee, Dan Stevens, Karen Gillan, and Bradley Whitford. Set during the 1890s Klondike Gold Rush, the film follows a dog named Buck as he is stolen from his home in California and sent to the Yukon, where he befriends an old outdoorsman and begins a life-altering adventure.",
+  "releaseDate": {
+    "$date": "2020-02-21T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6900,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/43/The_Call_of_the_Wild_poster.jpg",
+  "director": "Chris Sanders",
+  "rating": 0,
+  "trailer": "https://youtu.be/5P8R2zAhEwg?si=d5QiOoUAcLH5pb-E",
+  "age_limit": 10
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a2b"
+  },
+  "title": "Emma",
+  "description": "Emma is a 2020 period romantic comedy film directed by Autumn de Wilde, from a screenplay by Eleanor Catton, based on Jane Austen's 1815 novel of the same name. It stars Anya Taylor-Joy as Miss Emma Woodhouse, a wealthy and elegant young woman living with her father in Regency-era England who amuses herself with matchmaking and meddles in the romantic lives of those closest to her. The film also stars Johnny Flynn, Josh O'Connor, Callum Turner, Mia Goth, Miranda Hart, and Bill Nighy.",
+  "releaseDate": {
+    "$date": "2020-02-21T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 7200,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/5/53/Emma_poster.jpeg",
+  "director": "Autumn de Wilde",
+  "rating": 0,
+  "trailer": "https://youtu.be/qsOwj0PR5Sk?si=jY38WF9xSMT24dZ2",
+  "age_limit": 12
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a2c"
+  },
+  "title": "The Last Thing He Wanted",
+  "description": "The Last Thing He Wanted is a 2020 political thriller film directed by Dee Rees, based on the 1996 novel of the same name by Joan Didion, from a screenplay by Rees and Marco Villalobos. The film stars Anne Hathaway, Ben Affleck, Rosie Perez, Edi Gathegi, Mel Rodriguez, Toby Jones, and Willem Dafoe.",
+  "releaseDate": {
+    "$date": "2020-01-27T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6600,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/4e/The_Last_Thing_He_Wanted.jpg",
+  "director": "Dee Rees",
+  "rating": 0,
+  "trailer": "https://youtu.be/KmrU6gMc1Lc?si=5xKNTaFUOIOIEog_",
+  "age_limit": 15
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a2d"
+  },
+  "title": "Brahms: The Boy II",
+  "description": "Brahms: The Boy II is a 2020 American supernatural horror film starring Katie Holmes, Ralph Ineson, Christopher Convery and Owain Yeoman. A sequel to the 2016 film The Boy, it is directed by William Brent Bell and written by Stacey Menear, the respective director and writer of the original film.",
+  "releaseDate": {
+    "$date": "2020-02-21T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 5400,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/5/51/Brahms_The_Boy_Poster.jpg",
+  "director": "William Brent Bell",
+  "rating": 0,
+  "trailer": "https://youtu.be/ytxEldPKnyA?si=pRKiLF-wKAHH0Veu",
+  "age_limit": 16
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a2e"
+  },
+  "title": "The Night Clerk",
+  "description": "The Night Clerk is a 2020 American crime drama film, written and directed by Michael Cristofer. It stars Tye Sheridan, Ana de Armas, John Leguizamo and Helen Hunt, and follows a hotel night clerk who becomes the center of a murder investigation. The film was released on February 21, 2020, by Saban Films. On June 6, 2020, Netflix released the film on its platform. The film has received negative reviews from critics who criticized it for its lackluster story, deriative, and undeveloped characters; however, Sheridan's performance did receive praise.",
+  "releaseDate": {
+    "$date": "2020-02-21T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6000,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/9/9f/The_Night_Clerk_poster.jpeg",
+  "director": "Michael Cristofer",
+  "rating": 3.2,
+  "trailer": "https://youtu.be/8j6wDoyiyd4?si=j-YjOjYUWWwwNjWA",
+  "age_limit": 16
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a2f"
+  },
+  "title": "Impractical Jokers: The Movie",
+  "description": "Impractical Jokers: The Movie is a 2020 American reality comedy film directed by Chris Henchy, based on the truTV television series Impractical Jokers. The film stars Brian Quinn, James Murray, Sal Vulcano, and Joe Gatto, also known as The Tenderloins. It was theatrically released on February 21, 2020. The film received generally mixed reviews and was a box office success, grossing $10 million against a budget of $3 million.",
+  "releaseDate": {
+    "$date": "2020-02-21T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 5700,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/6/6a/Impractical_Jokers_The_Movie_poster.png",
+  "director": "Chris Henchy",
+  "rating": 0,
+  "trailer": "https://youtu.be/IQQ8_VVR4TA?si=ixDlaiwBAYUrD4Ut",
+  "age_limit": 14
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a30"
+  },
+  "title": "The Invisible Man",
+  "description": "The Invisible Man is a 2020 science fiction horror film written and directed by Leigh Whannell. Inspired by H. G. Wells' novel of the same name, it stars Elisabeth Moss as a woman who believes she is being stalked and gaslit by her seemingly deceased ex-boyfriend after he acquires the ability to become invisible. Aldis Hodge, Storm Reid, Harriet Dyer, and Michael Dorman appear in supporting roles.",
+  "releaseDate": {
+    "$date": "2020-02-28T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6900,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/3a/The_Invisible_Man_%282020_film%29_-_release_poster.jpg",
+  "director": "Leigh Whannell",
+  "rating": 0,
+  "trailer": "https://youtu.be/WO_FJdiY9dA?si=T_SfyxQrp1KG6MsU",
+  "age_limit": 16
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a31"
+  },
+  "title": "All the Bright Places",
+  "description": "All the Bright Places is a 2020 American teen romantic drama film, directed by Brett Haley, from a screenplay by Jennifer Niven and Liz Hannah, adapted from the novel of the same name by Niven. It stars Elle Fanning, Justice Smith, Alexandra Shipp, Kelli O'Hara, Lamar Johnson, Virginia Gardner, Felix Mallard, Sofia Hasmik, Keegan-Michael Key, and Luke Wilson.",
+  "releaseDate": {
+    "$date": "2020-02-28T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 7200,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/8/8c/All_the_Bright_Places.jpeg",
+  "director": "Brett Haley",
+  "rating": 0,
+  "trailer": "https://youtu.be/zfQXKVCudec?si=nsj3RvVgdnyrLijk",
+  "age_limit": 12
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a32"
+  },
+  "title": "Wendy",
+  "description": "Wendy is a 2020 American fantasy drama film directed by Benh Zeitlin, from a screenplay by Zeitlin and Eliza Zeitlin. The film stars Devin France, Yashua Mack, Gage Naquin, Gavin Naquin, Ahmad Cage, Krzysztof Meyn, and Romyri Ross. It is intended to be a re-imagining of J. M. Barrie's Peter Pan.",
+  "releaseDate": {
+    "$date": "2020-02-28T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6900,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/a/ac/Wendy_poster.jpg",
+  "director": "Benh Zeitlin",
+  "rating": 0,
+  "trailer": "https://youtu.be/KKktQFFcXL0?si=hFeOwjr1IZ7HgF5l",
+  "age_limit": 10
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a33"
+  },
+  "title": "Guns Akimbo",
+  "description": "Guns Akimbo is a 2019 action comedy film written and directed by Jason Lei Howden. It stars Daniel Radcliffe, Samara Weaving, Ned Dennehy, Natasha Liu Bordizzo, Grant Bowler, Edwin Wright, Rhys Darby, Milo Cawthorne, Richard Knowles, and Mark Rowley.",
+  "releaseDate": {
+    "$date": "2020-02-28T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6000,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/1f/Guns_Akimbo_poster.jpg",
+  "director": "Jason Lei Howden",
+  "rating": 0,
+  "trailer": "https://youtu.be/JggpSpqxS6I?si=hSfgrRjNut6slXmT",
+  "age_limit": 14
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a34"
+  },
+  "title": "Onward",
+  "description": "Onward is a 2020 American computer-animated urban fantasy adventure film produced by Pixar Animation Studios and distributed by Walt Disney Studios Motion Pictures. The film was directed by Dan Scanlon, produced by Kori Rae, and written by Scanlon, Jason Headley, and Keith Bunin. The film stars the voices of Tom Holland, Chris Pratt, Julia Louis-Dreyfus, and Octavia Spencer. Set in a suburban fantasy world for the modern day, the film follows two elf brothers named Ian and Barley Lightfoot who set out on a quest to find an artifact that will temporarily bring back their deceased father named Wilden (Bornheimer) for twenty-four hours before the time is up. Along the way, their journey is filled with cryptic maps, impossible obstacles and unimaginable discoveries.",
+  "releaseDate": {
+    "$date": "2020-03-06T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6300,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/0/03/Onward_poster.jpg",
+  "director": "Dan Scanlon",
+  "rating": 0,
+  "trailer": "https://youtu.be/x8DKg_fsacM?si=7hgmwDrYCduKgRPV",
+  "age_limit": 10
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a35"
+  },
+  "title": "The Way Back",
+  "description": "The Way Back is a 2020 American sports drama film directed by Gavin O'Connor and written by Brad Ingelsby. It stars Ben Affleck, Al Madrigal, Michaela Watkins, and Janina Gavankar, and follows an alcoholic construction worker who is recruited to become head coach of the basketball team at the high school where he was a star.",
+  "releaseDate": {
+    "$date": "2020-03-06T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 7200,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/c3/The_Way_Back_poster.jpeg",
+  "director": "Gavin O'Connor",
+  "rating": 0,
+  "trailer": "https://youtu.be/VzNJVSsjE-I?si=wmFVnCAebcnl-ajp",
+  "age_limit": 14
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a36"
+  },
+  "title": "Spenser Confidential",
+  "description": "Spenser Confidential is a 2020 American action comedy film directed by Peter Berg and with a screenplay written by Sean O'Keefe and Brian Helgeland. The film stars Mark Wahlberg, Winston Duke, Alan Arkin, Iliza Shlesinger, Bokeem Woodbine, Donald Cerrone, Marc Maron, and Post Malone and marks the fifth collaboration between Wahlberg and Berg after Lone Survivor, Deepwater Horizon, Patriots Day, and Mile 22.",
+  "releaseDate": {
+    "$date": "2020-03-06T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6600,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/c6/Spenser_Confidential_poster.jpg",
+  "director": "Peter Berg",
+  "rating": 0,
+  "trailer": "https://youtu.be/bgKEoHNi3Uc?si=xJYKh-O2qeVHRuub",
+  "age_limit": 15
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a37"
+  },
+  "title": "The Banker",
+  "description": "The Banker is a 2020 American period drama film directed, co-written and produced by George Nolfi. The film stars Anthony Mackie, Nicholas Hoult, Nia Long, Jessie T. Usher and Samuel L. Jackson. The story follows Joe Morris (Jackson) and Bernard Garrett (Mackie), two of the first African-American bankers in the United States.",
+  "releaseDate": {
+    "$date": "2020-03-06T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6900,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/7/72/The_Banker_poster.jpeg",
+  "director": "George Nolfi",
+  "rating": 0,
+  "trailer": "https://youtu.be/hp33zFcvyRU?si=MbE7IDAvp4kq8XuN",
+  "age_limit": 14
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a38"
+  },
+  "title": "The Burnt Orange Heresy",
+  "description": "The Burnt Orange Heresy is a 2019 crime thriller film directed by Giuseppe Capotondi and with a screenplay by Scott Smith. The film is based on the book of the same name by Charles Willeford and stars Claes Bang, Elizabeth Debicki, Mick Jagger, and Donald Sutherland.",
+  "releaseDate": {
+    "$date": "2020-03-06T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6000,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/2/26/The_Burnt_Orange_Heresey.jpeg",
+  "director": "Giuseppe Capotondi",
+  "rating": 0,
+  "trailer": "https://youtu.be/6PMAlfrdQNI?si=8FeJHgVtQwY7bf4g",
+  "age_limit": 15
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a39"
+  },
+  "title": "Swallow",
+  "description": "Swallow is a 2019 psychological thriller film written and directed by Carlo Mirabella-Davis and starring Haley Bennett, Austin Stowell, Elizabeth Marvel, David Rasche, and Denis O'Hare. Its plot follows a young woman who, emotionally stifled in her marriage and domestic life, develops an impulse to consume inedible objects.",
+  "releaseDate": {
+    "$date": "2020-03-06T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 5700,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/7/7f/Swallow_film_poster.png",
+  "director": "Carlo Mirabella-Davis",
+  "rating": 0,
+  "trailer": "https://youtu.be/SCv70SAhuE4?si=zLdX2ZxtU8n5weSw",
+  "age_limit": 16
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a3a"
+  },
+  "title": "First Cow",
+  "description": "First Cow is a 2019 American drama film directed by Kelly Reichardt, from a screenplay by Reichardt and Jonathan Raymond based on Raymond's 2004 novel The Half-Life. It stars John Magaro, Orion Lee, Toby Jones, Ewen Bremner, Scott Shepherd, Gary Farmer, Stephen Malkmus, Alia Shawkat, and Lily Gladstone. It also features René Auberjonois in one of his final film roles.",
+  "releaseDate": {
+    "$date": "2020-03-06T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6300,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/43/First_Cow_poster.jpeg",
+  "director": "Kelly Reichardt",
+  "rating": 0,
+  "trailer": "https://youtu.be/SRUWVT87mt8?si=X2dWtAa9dm8gblB8",
+  "age_limit": 14
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a3b"
+  },
+  "title": "Bloodshot",
+  "description": "Bloodshot is a 2020 American superhero film based on the Valiant Comics character of the same name. It is intended to be the first installment in a series of films set within a Valiant Comics shared cinematic universe. Directed by David S. F. Wilson from a screenplay by Jeff Wadlow and Eric Heisserer and a story by Wadlow, the film stars Vin Diesel in the main role, Eiza González, Sam Heughan, Toby Kebbell, and Guy Pearce. It follows a soldier who was killed in action, only to be brought back to life with superpowers by an organization that wants to use him as a weapon.",
+  "releaseDate": {
+    "$date": "2020-03-13T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6600,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/45/Bloodshot_-_official_film_poster.jpeg",
+  "director": "David S. F. Wilson",
+  "rating": 0,
+  "trailer": "https://youtu.be/vOUVVDWdXbo?si=7sKGuH35RK1QfabD",
+  "age_limit": 15
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a3c"
+  },
+  "title": "The Hunt",
+  "description": "The Hunt is a 2020 American horror thriller film directed by Craig Zobel and written by Nick Cuse and Damon Lindelof. The film stars Betty Gilpin, Hilary Swank, Ike Barinholtz, and Emma Roberts. Jason Blum was a producer under his Blumhouse Productions banner, along with Lindelof. Zobel and Lindelof have said that the film is intended as a satire on the profound political divide between the American left and right. It is about a group of elites who kidnap working class people to hunt them.",
+  "releaseDate": {
+    "$date": "2020-03-13T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6000,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/a/a9/The_Hunt_2020_poster.png",
+  "director": "Craig Zobel",
+  "rating": 0,
+  "trailer": "https://youtu.be/xoWmwsPU5cQ?si=eeHo8ItA9eZAqv5u",
+  "age_limit": 16
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a3d"
+  },
+  "title": "I Still Believe",
+  "description": "I Still Believe is a 2020 American Christian romantic drama film directed by the Erwin brothers and starring KJ Apa, Britt Robertson, Shania Twain, Melissa Roxburgh, and Gary Sinise. It is based on the life of American contemporary Christian music singer-songwriter Jeremy Camp and his first wife, Melissa Lynn Henning-Camp, who was diagnosed with ovarian cancer shortly before they married. Camp's song \"I Still Believe\" is the film's namesake.",
+  "releaseDate": {
+    "$date": "2020-03-13T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6300,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/18/I_Still_Believe_promotional_poster.jpg",
+  "director": "Erwin brothers",
+  "rating": 0,
+  "trailer": "https://youtu.be/YnxHyBbYwQQ?si=7IV-BGRCmEAq6GfK",
+  "age_limit": 12
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a3e"
+  },
+  "title": "Lost Girls",
+  "description": "Lost Girls is a 2020 American mystery drama film. Lost Girls was directed by Liz Garbus, from a screenplay by Michael Werwie, and based on the book Lost Girls: An Unsolved American Mystery by Robert Kolker. The film revolves around the murders of young female sex workers on the South Shore barrier islands of Long Island, committed by the Long Island serial killer, who remains unidentified.",
+  "releaseDate": {
+    "$date": "2020-03-13T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6900,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/37/Lost_Girls_poster.jpeg",
+  "director": "Liz Garbus",
+  "rating": 0,
+  "trailer": "https://youtu.be/UJzGE00wncU?si=SIxTWM-ypZJpKBFM",
+  "age_limit": 15
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a3f"
+  },
+  "title": "Stargirl",
+  "description": "Stargirl is a 2020 American jukebox musical romance film based on the 2000 novel of the same name by Jerry Spinelli that debuted on Disney+. The film explores the tense emotions, non-conformity and self-expression of teenagers in high school, and the exuberance of first love.",
+  "releaseDate": {
+    "$date": "2020-03-13T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6000,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/1f/Star_girl_Movie_Poster.jpeg",
+  "director": "Julia Hart",
+  "rating": 0,
+  "trailer": "https://youtu.be/fE-e7v4bvxw?si=RcZtdtHmeCeqwrTe",
+  "age_limit": 10
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a40"
+  },
+  "title": "The Roads Not Taken",
+  "description": "The Roads Not Taken is a 2020 drama film written and directed by Sally Potter. The film stars Javier Bardem, Elle Fanning, Salma Hayek and Laura Linney.",
+  "releaseDate": {
+    "$date": "2020-03-13T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 5700,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/12/The_Roads_Not_Taken_poster.jpeg",
+  "director": "Sally Potter",
+  "rating": 0,
+  "trailer": "https://youtu.be/cE0pvT1Lgrg?si=_Wd_mG0Z4H9g7MZE",
+  "age_limit": 14
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a41"
+  },
+  "title": "Never Rarely Sometimes Always",
+  "description": "Never Rarely Sometimes Always is a 2020 drama film written and directed by Eliza Hittman. It stars Sidney Flanigan, Talia Ryder, Théodore Pellerin, Ryan Eggold, and Sharon Van Etten. It had its world premiere at the Sundance Film Festival on January 24, 2020. It was also selected to compete for the Golden Bear in the main competition section at the 70th Berlin International Film Festival, where it won the Silver Bear Grand Jury Prize. The film was released in the United States on March 13, 2020, by Focus Features. It received widespread acclaim from critics, with praise for Flanigan's performance and Hittman's direction.",
+  "releaseDate": {
+    "$date": "2020-03-13T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6900,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/44/Never_Rarely_Sometimes_Always.png",
+  "director": "Eliza Hittman",
+  "rating": 0,
+  "trailer": "https://youtu.be/hjw_QTKr2rc?si=2zLwGXo8Xv36TPZW",
+  "age_limit": 14
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a42"
+  },
+  "title": "Big Time Adolescence",
+  "description": "Big Time Adolescence is a 2019 American coming-of-age comedy film written and directed by Jason Orley, in his directorial debut. It stars Pete Davidson, Griffin Gluck, Emily Arlook, Colson Baker, Sydney Sweeney and Jon Cryer.",
+  "releaseDate": {
+    "$date": "2020-03-13T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6300,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/4d/Big_Time_Adolescences_poster.jpeg",
+  "director": "Jason Orley",
+  "rating": 0,
+  "trailer": "https://youtu.be/t3PcDo4YcnY?si=4_HI0ATd3jCIeaUB",
+  "age_limit": 13
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a43"
+  },
+  "title": "Lost Transmissions",
+  "description": "Lost Transmissions is a 2019 drama film written and directed by Katharine O'Brien. It stars Simon Pegg, Juno Temple, and Alexandra Daddario. It premiered at the Tribeca Film Festival on April 28, 2019 ati was released on March 13, 2020 by Gravitas Ventures.",
+  "releaseDate": {
+    "$date": "2020-03-13T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 5700,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/e/ee/LostTransmissionTribeca.png",
+  "director": "Katharine O'Brien",
+  "rating": 0,
+  "trailer": "https://youtu.be/IFn-xDAO1ao?si=Ecy2mWbOgceoqu5B",
+  "age_limit": 14
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a44"
+  },
+  "title": "Resistance",
+  "description": "Resistance is a 2020 biographical drama film written and directed by Jonathan Jakubowicz, inspired by the life of Marcel Marceau. It stars Jesse Eisenberg as Marceau, with Clémence Poésy, Matthias Schweighöfer, Alicia von Rittberg, Félix Moati, Géza Röhrig, Karl Markovics, Vica Kerekes, Bella Ramsey, Ed Harris and Édgar Ramírez.",
+  "releaseDate": {
+    "$date": "2020-03-13T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6600,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/1b/Resistance_poster.jpg",
+  "director": "Jonathan Jakubowicz",
+  "rating": 0,
+  "trailer": "https://youtu.be/B48hwisZvEI?si=cn5TtpIE9YF3HhzQ",
+  "age_limit": 14
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a45"
+  },
+  "title": "Uncorked",
+  "description": "Uncorked is a 2020 American drama film, written and directed by Prentice Penny. It stars Mamoudou Athie, Courtney B. Vance, Niecy Nash, Matt McGorry, Sasha Compère, Gil Ozeri, Kelly Jenrette, Bernard David Jones, Melisia Lomax and Meera Rohit Kumbhani.",
+  "releaseDate": {
+    "$date": "2024-05-17T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6300,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/9/92/Uncorked_poster.jpeg",
+  "director": "Prentice Penny",
+  "rating": 0,
+  "trailer": "https://youtu.be/s0sZtjE2MXg?si=80SRsQjyjkodkY-1",
+  "age_limit": 13
+},
+{
+  "_id": {
+    "$oid": "665625047aee2eb5aea70a46"
+  },
+  "title": "Vivarium",
+  "description": "Vivarium is a 2019 science fiction film directed by Lorcan Finnegan, from a story by Finnegan and Garret Shanley. An international co-production between Ireland, Denmark and Belgium, it stars Imogen Poots and Jesse Eisenberg. It premiered at the Cannes Film Festival on 18 May 2019, and was released in Ireland on 27 March 2020 by Vertigo Releasing. The film follows a couple that is forced to care for a mysterious child while trapped in a seemingly perfect neighbourhood.",
+  "releaseDate": {
+    "$date": "2024-05-21T00:00:00.000Z"
+  },
+  "language": "English",
+  "duration": 6900,
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/11/Vivarium_film_theatrical_poster.jpg",
+  "director": "Lorcan Finnegan",
+  "rating": 0,
+  "trailer": "https://youtu.be/bHWtbO_KAOU?si=UdPB2lOwU0RFC71h",
+  "age_limit": 15
+},
+{
+  "_id": {
+    "$oid": "6656255bfae2bf9a23e816cb"
+  },
+  "title": "MaXXXine",
+  "trailer": "https://youtu.be/FEf412bSPLs?si=usfBUneWf8s5G-qx",
+  "releaseDate": {
+    "$date": "2020-01-17T00:00:00.000Z"
+  },
+  "description": "In 1980s Hollywood, adult film star and aspiring actress Maxine Minx finally gets her big break. But as a mysterious killer stalks the starlets of Hollywood, a trail of blood threatens to reveal her sinister past.",
+  "thumbnail": "https://www.hollywoodreporter.com/wp-content/uploads/2024/04/A24_MaXXXine_FirstLook_Confidential.jpg?w=1296",
+  "duration": 5076,
+  "director": "Ti West",
+  "rating": 0,
+  "age_limit": 18,
+  "language": "English"
+},
+{
+  "_id": {
+    "$oid": "6656267cfae2bf9a23e816cd"
+  },
+  "title": "Harold and the Purple Crayon",
+  "releaseDate": {
+    "$date": "2024-08-01T00:00:00.000Z"
+  },
+  "description": "Inside of his book, adventurous Harold (Zachary Levi) can make anything come to life simply by drawing it. After he grows up and draws himself off the book's pages and into the physical world, Harold finds he has a lot to learn about real life - and that his trusty purple crayon may set off more hilarious hijinks than he thought possible. When the power of unlimited imagination falls into the wrong hands, it will take all of Harold and his friends' creativity to save both the real world and his own.",
+  "thumbnail": "data:image/jpeg;base64,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",
+  "duration": 5400,
+  "director": "Carlos Saldanha",
+  "rating": 0,
+  "trailer": "https://www.youtube.com/watch?v=WojIv-PVYm8",
+  "age_limit": 0
+}]
