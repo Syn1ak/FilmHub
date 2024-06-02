@@ -7,23 +7,21 @@
 
 import Foundation
 
-enum UserRole: String, Codable {
-    case client = "Client"
-    case manager = "Manager"
-}
-
 struct User: Codable {
     let firstName: String
     let lastName: String
     let password: String
     let email: String
-    let role: UserRole
+    let age: Int
+    let phone: String
+    
     
     enum CodingKeys: String, CodingKey {
         case firstName = "first_name"
         case lastName = "last_name"
         case password
         case email
-        case role
+        case age
+        case phone
     }
 }

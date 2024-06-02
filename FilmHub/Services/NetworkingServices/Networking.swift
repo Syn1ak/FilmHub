@@ -115,7 +115,8 @@ class Networking {
         }
     }
     
-    func getMovieReviews(for movieId: String) async throws -> [Review]? {
+    
+    func getMovieFullInfo(for movieId: String) async throws -> MovieAdditionalInfo? {
         guard let reqUrl = createUrl(for: "movie", params: [URLQueryItem(name: "movie_id", value: movieId)])
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
@@ -124,8 +125,8 @@ class Networking {
             throw NetworkingErrors.invalidResponse
         }
         do {
-            let reviews = try JSONDecoder().decode([Review].self, from: data)
-            return reviews
+            let movieInfo = try JSONDecoder().decode(MovieAdditionalInfo.self, from: data)
+            return movieInfo
         } catch {
             throw NetworkingErrors.invalidData
         }

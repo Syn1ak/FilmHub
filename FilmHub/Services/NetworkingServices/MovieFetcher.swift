@@ -26,6 +26,22 @@ class MovieFetcher {
         return nil
     }
     
+    func getMovies(for movieId: String) async -> MovieAdditionalInfo?{
+        do {
+            let movieInfo = try await networkingService.getMovieFullInfo(for: movieId)
+            return movieInfo
+        } catch NetworkingErrors.invalidURL {
+            print("Invalid url")
+        } catch NetworkingErrors.invalidResponse {
+            print("Invalid response")
+        } catch NetworkingErrors.invalidData {
+            print("Invalid data")
+        } catch {
+            print("Other error")
+        }
+        return nil
+    }
+    
     func getFutureMovies() async -> [Movie]? {
         do {
             let futureMovies = try await networkingService.getFutureMovies()

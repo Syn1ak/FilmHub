@@ -17,20 +17,20 @@ struct HallView: View {
             .stroke(Color.gray, lineWidth: 2)
             .padding(.top, 25)
         VStack {
-            ForEach(0...9, id: \.self){ index1 in
+            ForEach(0...9, id: \.self){ row in
                 HStack {
-                    ForEach(0...9, id: \.self){ index2 in
+                    ForEach(0...9, id: \.self){ seat in
                         Button(action: {
                             
                         }, label: {
 
                             ZStack {
                                 RoundedRectangle(cornerRadius: 5)
-                                    .stroke(index2 % 2 == 0 ? Color.blue : Color.gray, lineWidth: 2)
-                                    .background(Color("SeatColor").opacity(index2 % 2 == 0  ? 1 : 0))
+                                    .stroke(seat % 2 == 0 ? Color.blue : Color.gray, lineWidth: 2)
+                                    .background(Color("SeatColor").opacity(seat % 2 == 0  ? 1 : 0))
                                     
-                                    .padding(.trailing, index2 == 4 ? 30 : 0)
-                                if(index2 % 2 == 1){
+                                    .padding(.trailing, seat == 4 ? 30 : 0)
+                                if(seat % 2 == 1){
                                     Image(systemName: "xmark")
                                         .foregroundStyle(.gray)
                                 }

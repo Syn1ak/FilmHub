@@ -14,12 +14,12 @@ struct MainView: View {
         VStack {
             if isAuthorized {
                 TabView {
-                    FilmListView(inProduction: true, userRole: .client)
+                    FilmListView(inProduction: true)
                         .tabItem {
                             Image(systemName: "movieclapper")
                         }
                         .tint(.gray)
-                    FilmListView(inProduction: false, userRole: .client)
+                    FilmListView(inProduction: false)
                         .tabItem {
                             Image(systemName: "play.rectangle")
                         }

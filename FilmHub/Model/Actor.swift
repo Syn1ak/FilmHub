@@ -8,13 +8,14 @@
 import Foundation
 
 
-struct Actor {
+struct Actor: Codable {
     let id: String
     let name: String
     let popularMovies: [String]
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
+        case name
         case popularMovies = "popular_movies"
     }
 }

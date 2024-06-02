@@ -13,7 +13,7 @@ struct Movie: Codable, Hashable {
     let releaseDate: Date
     let description: String
     let posterLink: URL
-    //let duration: TimeInterval
+    let duration: TimeInterval
     let director: String
     let rating: Double
     
@@ -30,7 +30,7 @@ struct Movie: Codable, Hashable {
         case releaseDate
         case description
         case posterLink = "thumbnail"
-        //case duration
+        case duration
         case director
         case rating
     }
@@ -40,3 +40,11 @@ struct MovieGenre: Codable {
     let movie: Movie
     let genre: Genre
 }
+
+struct MovieAdditionalInfo: Codable {
+    let actors: [Actor]
+    let genres: [Genre]
+    let reviews: [Review]
+}
+
+

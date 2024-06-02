@@ -16,9 +16,8 @@ final class FilmListViewModel: ObservableObject {
 
 struct FilmListView: View {
         
-    init(inProduction: Bool, userRole: UserRole) {
+    init(inProduction: Bool) {
         self.inProduction = inProduction
-        self.userRole = userRole
         self.inProduction ? filmListDataService.downloadMovies() : filmListDataService.downloadFutureMovies()
     }
     
@@ -27,7 +26,6 @@ struct FilmListView: View {
     @ObservedObject private var filmListModel = FilmListViewModel()
     @ObservedObject private var filmListDataService = FilmListDataService()
     
-    private let userRole: UserRole
     
     var body: some View {
         NavigationStack {
@@ -69,8 +67,6 @@ struct FilmListView: View {
             .padding(.top, -8)
             .animation(.easeInOut, value: filmListModel.isSearching)
         }
-        
-        
     }
 
     
@@ -148,7 +144,6 @@ struct FilmListHeader: View {
             }
         } label: {
             Text(selectedItem.description)
-                //.font(.title2)
                 .bold()
                 .dynamicTypeSize(.large)
                 .foregroundStyle(.white)
