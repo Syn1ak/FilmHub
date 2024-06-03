@@ -99,7 +99,7 @@ const getListOfMovies = async (req: Request, res: Response) => {
                     title: {$regex: query as string, $options: "i"}
                 }
             }])
-            const ids = moviesByQuery.map(item => item.movie.toString());
+            const ids = moviesByQuery.map(item => item._id.toString());
             if (!city && !cinema && !genres && !date && !actor) moviesIds = new Set<string>([...ids]);
             else moviesIds = new Set<string>(ids.filter(i => moviesIds.has(i)));
             console.log("query", moviesIds)
