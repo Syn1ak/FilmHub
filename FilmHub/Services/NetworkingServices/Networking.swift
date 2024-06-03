@@ -184,7 +184,7 @@ class Networking {
             throw NetworkingErrors.invalidResponse
         }
         do {
-            let tickets = try JSONDecoder().decode([Ticket].self, from: data)
+            let tickets = try! JSONDecoder().decode([Ticket].self, from: data)
             return tickets
         } catch {
             throw NetworkingErrors.invalidData
@@ -204,7 +204,7 @@ class Networking {
             "seat_number": seatNumber
         ]
         request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (_, response) = try await URLSession.shared.data(for: request)
         if let response = response as? HTTPURLResponse, response.statusCode != 200 {
             throw NetworkingErrors.invalidResponse
         }

@@ -38,8 +38,8 @@ struct Ticket: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case session
-        case user
+        case session = "session_id"
+        case user = "user_id"
         case seatRow = "seat_row"
         case seatNumber = "seat_number"
         case purchaseDate = "purchase_date"
