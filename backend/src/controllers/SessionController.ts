@@ -6,9 +6,13 @@ const getAllSessionByMovie = async (req: Request, res: Response) => {
         const {movie_id} = req.query;
         console.log(movie_id);
 
-        const allSessions = await Session.find();
-        console.log(allSessions);
-
+        const allSessions = await Session.find({movie: movie_id})
+            .populate({
+                path: "hall",
+                populate:{
+                    path: "cinema_id"
+                }
+            }).populate("movie");
         res.json(allSessions)
     } catch (error) {
         console.error(error);

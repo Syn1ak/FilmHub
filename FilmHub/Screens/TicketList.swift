@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct TicketListView: View {
+    let ticketsDataService = TicketsDataService()
     
     var body: some View {
         VStack {
             ScreenTitleHeader(text: "My tickets")
             ScrollView {
                 LazyVStack(spacing: 20) {
-                    TicketView()
-                    TicketView()
-                    TicketView()
-                    TicketView()
-                    TicketView()
-                    TicketView()
+                    ForEach(ticketsDataService.userTickets, id: \.id) { ticket in
+                        TicketView(ticket: ticket)
+                    }
                 }
                 .padding(.top, 20)
             }.ignoresSafeArea(.all)

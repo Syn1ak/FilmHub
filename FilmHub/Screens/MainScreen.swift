@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var isAuthorized = false
+    @ObservedObject private var authService = AuthorizationService()
     
     var body: some View {
         VStack {
-            if isAuthorized {
+            if authService.isAuthorized {
                 TabView {
                     FilmListView(inProduction: true)
                         .tabItem {
@@ -27,17 +27,17 @@ struct MainView: View {
                         .tabItem {
                             Image(systemName: "ticket")
                         }
-                    ProfileView(isAuthorized: $isAuthorized)
+                    ProfileView(isAuthorized: $authService.isAuthorized)
                         .tabItem {
                             Image(systemName: "person.crop.circle.fill")
-                            
+
                         }
                 }
                 .tint(Color("BackgroundColor"))
             } else {
                 VStack {
-                    if !isAuthorized {
-                        AuthorizationView(isAuthorized: $isAuthorized)
+                    if !authService.isAuthorized {
+                        AuthorizationView(authService: authService)
                             .transition(.opacity)
                     } else {
                         MainView()
@@ -45,7 +45,7 @@ struct MainView: View {
                 }
             }
         }
-        .animation(.easeInOut, value: isAuthorized)
+        .animation(.easeInOut, value: authService.isAuthorized)
     }
 }
 

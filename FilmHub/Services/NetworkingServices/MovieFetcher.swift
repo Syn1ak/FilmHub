@@ -57,4 +57,21 @@ class MovieFetcher {
         }
         return nil
     }
+    
+    func getAdditionalInfo(for movieId: String) async throws -> MovieAdditionalInfo? {
+        do {
+            let info = try await networkingService.getMovieFullInfo(for: movieId)
+            return info
+        } catch NetworkingErrors.invalidURL {
+            print("Invalid url")
+        } catch NetworkingErrors.invalidResponse {
+            print("Invalid response")
+        } catch NetworkingErrors.invalidData {
+            print("Invalid data")
+        } catch {
+            print("Other error")
+        }
+        return nil
+    }
+    
 }

@@ -21,6 +21,7 @@ struct Session: Codable {
         formatter.dateFormat = "HH:mm"
         return formatter.string(from: startTime)
     }
+    
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case movie

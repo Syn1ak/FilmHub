@@ -8,37 +8,37 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
+
 struct FilmDeatailsView: View {
 
-    let movie: Movie
-    
+    @ObservedObject var filmDataService: FIlmDetailsDataService
     init(film: Movie) {
-        self.movie = film
+        self.filmDataService = FIlmDetailsDataService(movie: film)
     }
     
     var body: some View {
         ScrollView {
-            WebImage(url: movie.posterLink)
+            WebImage(url: filmDataService.movie.posterLink)
                 .resizable()
                 .scaledToFill()
                 .frame(width: Const.screenWidth)
                 .overlay { createPlayButton() }
             VStack (alignment: .leading){
-                createFilmTitle(title: movie.title)
-                AdditionalTitle(title: "1432423 s | Пригоди, екшн")
-                AdditionalInfo(text: movie.description)
+                createFilmTitle(title: filmDataService.movie.title)
+                AdditionalTitle(title: "\(filmDataService.movie.fortmattedDuration) | \( filmDataService.additionalInfo?.formattedGenres ?? "")")
+                AdditionalInfo(text: filmDataService.movie.description)
                     .padding(.top, 15)
                 AdditionalTitle(title: "Release date")
                     .padding(.top, 15)
-                AdditionalInfo(text: movie.formattedDate)
+                AdditionalInfo(text: filmDataService.movie.formattedDate)
                 AdditionalTitle(title: "Director")
                     .padding(.top, 15)
-                AdditionalInfo(text: movie.director)
+                AdditionalInfo(text: filmDataService.movie.director)
                 
-                if movie.releaseDate < Date() {
+                if filmDataService.movie.releaseDate < Date() {
                     Divider()
                     LazyVStack {
-                        ReviewListView()
+                        ReviewListView(reviews: filmDataService.additionalInfo?.reviews ?? [])
                     }
                 }
             }
@@ -47,9 +47,9 @@ struct FilmDeatailsView: View {
             
         }
         .navigationTitle("Details")
-        if movie.releaseDate < Date() {
+        if filmDataService.movie.releaseDate < Date() {
             NavigationLink(
-                destination: SessionsView(movie: movie),
+                destination: SessionsView(movie: filmDataService.movie),
                            label: {
                 Text("Sessions")
                     .font(.title3)
@@ -89,8 +89,6 @@ struct FilmDeatailsView: View {
             .padding(.top, 30)
             .padding(.bottom, 7)
     }
-    
-
     
 }
 

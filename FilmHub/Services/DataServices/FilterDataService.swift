@@ -10,13 +10,17 @@ import Foundation
 class FilterDataService: ObservableObject {
     
     let genreFetcher = GenreFetcher()
+    var dateIsSelected = false
  
     @Published var actorName: String
     @Published var currentGenres: [Genre] = []
-    @Published var date: Date
+    @Published var date: Date {
+        didSet {
+            dateIsSelected = true
+        }
+    }
     @Published var allGenres: [Genre] = []
     
-
     
     init(actorName: String, cureentGenresIds: [String], date: String) {
         self.actorName = actorName
@@ -28,7 +32,7 @@ class FilterDataService: ObservableObject {
             let genres = await genreFetcher.getAllGenres()
             await MainActor.run {
                 self.allGenres = genres ?? []
-                self.currentGenres =  self.allGenres.filter{ genre in
+                self.currentGenres = self.allGenres.filter{ genre in
                     cureentGenresIds.contains(where: { genreId in genre.id == genreId}) }
             }
         }
@@ -37,7 +41,7 @@ class FilterDataService: ObservableObject {
     func applyFilters(filmListDataService: FilmListDataService) {
         filmListDataService.filters["actor"] = actorName
         filmListDataService.filters["genres"] = currentGenres.map { $0.id }.joined(separator: ",")
-        filmListDataService.filters["date"] = date.description
+        filmListDataService.filters["date"] = dateIsSelected ? date.description : ""
         filmListDataService.downloadMovies()
     }
     

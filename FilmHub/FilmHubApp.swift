@@ -12,11 +12,7 @@ struct FilmHubApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
-                .onAppear{
-                    let tabBarAppearance = UITabBarAppearance()
-                    tabBarAppearance.backgroundColor = UIColor(named: "TabbarColor")
-                    UITabBar.appearance().standardAppearance = tabBarAppearance
-                }
+                
         }
     }
 }

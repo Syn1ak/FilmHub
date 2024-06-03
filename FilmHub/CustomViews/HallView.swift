@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct HallView: View {
+    var seats: [[Bool]]
+    @Binding private var selectedSeats: [(row: Int, seat: Int)]
     
+    init(seats: [[Bool]]?, selectedSeats: Binding<[(row: Int, seat: Int)]>) {
+        self.seats = seats ?? [[]]
+        self._selectedSeats = selectedSeats
+    }
     var body: some View {
         Text("Screen")
             .foregroundStyle(.gray)
@@ -17,32 +23,48 @@ struct HallView: View {
             .stroke(Color.gray, lineWidth: 2)
             .padding(.top, 25)
         VStack {
-            ForEach(0...9, id: \.self){ row in
+            ForEach(0..<seats.count, id: \.self){ row in
                 HStack {
-                    ForEach(0...9, id: \.self){ seat in
-                        Button(action: {
-                            
-                        }, label: {
-
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 5)
-                                    .stroke(seat % 2 == 0 ? Color.blue : Color.gray, lineWidth: 2)
-                                    .background(Color("SeatColor").opacity(seat % 2 == 0  ? 1 : 0))
-                                    
-                                    .padding(.trailing, seat == 4 ? 30 : 0)
-                                if(seat % 2 == 1){
-                                    Image(systemName: "xmark")
-                                        .foregroundStyle(.gray)
-                                }
-                            }
-                            .frame(width: 25, height: 25)
-                        })
+                    ForEach(0..<seats[row].count/2, id: \.self){ seat in
+                        
+                        createSeatView(row: row, seat: seat)
                     }
+                    Spacer()
+                    ForEach(seats[row].count/2..<seats[row].count, id: \.self){ seat in
+                        createSeatView(row: row, seat: seat)
+                    }
+                    
                 }
             }
         }
-        .padding(.horizontal, 30)
+        .padding(.horizontal, 50)
         .offset(y: -40)
+    }
+    
+    @ViewBuilder
+    private func createSeatView(row: Int, seat: Int) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 5)
+                .stroke(seats[row][seat] ? Color.gray : Color.blue, lineWidth: 2)
+                .background(
+                    Color("SeatColor").opacity(
+                        selectedSeats.contains(where: { $0.row == row && $0.seat == seat}) ? 1 : 0
+                    )
+                )
+                .onTapGesture {
+                    if selectedSeats.contains(where: { $0.row == row && $0.seat == seat}) {
+                        selectedSeats.removeAll(where: { $0.row == row && $0.seat == seat})
+                    } else {
+                        selectedSeats.append((row: row, seat: seat))
+                    }
+                }
+            if seats[row][seat] {
+                Image(systemName: "xmark")
+                    .foregroundStyle(.gray)
+            }
+        }
+        .frame(width: 20, height: 20)
+        .clipShape(RoundedRectangle(cornerRadius: 5))
     }
 }
 

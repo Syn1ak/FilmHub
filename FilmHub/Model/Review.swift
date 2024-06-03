@@ -23,4 +23,13 @@ struct Review: Codable {
         case comment
         case reviewDate
     }
+    
+    var formatedReviewDate: String {
+        let outputDateFormatter = DateFormatter()
+        outputDateFormatter.dateFormat = "d MMMM yyyy HH:mm"
+        outputDateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        outputDateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        return outputDateFormatter.string(from: reviewDate)
+    }
+    
 }

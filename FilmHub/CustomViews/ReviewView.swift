@@ -8,22 +8,21 @@
 import SwiftUI
 
 struct ReviewView: View {
-    let rating = 4
+    let review: Review
     var body: some View {
-        
         VStack(alignment: .leading, spacing: 10) {
             HStack (spacing: 10) {
-                AdditionalInfo(text: "Natalya")
-                AdditionalTitle(title: "29 April 2024 12:51")
+                AdditionalInfo(text: "\(review.user.lastName) \(review.user.firstName)")
+                AdditionalTitle(title: review.formatedReviewDate)
             }
-            Text("This works for me! What I do not really understand though is why I don't have to always do this. E.g. I have two Texts that should wrap lines below each other in a VStack. It's only needed for the first one. For the second one I don't have to do anything. Is this a bug or a feature? (Sidenote: both Texts are also inside a Group on that I set .frame(maxWidth: .infinity, alignment: .leading) for text alignment) ")
+            Text(review.comment)
             .lineLimit(nil)
             HStack {
                 ForEach(1...5, id: \.self) { index in
                     Button(action: {
                         
                     }, label: {
-                        Image(systemName: rating < index ? "star" : "star.fill")
+                        Image(systemName: review.rating < index ? "star" : "star.fill")
                             .foregroundStyle(.yellow)
                             .scaleEffect(1.3)
                     })

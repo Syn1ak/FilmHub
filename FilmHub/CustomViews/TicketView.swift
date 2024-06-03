@@ -6,43 +6,41 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct TicketView: View {
-    //let ticket: Ticket
+    let ticket: Ticket
     
-//    init(ticket: Ticket) {
-//        self.ticket = ticket
-//    }
+    init(ticket: Ticket) {
+        self.ticket = ticket
+    }
     
     var body: some View {
         HStack {
-            Color.red
+            WebImage(url: ticket.session.movie.posterLink)
+                .resizable()
+                .scaledToFit()
                 .frame(width: Const.screenWidth/3.5, height: 150)
                 .padding(.all, 10)
             VStack (alignment: .leading){
                 HStack {
-                    AdditionalTitle(title: "2D")
                     Spacer()
-                    AdditionalTitle(title: "#864394")
+                    AdditionalTitle(title: ticket.id)
                         .padding(.trailing, 10)
                 }
                 HStack {
-                    Text("Я, Побєда і Берлін")
+                    Text(ticket.session.movie.title)
                         .font(.title3)
                         .bold()
                 }
                 HStack(spacing: 10) {
                     VStack(alignment: .leading) {
                         AdditionalTitle(title: "Дата")
-                        AdditionalInfo(text: "3 листопада 2023")
+                        AdditionalInfo(text: ticket.formattedDate)
                     }
                     VStack(alignment: .leading) {
                         AdditionalTitle(title: "Час")
-                        AdditionalInfo(text: "19:00")
-                    }
-                    VStack(alignment: .leading) {
-                        AdditionalTitle(title: "Зал")
-                        AdditionalInfo(text: "3")
+                        AdditionalInfo(text: ticket.formattedTime)
                     }
                 }
                 .padding(.top, 2)

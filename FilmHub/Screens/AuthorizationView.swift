@@ -15,10 +15,10 @@ final class AuthorizationViewModel: ObservableObject {
 
 struct AuthorizationView: View {
     @ObservedObject private var authorizationViewModel = AuthorizationViewModel()
-    @Binding var isAuthorized: Bool
+    @ObservedObject private var authService: AuthorizationService
     
-    init(isAuthorized: Binding<Bool>) {
-        self._isAuthorized = isAuthorized
+    init(authService: AuthorizationService) {
+        self.authService = authService
     }
     
     let aspectRatio = Const.screenWidth/Const.screenHeight
@@ -49,8 +49,10 @@ struct AuthorizationView: View {
                             placeholder: "Password")
 
             CustomButton(buttonTitlte: "Login",
-                         buttonAction: { isAuthorized.toggle() }, buttonWidth: 100,
-                             buttonHeight: 50)
+                         buttonAction: {
+                authService.login(email: authorizationViewModel.email, password: authorizationViewModel.password)
+            }, buttonWidth: 100,
+            buttonHeight: 50)
         }
         Spacer()
     }

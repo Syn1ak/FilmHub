@@ -24,6 +24,10 @@ struct Movie: Codable, Hashable {
         return formatter.string(from: releaseDate)
     }
     
+    var fortmattedDuration: String {
+        return "\(Int(duration/3600)) hour \((Int(duration) % 3600) / 60) min."
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case title
@@ -45,6 +49,17 @@ struct MovieAdditionalInfo: Codable {
     let actors: [Actor]
     let genres: [Genre]
     let reviews: [Review]
+    
+    var formattedGenres: String {
+        var result = ""
+        for i in 0..<genres.count {
+            result += genres[i].name
+            if i < genres.count - 1 {
+                result += ", "
+            }
+        }
+        return result
+    }
 }
 
 

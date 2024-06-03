@@ -21,9 +21,9 @@ const getUserById = async (req: Request, res: Response) => {
 
 const getAllUserTickets = async (req: Request, res: Response) => {
     try {
-        const {user} = req.query;
+        const {user_id} = req.query;
 
-        const allTickets = await Ticket.find({ user });
+        const allTickets = await Ticket.find({ user_id });
 
         res.json(allTickets);
     } catch (error) {

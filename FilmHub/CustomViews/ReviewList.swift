@@ -8,32 +8,22 @@
 import SwiftUI
 
 struct ReviewListView: View {
+    let reviews: [Review]
     var body: some View {
         VStack {
             HStack {
                 Image(systemName: "ellipsis.message.fill")
                     .foregroundStyle(Color("BackgroundColor"))
-                Text("Reviews (24)")
+                Text("Reviews (\(reviews.count)")
                 Spacer()
             }
             .padding(.top, 5)
             AddOwnReviewView()
-            LazyVStack {
-                ReviewView()
-                    .padding(.vertical, 15)
-                Divider()
-                ReviewView()
-                    .padding(.vertical, 15)
-                Divider()
-                ReviewView()
-                    .padding(.vertical, 15)
-                Divider()
-                ReviewView()
-                    .padding(.vertical, 15)
-                Divider()
-                ReviewView()
-                    .padding(.vertical, 15)
-                
+            LazyVStack(spacing: 15) {
+                ForEach(reviews, id: \.id) { review in
+                    ReviewView(review: review)
+                    Divider()
+                }
             }
             
                

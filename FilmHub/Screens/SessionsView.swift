@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct SessionsView: View {
-    
+    @Environment(\.presentationMode) var presentationMode
     let movie: Movie
-    @State private var activeDate = Date()
-//    @State private var selectedTime = 
+    @ObservedObject private var sessionDataService: SessionsDataService
+    @ObservedObject private var ticketService = TicketsDataService()
     
     init(movie: Movie) {
         self.movie = movie
+        self.sessionDataService = SessionsDataService(movieId: movie.id)
     }
     
     var body: some View {
         VStack {
-            HallView()
+            HallView(seats: sessionDataService.currentSession?.seats, selectedSeats: $sessionDataService.selectedSeats)
             createFooter()
                 .offset(y: -40)
         }
@@ -30,7 +31,6 @@ struct SessionsView: View {
                 .font(.title2)
                 .bold()
                 .foregroundColor(.white)
-                
             }
         }
     }
@@ -43,14 +43,17 @@ struct SessionsView: View {
             VStack(alignment: .leading) {
                 Text("Price:")
                     .foregroundStyle(.white)
-                Text("560")
+                Text(sessionDataService.currentSession == nil ? "0₴" : "\(Int(sessionDataService.currentSession!.price) * sessionDataService.selectedSeats.count)₴")
                     .font(.title2)
                     .bold()
                     .foregroundStyle(.yellow)
             }
             Spacer()
             Button(action: {
-                
+                if sessionDataService.selectedSeats.count > 0 {
+                    ticketService.addTicket(sessionDataService: sessionDataService)
+                    presentationMode.wrappedValue.dismiss()
+                }
             }, label: {
                 Text("Buy ticket")
                     .font(.title3)
@@ -68,16 +71,21 @@ struct SessionsView: View {
     private func createTimeList() -> some View {
         ScrollView(.horizontal) {
             HStack (spacing: 20){
-                ForEach(0...5, id: \.self) { index in
+                ForEach(sessionDataService.allSessions, id: \.id) { session in
                     Button(action: {
+                        sessionDataService.selectedTime = session.startTime
                     }, label: {
-                        Text("10:30")
+                        Text(session.formattedStartTime)
                             .foregroundStyle(.white)
                             .font(.title3)
                             .bold()
                             .frame(width: 90, height: 44)
-                            .background(Color("SeatColor"))
-                            .clipShape(RoundedRectangle(cornerRadius: 5))
+                            .background(session.startTime == sessionDataService.selectedTime ? Color("SeatColor") : Color.clear)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.blue, lineWidth: 1)
+                            }
                     })
                 }
             }
@@ -94,7 +102,7 @@ struct SessionsView: View {
                 .bold()
             Spacer()
             DatePicker("",
-                       selection: $activeDate,
+                       selection: $sessionDataService.selectedDate,
                        displayedComponents: [.date])
             .datePickerStyle(CompactDatePickerStyle())
             .colorInvert()

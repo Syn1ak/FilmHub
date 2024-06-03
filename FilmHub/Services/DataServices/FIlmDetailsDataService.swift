@@ -8,12 +8,20 @@
 import Foundation
 
 class FIlmDetailsDataService: ObservableObject {
+    let movieFetcher = MovieFetcher()
     let movie: Movie
-    @Published private var additionalInfo: MovieAdditionalInfo
+    @Published var additionalInfo: MovieAdditionalInfo?
     
-    init(movie: Movie, additionalInfo: MovieAdditionalInfo) {
+    
+    init(movie: Movie) {
         self.movie = movie
-        self.additionalInfo = additionalInfo
+        Task {
+            let info = try await movieFetcher.getAdditionalInfo(for: movie.id)
+            await MainActor.run {
+                self.additionalInfo = info
+            }
+        }
     }
+    
     
 }

@@ -11,4 +11,5 @@ enum NetworkingErrors : Error {
     case invalidURL
     case invalidResponse
     case invalidData
+    case unauthorized
 }

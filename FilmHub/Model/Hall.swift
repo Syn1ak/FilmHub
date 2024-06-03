@@ -14,7 +14,7 @@ struct Hall: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case cinema
+        case cinema = "cinema_id"
         case numberOfSeats = "number_of_seats"
     }
 }
