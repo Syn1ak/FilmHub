@@ -26,7 +26,6 @@ struct HallView: View {
             ForEach(0..<seats.count, id: \.self){ row in
                 HStack {
                     ForEach(0..<seats[row].count/2, id: \.self){ seat in
-                        
                         createSeatView(row: row, seat: seat)
                     }
                     Spacer()
@@ -52,10 +51,12 @@ struct HallView: View {
                     )
                 )
                 .onTapGesture {
-                    if selectedSeats.contains(where: { $0.row == row && $0.seat == seat}) {
-                        selectedSeats.removeAll(where: { $0.row == row && $0.seat == seat})
-                    } else {
-                        selectedSeats.append((row: row, seat: seat))
+                    if !seats[row][seat] {
+                        if selectedSeats.contains(where: { $0.row == row && $0.seat == seat}) {
+                            selectedSeats.removeAll(where: { $0.row == row && $0.seat == seat})
+                        } else {
+                            selectedSeats.append((row: row, seat: seat))
+                        }
                     }
                 }
             if seats[row][seat] {

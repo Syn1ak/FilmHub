@@ -20,14 +20,9 @@ struct TicketView: View {
             WebImage(url: ticket.session.movie.posterLink)
                 .resizable()
                 .scaledToFit()
-                .frame(width: Const.screenWidth/3.5, height: 150)
+                .frame(width: Const.screenWidth/3, height: 180)
                 .padding(.all, 10)
-            VStack (alignment: .leading){
-                HStack {
-                    Spacer()
-                    AdditionalTitle(title: ticket.id)
-                        .padding(.trailing, 10)
-                }
+            VStack (alignment: .leading, spacing: 10){
                 HStack {
                     Text(ticket.session.movie.title)
                         .font(.title3)
@@ -44,14 +39,29 @@ struct TicketView: View {
                     }
                 }
                 .padding(.top, 2)
+                HStack(spacing: 10) {
+                    VStack(alignment: .leading) {
+                        AdditionalTitle(title: "Row")
+                        AdditionalInfo(text: "\(ticket.seatRow)")
+                    }
+                    VStack(alignment: .leading) {
+                        AdditionalTitle(title: "Seat")
+                        AdditionalInfo(text: "\(ticket.seatNumber + 1)")
+                    }
+                }
+                VStack(alignment: .leading) {
+                    AdditionalTitle(title: "Hall")
+                    AdditionalInfo(text: ticket.session.hall.name)
+                }
                 Spacer()
             }
-            .padding(.top, 30)
+            .padding(.top, 10)
+            Spacer()
         }
         .frame(width: Const.screenWidth * 0.95, height: 200)
         .background(RoundedRectangle(cornerRadius: 10)
-            .foregroundStyle(.white)
-            .shadow(color: Color.black.opacity(0.5), radius: 5))
+        .foregroundStyle(.white)
+        .shadow(color: Color.black.opacity(0.5), radius: 5))
     }
 }
 

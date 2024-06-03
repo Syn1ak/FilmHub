@@ -124,7 +124,11 @@ class Networking {
             throw NetworkingErrors.invalidResponse
         }
         do {
-            let movieInfo = try JSONDecoder().decode(MovieAdditionalInfo.self, from: data)
+            let decoder = JSONDecoder()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            decoder.dateDecodingStrategy = .formatted(dateFormatter)
+            let movieInfo = try! decoder.decode(MovieAdditionalInfo.self, from: data)
             return movieInfo
         } catch {
             throw NetworkingErrors.invalidData
@@ -176,7 +180,7 @@ class Networking {
     }
     
     func getUserTickers(for userId: String) async throws -> [Ticket] {
-        guard let reqUrl = createUrl(for: "user/tickets", params: [URLQueryItem(name: "user", value: userId)])
+        guard let reqUrl = createUrl(for: "user/tickets", params: [URLQueryItem(name: "user_id", value: userId)])
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
@@ -184,7 +188,11 @@ class Networking {
             throw NetworkingErrors.invalidResponse
         }
         do {
-            let tickets = try! JSONDecoder().decode([Ticket].self, from: data)
+            let decoder = JSONDecoder()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            decoder.dateDecodingStrategy = .formatted(dateFormatter)
+            let tickets = try decoder.decode([Ticket].self, from: data)
             return tickets
         } catch {
             throw NetworkingErrors.invalidData
@@ -202,6 +210,25 @@ class Networking {
             "user_id": userId,
             "seat_row": seatRow,
             "seat_number": seatNumber
+        ]
+        request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+        let (_, response) = try await URLSession.shared.data(for: request)
+        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+            throw NetworkingErrors.invalidResponse
+        }
+    }
+    
+    func postAddReview(movieId: String, userId: String, comment: String, rating: Int) async throws {
+        guard let reqUrl = createUrl(for: "movies/movie/add_review", params: [])
+        else { throw NetworkingErrors.invalidURL }
+        var request = URLRequest(url: reqUrl)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let parameters: [String : Any] = [
+            "movie_id": movieId,
+            "user_id": userId,
+            "comment": comment,
+            "rating": rating
         ]
         request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
         let (_, response) = try await URLSession.shared.data(for: request)

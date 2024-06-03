@@ -7,11 +7,6 @@
 
 import Foundation
 
-enum TicketType {
-    case `default`
-    case lux
-}
-
 struct Ticket: Decodable {
     let id: String
     let session: Session
@@ -38,8 +33,8 @@ struct Ticket: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case session = "session_id"
-        case user = "user_id"
+        case session
+        case user
         case seatRow = "seat_row"
         case seatNumber = "seat_number"
         case purchaseDate = "purchase_date"

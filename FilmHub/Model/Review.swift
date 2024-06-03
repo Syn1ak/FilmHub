@@ -10,7 +10,7 @@ import Foundation
 struct Review: Codable {
     let id: String
     let user: User
-    let movie: Movie
+    let movieId: String
     let rating: Int
     let comment: String
     let reviewDate: Date
@@ -18,10 +18,10 @@ struct Review: Codable {
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case user
-        case movie
+        case movieId = "movie"
         case rating
         case comment
-        case reviewDate
+        case reviewDate = "review_date"
     }
     
     var formatedReviewDate: String {

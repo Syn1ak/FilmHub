@@ -12,14 +12,27 @@ class FIlmDetailsDataService: ObservableObject {
     let movie: Movie
     @Published var additionalInfo: MovieAdditionalInfo?
     
-    
     init(movie: Movie) {
         self.movie = movie
+        downloadInfo()
+    }
+    
+    private func downloadInfo() {
         Task {
-            let info = try await movieFetcher.getAdditionalInfo(for: movie.id)
+            let info = await movieFetcher.getAdditionalInfo(for: movie.id)
             await MainActor.run {
                 self.additionalInfo = info
             }
+        }
+    }
+    
+    func addReview(comment: String, rating: Int) {
+        Task {
+            await movieFetcher.addReview(movieId: movie.id,
+                                             userId: AuthorizationService.currentUser!.id,
+                                             comment: comment,
+                                             rating: rating)
+            downloadInfo()
         }
     }
     

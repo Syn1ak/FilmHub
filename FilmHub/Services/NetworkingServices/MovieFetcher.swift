@@ -58,7 +58,7 @@ class MovieFetcher {
         return nil
     }
     
-    func getAdditionalInfo(for movieId: String) async throws -> MovieAdditionalInfo? {
+    func getAdditionalInfo(for movieId: String) async -> MovieAdditionalInfo? {
         do {
             let info = try await networkingService.getMovieFullInfo(for: movieId)
             return info
@@ -72,6 +72,21 @@ class MovieFetcher {
             print("Other error")
         }
         return nil
+    }
+    
+    func addReview(movieId: String, userId: String, comment: String, rating: Int) async {
+        do {
+            try await networkingService.postAddReview(movieId: movieId,
+                                                      userId: userId,
+                                                      comment: comment,
+                                                      rating: rating)
+        } catch NetworkingErrors.invalidURL {
+            print("Invalid url")
+        } catch NetworkingErrors.invalidResponse {
+            print("Invalid response")
+        } catch {
+            print("Other error")
+        }
     }
     
 }

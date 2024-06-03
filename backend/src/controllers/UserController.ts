@@ -23,7 +23,28 @@ const getAllUserTickets = async (req: Request, res: Response) => {
     try {
         const {user_id} = req.query;
 
-        const allTickets = await Ticket.find({ user_id });
+        const allTickets = await Ticket.find({ user: user_id })
+            .populate("user")
+            .populate({
+                path: "session",
+                populate: [
+                    {
+                        path: "hall",
+                        populate: {
+                            path: "cinema_id",
+                            populate: {
+                                path: "city_id",
+                            },
+                        },
+                    },
+                    {
+                        path: "movie",
+                    },
+                ],
+            });
+
+
+
 
         res.json(allTickets);
     } catch (error) {

@@ -38,7 +38,7 @@ struct FilmDeatailsView: View {
                 if filmDataService.movie.releaseDate < Date() {
                     Divider()
                     LazyVStack {
-                        ReviewListView(reviews: filmDataService.additionalInfo?.reviews ?? [])
+                        ReviewListView(reviews: filmDataService.additionalInfo?.reviews ?? [], movieService: filmDataService)
                     }
                 }
             }

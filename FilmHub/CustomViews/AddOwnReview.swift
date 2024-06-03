@@ -7,9 +7,15 @@
 
 import SwiftUI
 
+
 struct AddOwnReviewView: View {
     @State private var reviewRating = 0
     @State private var review = ""
+    @ObservedObject private var movieDetailsService: FIlmDetailsDataService
+    
+    init(movieDetailsService: FIlmDetailsDataService) {
+        self.movieDetailsService = movieDetailsService
+    }
     
     var body: some View {
         VStack(alignment: .leading){
@@ -24,7 +30,11 @@ struct AddOwnReviewView: View {
             createRatingStars()
                 .padding(.top, 10)
             Button(action: {
-                
+                if reviewRating > 0 && review.count > 0 {
+                    movieDetailsService.addReview(comment: review, rating: reviewRating)
+                    review = ""
+                    reviewRating = 0
+                }
             }, label: {
                 Text("Add review")
                     .font(.system(size: 18))
