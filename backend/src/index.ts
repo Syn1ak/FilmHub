@@ -12,7 +12,8 @@ import userRoute from "./routes/UserRoute";
 import sessionRoute from "./routes/SessionRoute";
 import Hall from "./models/hall";
 import authRoute from "./routes/auth/AuthRoute";
-import {webcrypto} from "crypto";
+import { webcrypto } from "crypto";
+import { sessionCheck } from "./middleware/session";
 
 const PORT = process.env.PORT || 7010;
 
@@ -20,24 +21,25 @@ mongoose
   .connect(process.env.MONGODB_CONNECTION_STRING as string)
   .then(() => console.log("Connected to database!"));
 
-
 getActors();
 async function getActors() {
   await User.find();
 }
-
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 app.use("/api/auth", authRoute);
+
+app.use(sessionCheck);
+
 app.use("/api/movies", movieRoute);
 app.use("/api/cities", cityRoute);
 app.use("/api/genres", genreRoute);
 app.use("/api/cinemas", cinemaRoute);
 app.use("/api/user", userRoute);
-app.use("/api/sessions", sessionRoute)
+app.use("/api/sessions", sessionRoute);
 
 app.get("/test", async (req: Request, res: Response) => {
   const allHalls = await Hall.find({ cinema_id: req.query.id });
