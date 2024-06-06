@@ -55,6 +55,12 @@ struct AuthorizationView: View {
                                     .stroke(Color("BackgroundColor"), lineWidth: 2)
                             }
                             .padding(.horizontal, 35)
+                            if authService.error.count > 0 {
+                                Text(authService.error)
+                                    .foregroundStyle(.red)
+                                    .font(.system(size: 14))
+                                    .transition(.opacity)
+                            }
                         }
                         .offset(y: -50)
                         CustomButton(buttonTitlte: "Login",
@@ -64,7 +70,9 @@ struct AuthorizationView: View {
                         }, buttonWidth: 150,
                                      buttonHeight: 50)
                         CustomButton(buttonTitlte: "Sign Up",
-                                     buttonAction: { authorizationViewModel.isSignUp.toggle() },
+                                     buttonAction: {
+                            authorizationViewModel.isSignUp.toggle()
+                        },
                                      buttonWidth: 150,
                                      buttonHeight: 50)
                     }
@@ -82,6 +90,7 @@ struct AuthorizationView: View {
             }
         }
         .animation(.easeInOut, value: authorizationViewModel.isSignUp)
+        .animation(.easeInOut, value: authService.error)
     }
 }
 

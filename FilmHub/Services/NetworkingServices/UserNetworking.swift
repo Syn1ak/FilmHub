@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AuthSender {
+class UserNetworking {
     let networkingService = Networking()
     
     func getUserByCredentials(email: String, password: String) async -> User? {
@@ -42,5 +42,23 @@ class AuthSender {
         } catch {
             print("Other error")
         }
+    }
+    
+    func editUser(user: User) async -> User? {
+        do {
+            let user = try await networkingService.editUser(user: user)
+            return user
+        } catch NetworkingErrors.invalidURL {
+            print("Invalid url")
+        } catch NetworkingErrors.invalidResponse {
+            print("Invalid response")
+        } catch NetworkingErrors.invalidData {
+            print("Invalid data")
+        } catch NetworkingErrors.unauthorized{
+            print("Unauthorized access")
+        } catch {
+            print("Other error")
+        }
+        return nil
     }
 }

@@ -32,12 +32,7 @@ class FilmListDataService: ObservableObject {
             downloadMovies()
         }
     }
-    @Published var searchingTitle: String = "" {
-        didSet {
-            filters["query"] = searchingTitle
-            downloadMovies()
-        }
-    }
+    @Published var searchingTitle: String = "" 
 
     
     init() {

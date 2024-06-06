@@ -13,7 +13,6 @@ final class FilmListViewModel: ObservableObject {
     @Published var isFiltering: Bool = false
 }
 
-
 struct FilmListView: View {
         
     init(inProduction: Bool) {
@@ -34,7 +33,22 @@ struct FilmListView: View {
                            inProduction: inProduction)
             ScrollView {
                 if filmListModel.isSearching {
-                    CustomTextField(textValue: $filmListDataService.searchingTitle, placeholder: "Enter film title")
+                    ZStack {
+                        CustomTextField(textValue: $filmListDataService.searchingTitle, placeholder: "Enter film title")
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                filmListDataService.filters["query"] = filmListDataService.searchingTitle
+                                filmListDataService.downloadMovies()
+                            }, label: {
+                                Image(systemName: "magnifyingglass")
+                                    .foregroundStyle(.white)
+                                    .frame(width: 40, height: 40)
+                                    .background(Color("BackgroundColor"))
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                            })
+                        }
+                    }
                     .padding(.leading, 15)
                     .frame(height: 40)
                     .overlay {
@@ -61,7 +75,7 @@ struct FilmListView: View {
             .navigationDestination(
                 for: Movie.self,
                 destination: {
-                    FilmDeatailsView(film: $0)  
+                    FilmDeatailsView(film: $0, cinemaIsChosen: filmListDataService.currentCinema.name != "Cinema")  
                 })
             .ignoresSafeArea(.all)
             .padding(.top, -8)
