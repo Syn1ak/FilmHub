@@ -17,7 +17,7 @@ struct ProfileView: View {
         
         VStack() {
             createHeader()
-            ProfileDetailsView(isLogin: true, profileDetailsViewModel: ProfileDetailsViewModel())
+            ProfileDetailsView()
             .padding(.horizontal, 20)
             CustomButton(buttonTitlte: "Log out",
                          buttonAction: { isAuthorized.toggle() },

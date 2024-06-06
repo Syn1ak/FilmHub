@@ -7,39 +7,30 @@
 
 import SwiftUI
 
-class ProfileDetailsViewModel: ObservableObject {
-    @Published var phoneNumber: String = ""
-    @Published var emailAdress: String = ""
-    @Published var name: String = ""
-    @Published var surname: String = ""
-    @Published var age: String = ""
-    @Published var password: String = ""
-    @Published var dataError: Bool = false
+class ProfileViewModel: ObservableObject {
+    @Published var phoneNumber: String
+    @Published var name: String
+    @Published var surname: String
+    @Published var age: String
+    @Published var email: String
     
-    func getUser() -> User? {
-        guard let age = Int(age) else {
-            dataError = true
-            return nil
-        }
-        return User(id: "",
-             firstName: name,
-             lastName: surname,
-             password: password,
-             email: emailAdress,
-             age: age,
-             phone: phoneNumber)
+    init() {
+        let user = AuthorizationService.currentUser!
+        self.phoneNumber = user.phone
+        self.name = user.firstName
+        self.surname = user.lastName
+        self.age = String(user.age)
+        self.email = user.email
     }
 }
 
 struct ProfileDetailsView: View {
-    let isLogin: Bool
-    @ObservedObject var profileDetailsViewModel: ProfileDetailsViewModel
-    
+    @ObservedObject var profileViewModel = ProfileViewModel()
     var body: some View {
         VStack(alignment: .leading, spacing: 7){
             AdditionalInfo(text: "Phone number")
                 .padding(.top, 10)
-            CustomTextField(textValue: $profileDetailsViewModel.phoneNumber, placeholder: "")
+            CustomTextField(textValue: $profileViewModel.phoneNumber, placeholder: "")
                 .frame(height: 40)
                 .padding(.leading, 10)
                 .overlay {
@@ -48,7 +39,7 @@ struct ProfileDetailsView: View {
                 }
             AdditionalInfo(text: "Name")
                 .padding(.top, 10)
-            CustomTextField(textValue: $profileDetailsViewModel.name, placeholder: "")
+            CustomTextField(textValue: $profileViewModel.name, placeholder: "")
                 .frame(height: 40)
                 .padding(.leading, 10)
                 .overlay {
@@ -57,7 +48,7 @@ struct ProfileDetailsView: View {
                 }
             AdditionalInfo(text: "Surname")
                 .padding(.top, 10)
-            CustomTextField(textValue: $profileDetailsViewModel.surname, placeholder: "")
+            CustomTextField(textValue: $profileViewModel.surname, placeholder: "")
                 .frame(height: 40)
                 .padding(.leading, 10)
                 .overlay {
@@ -66,7 +57,7 @@ struct ProfileDetailsView: View {
                 }
             AdditionalInfo(text: "Age")
                 .padding(.top, 10)
-            CustomTextField(textValue: $profileDetailsViewModel.age, placeholder: "")
+            CustomTextField(textValue: $profileViewModel.age, placeholder: "")
                 .frame(height: 40)
                 .padding(.leading, 10)
                 .overlay {
@@ -75,24 +66,13 @@ struct ProfileDetailsView: View {
                 }
             AdditionalInfo(text: "Email address")
                 .padding(.top, 10)
-            CustomTextField(textValue: $profileDetailsViewModel.emailAdress, placeholder: "")
+            CustomTextField(textValue: $profileViewModel.email, placeholder: "")
                 .frame(height: 40)
                 .padding(.leading, 10)
                 .overlay {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color("BackgroundColor"), lineWidth: 2)
                 }
-            if !isLogin {
-                AdditionalInfo(text: "Password")
-                    .padding(.top, 10)
-                CustomSecureField(textValue: $profileDetailsViewModel.password, placeholder: "")
-                    .frame(height: 40)
-                    .padding(.leading, 10)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color("BackgroundColor"), lineWidth: 2)
-                    }
-            }
         }
     }
     

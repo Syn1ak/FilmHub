@@ -17,7 +17,6 @@ final class AuthorizationViewModel: ObservableObject {
 struct AuthorizationView: View {
     @ObservedObject private var authorizationViewModel = AuthorizationViewModel()
     @ObservedObject private var authService: AuthorizationService
-    @ObservedObject private var profileDetailsModel = ProfileDetailsViewModel()
     
     init(authService: AuthorizationService) {
         self.authService = authService
@@ -76,26 +75,13 @@ struct AuthorizationView: View {
             } else {
                 VStack {
                     ScreenTitleHeader(text: "")
-                    ProfileDetailsView(isLogin: false, profileDetailsViewModel: profileDetailsModel)
+                    SigningUpView(isSignUp: $authorizationViewModel.isSignUp)
                         .padding(.horizontal, 35)
-                    CustomButton(buttonTitlte: "Sign Up",
-                                 buttonAction: {
-                        signUpUser()
-                    },
-                                 buttonWidth: 150,
-                                 buttonHeight: 50)
-                    .padding(.top, 30)
                     Spacer()
                 }
             }
         }
         .animation(.easeInOut, value: authorizationViewModel.isSignUp)
-    }
-    
-    private func signUpUser() {
-        guard let user = profileDetailsModel.getUser() else { return }
-        authService.signUp(user: user)
-        authorizationViewModel.isSignUp.toggle()
     }
 }
 
