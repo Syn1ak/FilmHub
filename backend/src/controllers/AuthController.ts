@@ -11,6 +11,7 @@ const onRegisterUser = async (req: Request, res: Response) => {
 
   const duplicate = await User.findOne({ email });
   if (duplicate) return res.sendStatus(409);
+
   try {
     const hashedPwd = await bcrypt.hash(password, 10);
     const newUser = new User({
@@ -22,6 +23,7 @@ const onRegisterUser = async (req: Request, res: Response) => {
       age: age,
     });
     await newUser.save();
+    
     session.setSessionUser({ email, password });
 
     res.status(201).json(newUser);
@@ -32,21 +34,23 @@ const onRegisterUser = async (req: Request, res: Response) => {
 
 const onLoginUser = async (req: Request, res: Response) => {
   const { email, password } = req.body;
-  console.log();
+
   if (!password || !email)
     return res
       .status(400)
       .json({ message: "Password and email are required." });
+
   const foundUser = await User.findOne({ email: email });
-  console.log(foundUser);
+
   if (!foundUser) return res.sendStatus(401);
 
   const match = await bcrypt.compare(password, foundUser.password);
 
-  if (!match) res.sendStatus(401);
+  if (!match) return res.sendStatus(401);
+
   session.setSessionUser({ email, password });
 
-  res.status(200).json(foundUser);
+  return res.status(200).json(foundUser);
 };
 
 export default {
