@@ -31,7 +31,7 @@ class Networking {
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode > 400  {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -51,7 +51,7 @@ class Networking {
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode > 400  {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -83,7 +83,7 @@ class Networking {
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode > 400  {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -99,7 +99,7 @@ class Networking {
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode > 400  {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -120,7 +120,7 @@ class Networking {
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode > 400  {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -135,12 +135,14 @@ class Networking {
         }
     }
     
-    func getAllSessions(movieId: String) async throws -> [Session] {
-        guard let reqUrl = createUrl(for: "sessions/getAllSessionByMovie", params: [URLQueryItem(name: "movie_id", value: movieId)])
+    func getSessions(movieId: String, date: Date, cinemaId: String) async throws -> [Session] {
+        guard let reqUrl = createUrl(for: "sessions/getSessionByMovieAndDate", params: [URLQueryItem(name: "movie_id", value: movieId),
+                                                                                        URLQueryItem(name: "date", value: date.description),
+                                                                                        URLQueryItem(name: "cinema_id", value: cinemaId)])
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode > 400  {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -184,7 +186,7 @@ class Networking {
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode > 400  {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -213,7 +215,7 @@ class Networking {
         ]
         request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
         let (_, response) = try await URLSession.shared.data(for: request)
-        if let response = response as? HTTPURLResponse, response.statusCode > 400  {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
     }
@@ -232,7 +234,7 @@ class Networking {
         ]
         request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
         let (_, response) = try await URLSession.shared.data(for: request)
-        if let response = response as? HTTPURLResponse, response.statusCode > 400  {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
     }
@@ -253,7 +255,7 @@ class Networking {
         ]
         request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
         let (_, response) = try await URLSession.shared.data(for: request)
-        if let response = response as? HTTPURLResponse, response.statusCode > 400 {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400 {
             throw NetworkingErrors.invalidResponse
         }
     }
@@ -274,7 +276,7 @@ class Networking {
         ]
         request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
         let (data, response) = try await URLSession.shared.data(for: request)
-        if let response = response as? HTTPURLResponse, response.statusCode > 400  {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {

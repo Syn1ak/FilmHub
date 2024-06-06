@@ -9,15 +9,27 @@ import Foundation
 
 class SessionsDataService: ObservableObject {
     let sessionFetcher = SessionFetcher()
+    let cinemaId: String
+    let movieId: String
     @Published var allSessions: [Session] = []
     @Published var currentSession: Session?
-    @Published var selectedDate = Date()
+    @Published var selectedDate: Date = Date() {
+        didSet {
+            downloadSessions()
+        }
+    }
     @Published var selectedTime: Date?
     @Published var selectedSeats = [(row: Int, seat: Int)]()
     
-    init(movieId: String) {
+    init(movieId: String, cinemaId: String) {
+        self.movieId = movieId
+        self.cinemaId = cinemaId
+        downloadSessions()
+    }
+    
+    private func downloadSessions() {
         Task {
-            let sessions = await sessionFetcher.getSessions(for: movieId)
+            let sessions = await sessionFetcher.getSessions(movieId: movieId, date: selectedDate, cinemaId: self.cinemaId)
             await MainActor.run {
                 self.allSessions = sessions ?? []
                 if allSessions.count > 0 {

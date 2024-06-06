@@ -10,11 +10,11 @@ import SDWebImageSwiftUI
 
 
 struct FilmDeatailsView: View {
-    let cinemaIsChosen: Bool
+    let cinemaId: String
     @ObservedObject var filmDataService: FIlmDetailsDataService
-    init(film: Movie, cinemaIsChosen: Bool) {
+    init(film: Movie, cinemaId: String) {
         self.filmDataService = FIlmDetailsDataService(movie: film)
-        self.cinemaIsChosen = cinemaIsChosen
+        self.cinemaId = cinemaId
     }
     
     var body: some View {
@@ -51,9 +51,9 @@ struct FilmDeatailsView: View {
             
         }
         .navigationTitle("Details")
-        if filmDataService.movie.releaseDate < Date() && cinemaIsChosen {
+        if filmDataService.movie.releaseDate < Date() && cinemaId != "" {
             NavigationLink(
-                destination: SessionsView(movie: filmDataService.movie),
+                destination: SessionsView(movie: filmDataService.movie, cinemaId: cinemaId),
                            label: {
                 Text("Sessions")
                     .font(.title3)

@@ -75,7 +75,7 @@ struct FilmListView: View {
             .navigationDestination(
                 for: Movie.self,
                 destination: {
-                    FilmDeatailsView(film: $0, cinemaIsChosen: filmListDataService.currentCinema.name != "Cinema")  
+                    FilmDeatailsView(film: $0, cinemaId: filmListDataService.currentCinema.id)  
                 })
             .ignoresSafeArea(.all)
             .padding(.top, -8)
