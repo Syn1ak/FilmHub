@@ -9,21 +9,22 @@ import SwiftUI
 
 struct MainView: View {
     @ObservedObject private var authService = AuthorizationService()
+    private var ticketService = TicketsDataService()
     
     var body: some View {
         VStack {
             if authService.isAuthorized {
                 TabView {
-                    FilmListView(inProduction: true)
+                    FilmListView(inProduction: true, ticketsService: ticketService)
                         .tabItem {
                             Image(systemName: "movieclapper")
                         }
                         .tint(.gray)
-                    FilmListView(inProduction: false)
+                    FilmListView(inProduction: false, ticketsService: ticketService)
                         .tabItem {
                             Image(systemName: "play.rectangle")
                         }
-                    TicketListView()
+                    TicketListView(ticketsDataService: ticketService)
                         .tabItem {
                             Image(systemName: "ticket")
                         }

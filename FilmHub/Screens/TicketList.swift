@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct TicketListView: View {
-    let ticketsDataService = TicketsDataService()
+    @ObservedObject var ticketsDataService: TicketsDataService
+    
+    init(ticketsDataService: TicketsDataService) {
+        self.ticketsDataService = ticketsDataService
+        self.ticketsDataService.downloadTickets()
+    }
     
     var body: some View {
         VStack {

@@ -15,8 +15,9 @@ final class FilmListViewModel: ObservableObject {
 
 struct FilmListView: View {
         
-    init(inProduction: Bool) {
+    init(inProduction: Bool, ticketsService: TicketsDataService) {
         self.inProduction = inProduction
+        self.ticketsDataService = ticketsService
         self.inProduction ? filmListDataService.downloadMovies() : filmListDataService.downloadFutureMovies()
     }
     
@@ -24,7 +25,7 @@ struct FilmListView: View {
     
     @ObservedObject private var filmListModel = FilmListViewModel()
     @ObservedObject private var filmListDataService = FilmListDataService()
-    
+    private var ticketsDataService: TicketsDataService
     
     var body: some View {
         NavigationStack {
@@ -75,7 +76,7 @@ struct FilmListView: View {
             .navigationDestination(
                 for: Movie.self,
                 destination: {
-                    FilmDeatailsView(film: $0, cinemaId: filmListDataService.currentCinema.id)  
+                    FilmDeatailsView(film: $0, cinemaId: filmListDataService.currentCinema.id, ticketService: self.ticketsDataService)
                 })
             .ignoresSafeArea(.all)
             .padding(.top, -8)
