@@ -136,8 +136,10 @@ class Networking {
     }
     
     func getSessions(movieId: String, date: Date, cinemaId: String) async throws -> [Session] {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         guard let reqUrl = createUrl(for: "sessions/getSessionByMovieAndDate", params: [URLQueryItem(name: "movie_id", value: movieId),
-                                                                                        URLQueryItem(name: "date", value: date.description),
+                                                                                        URLQueryItem(name: "date", value: dateFormatter.string(from: date)),
                                                                                         URLQueryItem(name: "cinema_id", value: cinemaId)])
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
@@ -150,7 +152,7 @@ class Networking {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
             decoder.dateDecodingStrategy = .formatted(dateFormatter)
-            let sessions = try decoder.decode([Session].self, from: data)
+            let sessions = try! decoder.decode([Session].self, from: data)
             return sessions
         } catch {
             throw NetworkingErrors.invalidData
