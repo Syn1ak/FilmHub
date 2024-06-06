@@ -60,6 +60,24 @@ struct MovieAdditionalInfo: Codable {
         }
         return result
     }
+    
+    func getFormattedActorsAndMovies() -> String {
+        var result = ""
+        for i in 0..<actors.count {
+            result += "\(actors[i].name) ("
+            for j in 0..<actors[i].popularMovies.count {
+                result += "\"\(actors[i].popularMovies[j])\""
+                if j < actors[i].popularMovies.count - 1 {
+                    result += ", "
+                }
+            }
+            result += ")"
+            if i < actors.count - 1 {
+                result += ", "
+            }
+        }
+        return result
+    }
 }
 
 

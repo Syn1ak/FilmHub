@@ -5,12 +5,14 @@
 //  Created by Zakhar Litvinchuk on 03.06.2024.
 //
 
-import Foundation
+import SwiftUI
 
 class AuthorizationService: ObservableObject {
-    let authSender = AuthSender()
+    let authSender = UserNetworking()
     static var currentUser: User? = nil
     @Published var isAuthorized = false
+    @Published var error = ""
+    
     
     func login(email: String, password: String) {
         Task {
@@ -19,8 +21,16 @@ class AuthorizationService: ObservableObject {
                 if user != nil {
                     isAuthorized = true
                     AuthorizationService.currentUser = user
+                } else {
+                    error = "Email or password is incorrect" 
                 }
             }
+        }
+    }
+    
+    func signUp(user: User) {
+        Task {
+            await authSender.signUpUser(user: user)
         }
     }
 }

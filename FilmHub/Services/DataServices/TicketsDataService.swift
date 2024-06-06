@@ -10,16 +10,7 @@ import Foundation
 class TicketsDataService: ObservableObject {
     private let ticketsFetcher = TicketFetcher()
     @Published var userTickets: [Ticket] = []
-    
-    init() {
-        Task {
-            let tickets = await ticketsFetcher.getAllTickets(for: AuthorizationService.currentUser!.id)
-            await MainActor.run {
-                self.userTickets = tickets ?? []
-            }
-        }
-    }
-    
+
     func addTicket(sessionDataService: SessionsDataService) {
         Task {
             for selectedSeat in sessionDataService.selectedSeats {
@@ -27,6 +18,20 @@ class TicketsDataService: ObservableObject {
                                                userId: AuthorizationService.currentUser!.id,
                                                seatRow: selectedSeat.row,
                                                seatNumber: selectedSeat.seat)
+            }
+            await MainActor.run {
+                sessionDataService.selectedSeats = []
+                sessionDataService.downloadSessions()
+            }
+            downloadTickets()
+        }
+    }
+    
+    func downloadTickets() {
+        Task {
+            let tickets = await ticketsFetcher.getAllTickets(for: AuthorizationService.currentUser!.id)
+            await MainActor.run {
+                self.userTickets = tickets ?? []
             }
         }
     }

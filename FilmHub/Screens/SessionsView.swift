@@ -11,11 +11,12 @@ struct SessionsView: View {
     @Environment(\.presentationMode) var presentationMode
     let movie: Movie
     @ObservedObject private var sessionDataService: SessionsDataService
-    @ObservedObject private var ticketService = TicketsDataService()
+    private var ticketService: TicketsDataService
     
-    init(movie: Movie) {
+    init(movie: Movie, cinemaId: String, ticketService: TicketsDataService) {
         self.movie = movie
-        self.sessionDataService = SessionsDataService(movieId: movie.id)
+        self.sessionDataService = SessionsDataService(movieId: movie.id, cinemaId: cinemaId)
+        self.ticketService = ticketService
     }
     
     var body: some View {
@@ -74,6 +75,7 @@ struct SessionsView: View {
                 ForEach(sessionDataService.allSessions, id: \.id) { session in
                     Button(action: {
                         sessionDataService.selectedTime = session.startTime
+                        sessionDataService.currentSession = session
                     }, label: {
                         Text(session.formattedStartTime)
                             .foregroundStyle(.white)

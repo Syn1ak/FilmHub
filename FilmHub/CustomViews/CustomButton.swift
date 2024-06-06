@@ -30,7 +30,6 @@ struct CustomButton: View {
                 .frame(width: buttonWidth, height: buttonHeight)
                 .background(Color("BackgroundColor"))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
-                .padding(.top, 40)
         })
 
     }

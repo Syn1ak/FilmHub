@@ -13,11 +13,11 @@ final class FilmListViewModel: ObservableObject {
     @Published var isFiltering: Bool = false
 }
 
-
 struct FilmListView: View {
         
-    init(inProduction: Bool) {
+    init(inProduction: Bool, ticketsService: TicketsDataService) {
         self.inProduction = inProduction
+        self.ticketsDataService = ticketsService
         self.inProduction ? filmListDataService.downloadMovies() : filmListDataService.downloadFutureMovies()
     }
     
@@ -25,7 +25,7 @@ struct FilmListView: View {
     
     @ObservedObject private var filmListModel = FilmListViewModel()
     @ObservedObject private var filmListDataService = FilmListDataService()
-    
+    private var ticketsDataService: TicketsDataService
     
     var body: some View {
         NavigationStack {
@@ -34,7 +34,22 @@ struct FilmListView: View {
                            inProduction: inProduction)
             ScrollView {
                 if filmListModel.isSearching {
-                    CustomTextField(textValue: $filmListDataService.searchingTitle, placeholder: "Enter film title")
+                    ZStack {
+                        CustomTextField(textValue: $filmListDataService.searchingTitle, placeholder: "Enter film title")
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                filmListDataService.filters["query"] = filmListDataService.searchingTitle
+                                filmListDataService.downloadMovies()
+                            }, label: {
+                                Image(systemName: "magnifyingglass")
+                                    .foregroundStyle(.white)
+                                    .frame(width: 40, height: 40)
+                                    .background(Color("BackgroundColor"))
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                            })
+                        }
+                    }
                     .padding(.leading, 15)
                     .frame(height: 40)
                     .overlay {
@@ -61,7 +76,7 @@ struct FilmListView: View {
             .navigationDestination(
                 for: Movie.self,
                 destination: {
-                    FilmDeatailsView(film: $0)  
+                    FilmDeatailsView(film: $0, cinemaId: filmListDataService.currentCinema.id, ticketService: self.ticketsDataService)
                 })
             .ignoresSafeArea(.all)
             .padding(.top, -8)

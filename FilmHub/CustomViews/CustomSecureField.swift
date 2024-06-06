@@ -26,12 +26,5 @@ struct CustomSecureField: View {
             .focused($emailFieldIsFocused)
             .textInputAutocapitalization(.never)
             .disableAutocorrection(true)
-            .padding(.leading, 7)
-            .frame(height: 30)
-            .overlay {
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color("BackgroundColor"))
-            }
-            .padding(.horizontal, 35)
     }
 }

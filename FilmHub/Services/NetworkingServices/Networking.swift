@@ -31,7 +31,7 @@ class Networking {
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -51,7 +51,7 @@ class Networking {
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -67,7 +67,7 @@ class Networking {
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+        if let response = response as? HTTPURLResponse, response.statusCode > 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -83,7 +83,7 @@ class Networking {
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -99,7 +99,7 @@ class Networking {
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -120,7 +120,7 @@ class Networking {
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -128,19 +128,23 @@ class Networking {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
             decoder.dateDecodingStrategy = .formatted(dateFormatter)
-            let movieInfo = try! decoder.decode(MovieAdditionalInfo.self, from: data)
+            let movieInfo = try decoder.decode(MovieAdditionalInfo.self, from: data)
             return movieInfo
         } catch {
             throw NetworkingErrors.invalidData
         }
     }
     
-    func getAllSessions(movieId: String) async throws -> [Session] {
-        guard let reqUrl = createUrl(for: "sessions/getAllSessionByMovie", params: [URLQueryItem(name: "movie_id", value: movieId)])
+    func getSessions(movieId: String, date: Date, cinemaId: String) async throws -> [Session] {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        guard let reqUrl = createUrl(for: "sessions/getSessionByMovieAndDate", params: [URLQueryItem(name: "movie_id", value: movieId),
+                                                                                        URLQueryItem(name: "date", value: dateFormatter.string(from: date)),
+                                                                                        URLQueryItem(name: "cinema_id", value: cinemaId)])
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -148,7 +152,7 @@ class Networking {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
             decoder.dateDecodingStrategy = .formatted(dateFormatter)
-            let sessions = try decoder.decode([Session].self, from: data)
+            let sessions = try! decoder.decode([Session].self, from: data)
             return sessions
         } catch {
             throw NetworkingErrors.invalidData
@@ -184,7 +188,7 @@ class Networking {
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
         let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
         do {
@@ -213,7 +217,7 @@ class Networking {
         ]
         request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
         let (_, response) = try await URLSession.shared.data(for: request)
-        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
         }
     }
@@ -232,8 +236,56 @@ class Networking {
         ]
         request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
         let (_, response) = try await URLSession.shared.data(for: request)
-        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
             throw NetworkingErrors.invalidResponse
+        }
+    }
+    
+    func postSignUp(user: User) async throws {
+        guard let reqUrl = createUrl(for: "auth/sign_up", params: [])
+        else { throw NetworkingErrors.invalidURL }
+        var request = URLRequest(url: reqUrl)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let parameters: [String : Any] = [
+            "first_name": user.firstName,
+            "last_name": user.lastName,
+            "phone": user.phone,
+            "password": user.password,
+            "email": user.email,
+            "age": user.age
+        ]
+        request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+        let (_, response) = try await URLSession.shared.data(for: request)
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400 {
+            throw NetworkingErrors.invalidResponse
+        }
+    }
+    
+    func editUser(user: User) async throws -> User {
+        guard let reqUrl = createUrl(for: "user", params: [])
+        else { throw NetworkingErrors.invalidURL }
+        var request = URLRequest(url: reqUrl)
+        request.httpMethod = "PUT"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let parameters: [String : Any] = [
+            "_id": user.id,
+            "first_name": user.firstName,
+            "last_name": user.lastName,
+            "email": user.email,
+            "age": user.age,
+            "phone": user.phone
+        ]
+        request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+        let (data, response) = try await URLSession.shared.data(for: request)
+        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
+            throw NetworkingErrors.invalidResponse
+        }
+        do {
+            let user = try JSONDecoder().decode(User.self, from: data)
+            return user
+        } catch {
+            throw NetworkingErrors.invalidData
         }
     }
 }

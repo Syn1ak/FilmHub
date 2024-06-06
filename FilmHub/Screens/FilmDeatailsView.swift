@@ -10,10 +10,13 @@ import SDWebImageSwiftUI
 
 
 struct FilmDeatailsView: View {
-
+    let cinemaId: String
     @ObservedObject var filmDataService: FIlmDetailsDataService
-    init(film: Movie) {
+    var ticketService: TicketsDataService
+    init(film: Movie, cinemaId: String, ticketService: TicketsDataService) {
         self.filmDataService = FIlmDetailsDataService(movie: film)
+        self.cinemaId = cinemaId
+        self.ticketService = ticketService
     }
     
     var body: some View {
@@ -34,6 +37,9 @@ struct FilmDeatailsView: View {
                 AdditionalTitle(title: "Director")
                     .padding(.top, 15)
                 AdditionalInfo(text: filmDataService.movie.director)
+                AdditionalTitle(title: "Starring")
+                    .padding(.top, 15)
+                AdditionalInfo(text: filmDataService.additionalInfo?.getFormattedActorsAndMovies() ?? "")
                 
                 if filmDataService.movie.releaseDate < Date() {
                     Divider()
@@ -47,9 +53,9 @@ struct FilmDeatailsView: View {
             
         }
         .navigationTitle("Details")
-        if filmDataService.movie.releaseDate < Date() {
+        if filmDataService.movie.releaseDate < Date() && cinemaId != "" {
             NavigationLink(
-                destination: SessionsView(movie: filmDataService.movie),
+                destination: SessionsView(movie: filmDataService.movie, cinemaId: cinemaId, ticketService: ticketService),
                            label: {
                 Text("Sessions")
                     .font(.title3)
