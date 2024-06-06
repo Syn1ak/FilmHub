@@ -27,4 +27,20 @@ class AuthSender {
         }
         return nil
     }
+    
+    func signUpUser(user: User) async {
+        do {
+            try await networkingService.postSignUp(user: user)
+        } catch NetworkingErrors.invalidURL {
+            print("Invalid url")
+        } catch NetworkingErrors.invalidResponse {
+            print("Invalid response")
+        } catch NetworkingErrors.invalidData {
+            print("Invalid data")
+        } catch NetworkingErrors.unauthorized{
+            print("Unauthorized access")
+        } catch {
+            print("Other error")
+        }
+    }
 }

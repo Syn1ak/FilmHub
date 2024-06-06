@@ -128,7 +128,7 @@ class Networking {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
             decoder.dateDecodingStrategy = .formatted(dateFormatter)
-            let movieInfo = try! decoder.decode(MovieAdditionalInfo.self, from: data)
+            let movieInfo = try decoder.decode(MovieAdditionalInfo.self, from: data)
             return movieInfo
         } catch {
             throw NetworkingErrors.invalidData
@@ -229,6 +229,27 @@ class Networking {
             "user_id": userId,
             "comment": comment,
             "rating": rating
+        ]
+        request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+        let (_, response) = try await URLSession.shared.data(for: request)
+        if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+            throw NetworkingErrors.invalidResponse
+        }
+    }
+    
+    func postSignUp(user: User) async throws {
+        guard let reqUrl = createUrl(for: "auth/sign_up", params: [])
+        else { throw NetworkingErrors.invalidURL }
+        var request = URLRequest(url: reqUrl)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let parameters: [String : Any] = [
+            "first_name": user.firstName,
+            "last_name": user.lastName,
+            "phone": user.phone,
+            "password": user.password,
+            "email": user.email,
+            "age": user.age
         ]
         request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
         let (_, response) = try await URLSession.shared.data(for: request)

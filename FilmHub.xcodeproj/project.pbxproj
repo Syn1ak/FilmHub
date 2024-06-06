@@ -23,6 +23,8 @@
 		7E65C3E22C0DC39E0092C7E6 /* TicketFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65C3E12C0DC39E0092C7E6 /* TicketFetcher.swift */; };
 		7E65C3E42C0DC73F0092C7E6 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65C3E32C0DC73F0092C7E6 /* AuthorizationService.swift */; };
 		7E65C3E62C0DC7C50092C7E6 /* AuthSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65C3E52C0DC7C50092C7E6 /* AuthSender.swift */; };
+		7E65E07A2C11A7D00085DC2F /* ProfileDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65E0792C11A7D00085DC2F /* ProfileDetailsView.swift */; };
+		7E65E07C2C11BA570085DC2F /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65E07B2C11BA570085DC2F /* UserDataService.swift */; };
 		7E74B1F72C0CE1E800598911 /* SessionFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E74B1F62C0CE1E800598911 /* SessionFetcher.swift */; };
 		7E74B1F92C0CE26600598911 /* SessionsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E74B1F82C0CE26600598911 /* SessionsDataService.swift */; };
 		7E8A7CDA2BF236C10074CB68 /* FilmHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A7CD92BF236C10074CB68 /* FilmHubApp.swift */; };
@@ -76,6 +78,8 @@
 		7E65C3E12C0DC39E0092C7E6 /* TicketFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketFetcher.swift; sourceTree = "<group>"; };
 		7E65C3E32C0DC73F0092C7E6 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		7E65C3E52C0DC7C50092C7E6 /* AuthSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSender.swift; sourceTree = "<group>"; };
+		7E65E0792C11A7D00085DC2F /* ProfileDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsView.swift; sourceTree = "<group>"; };
+		7E65E07B2C11BA570085DC2F /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		7E74B1F62C0CE1E800598911 /* SessionFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionFetcher.swift; sourceTree = "<group>"; };
 		7E74B1F82C0CE26600598911 /* SessionsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsDataService.swift; sourceTree = "<group>"; };
 		7E8A7CD62BF236C10074CB68 /* FilmHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				7EE99BF52BFCE20900804D2A /* FilmListDataService.swift */,
+				7E65E07B2C11BA570085DC2F /* UserDataService.swift */,
 				7E65C3E32C0DC73F0092C7E6 /* AuthorizationService.swift */,
 				7EC4DFC42C00C6C8009A1D0B /* FIlmDetailsDataService.swift */,
 				7E1D63D52BFD11FE00B9A979 /* FilterDataService.swift */,
@@ -205,6 +210,7 @@
 				7E8EE1E62BF6682800CB8166 /* ScreenHeader.swift */,
 				7EA66B142BFA7FF6005B526A /* CheckBox.swift */,
 				7E1D63CE2BFD082800B9A979 /* FilmPoster.swift */,
+				7E65E0792C11A7D00085DC2F /* ProfileDetailsView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -350,6 +356,7 @@
 				7E1D63D62BFD11FE00B9A979 /* FilterDataService.swift in Sources */,
 				7EE99BF62BFCE20900804D2A /* FilmListDataService.swift in Sources */,
 				7EE99BF22BFCD5AA00804D2A /* Errors.swift in Sources */,
+				7E65E07A2C11A7D00085DC2F /* ProfileDetailsView.swift in Sources */,
 				7EE99BF42BFCD89E00804D2A /* MovieFetcher.swift in Sources */,
 				7E8EE1D72BF6293E00CB8166 /* FilmDeatailsView.swift in Sources */,
 				7E8A7CDA2BF236C10074CB68 /* FilmHubApp.swift in Sources */,
@@ -358,6 +365,7 @@
 				7EC4DFC52C00C6C8009A1D0B /* FIlmDetailsDataService.swift in Sources */,
 				7ED3CE022BF5F5360083449F /* CustomButton.swift in Sources */,
 				7E43237F2BFBC4530012CFA9 /* SessionsView.swift in Sources */,
+				7E65E07C2C11BA570085DC2F /* UserDataService.swift in Sources */,
 				7E8EE1E12BF658FB00CB8166 /* TicketView.swift in Sources */,
 				7E4323712BFB6E8D0012CFA9 /* Actor.swift in Sources */,
 				7EE99BF02BFCD46A00804D2A /* Networking.swift in Sources */,

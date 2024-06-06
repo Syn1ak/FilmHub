@@ -23,4 +23,10 @@ class AuthorizationService: ObservableObject {
             }
         }
     }
+    
+    func signUp(user: User) {
+        Task {
+            await authSender.signUpUser(user: user)
+        }
+    }
 }
