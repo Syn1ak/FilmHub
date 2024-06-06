@@ -20,6 +20,7 @@ struct TicketListView: View {
                     }
                 }
                 .padding(.top, 20)
+                .padding(.bottom, 100)
             }.ignoresSafeArea(.all)
         }
     }

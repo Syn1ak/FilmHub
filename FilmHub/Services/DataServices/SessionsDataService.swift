@@ -27,7 +27,7 @@ class SessionsDataService: ObservableObject {
         downloadSessions()
     }
     
-    private func downloadSessions() {
+    func downloadSessions() {
         Task {
             let sessions = await sessionFetcher.getSessions(movieId: movieId, date: selectedDate, cinemaId: self.cinemaId)
             await MainActor.run {
@@ -35,6 +35,9 @@ class SessionsDataService: ObservableObject {
                 if allSessions.count > 0 {
                     self.currentSession = self.allSessions[0]
                     self.selectedTime = self.currentSession!.startTime
+                }
+                else {
+                    currentSession = nil
                 }
             }
         }

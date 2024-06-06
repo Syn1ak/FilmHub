@@ -28,6 +28,8 @@ class TicketsDataService: ObservableObject {
                                                seatRow: selectedSeat.row,
                                                seatNumber: selectedSeat.seat)
             }
+            sessionDataService.selectedSeats = []
+            sessionDataService.downloadSessions()
         }
     }
 }
