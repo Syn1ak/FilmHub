@@ -12,7 +12,6 @@ import userRoute from "./routes/UserRoute";
 import sessionRoute from "./routes/SessionRoute";
 import Hall from "./models/hall";
 import authRoute from "./routes/auth/AuthRoute";
-import { webcrypto } from "crypto";
 import { sessionCheck } from "./middleware/session";
 
 const PORT = process.env.PORT || 7010;
