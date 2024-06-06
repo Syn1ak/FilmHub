@@ -35,10 +35,21 @@ const getSessionByMovieAndDate = async (req: Request, res: Response) => {
           },
         ],
       },
-    }).populate({
-      path: "hall",
-      match: { cinema_id: cinema_id },
-    });
+    }).populate([
+      {
+        path: "hall",
+        match: { cinema_id: cinema_id },
+        populate: {
+          path: "cinema_id",
+          populate: {
+            path: "city_id",
+          },
+        },
+      },
+      {
+        path: "movie",
+      },
+    ]);
 
     const sessions = sessionByMovieAndDate.filter((item) => item.hall != null);
 
