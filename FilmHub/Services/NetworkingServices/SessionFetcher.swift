@@ -15,13 +15,13 @@ class SessionFetcher {
             let sessions = try await networkingService.getSessions(movieId: movieId, date: date, cinemaId: cinemaId)
             return sessions
         } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
+            print("Get sessions: Invalid url")
         } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
+            print("Get sessions: Invalid response")
         } catch NetworkingErrors.invalidData {
-            print("Invalid data")
+            print("Get sessions: Invalid data")
         } catch {
-            print("Other error")
+            print("Get sessions: Other error")
         }
         return nil
     }

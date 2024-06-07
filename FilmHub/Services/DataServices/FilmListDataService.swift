@@ -59,7 +59,7 @@ class FilmListDataService: ObservableObject {
     
     private func downloadCities() {
         Task {
-            let cities = await cityFetcher.getAllMovies()
+            let cities = await cityFetcher.getAllCities()
             await MainActor.run {
                 self.cities = cities ?? []
             }

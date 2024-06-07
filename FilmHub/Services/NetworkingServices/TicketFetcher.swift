@@ -15,13 +15,13 @@ class TicketFetcher {
             let tickets = try await networkingService.getUserTickers(for: userId)
             return tickets
         } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
+            print("Get user tickets: Invalid url")
         } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
+            print("Get user tickets: Invalid response")
         } catch NetworkingErrors.invalidData {
-            print("Invalid data")
+            print("Get user tickets: Invalid data")
         } catch {
-            print("Other error")
+            print("Get user tickets: Other error")
         }
         return nil
     }
@@ -33,11 +33,11 @@ class TicketFetcher {
                                                       seatRow: seatRow,
                                                       seatNumber: seatNumber)
         } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
+            print("Add ticket: Invalid url")
         } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
+            print("Add ticket: Invalid response")
         } catch {
-            print("Other error")
+            print("Add ticket: Other error")
         }
     }
 }

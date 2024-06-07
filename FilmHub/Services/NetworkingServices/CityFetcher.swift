@@ -10,18 +10,18 @@ import Foundation
 class CityFetcher {
     let networkingService = Networking()
     
-    func getAllMovies() async -> [City]?{
+    func getAllCities() async -> [City]?{
         do {
             let cities = try await networkingService.getAllCities()
             return cities
         } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
+            print("Get all cities: Invalid url")
         } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
+            print("Get all cities: Invalid response")
         } catch NetworkingErrors.invalidData {
-            print("Invalid data")
+            print("Get all cities: Invalid data")
         } catch {
-            print("Other error")
+            print("Get all cities: Other error")
         }
         return nil
     }

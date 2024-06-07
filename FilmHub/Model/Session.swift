@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Session: Codable {
+struct Session: Codable, Equatable {
+    static func == (lhs: Session, rhs: Session) -> Bool {
+        lhs.id == rhs.id
+    }
+    
     let id: String
     let movie: Movie
     let hall: Hall

@@ -15,15 +15,15 @@ class UserNetworking {
             let user = try await networkingService.getUserByCredentials(email: email, password: password)
             return user
         } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
+            print("Get user by credentials: Invalid url")
         } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
+            print("Get user by credentials: Invalid response")
         } catch NetworkingErrors.invalidData {
-            print("Invalid data")
+            print("Get user by credentials: Invalid data")
         } catch NetworkingErrors.unauthorized{
-            print("Unauthorized access")
+            print("Get user by credentials: Unauthorized access")
         } catch {
-            print("Other error")
+            print("Get user by credentials: Other error")
         }
         return nil
     }
@@ -32,15 +32,15 @@ class UserNetworking {
         do {
             try await networkingService.postSignUp(user: user)
         } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
+            print("Sign up user: Invalid url")
         } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
+            print("Sign up user: Invalid response")
         } catch NetworkingErrors.invalidData {
-            print("Invalid data")
+            print("Sign up user: Invalid data")
         } catch NetworkingErrors.unauthorized{
-            print("Unauthorized access")
+            print("Sign up user: Unauthorized access")
         } catch {
-            print("Other error")
+            print("Sign up user: Other error")
         }
     }
     
@@ -49,15 +49,15 @@ class UserNetworking {
             let user = try await networkingService.editUser(user: user)
             return user
         } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
+            print("Edit user: Invalid url")
         } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
+            print("Edit user: Invalid response")
         } catch NetworkingErrors.invalidData {
-            print("Invalid data")
+            print("Edit user: Invalid data")
         } catch NetworkingErrors.unauthorized{
-            print("Unauthorized access")
+            print("Edit user: Unauthorized access")
         } catch {
-            print("Other error")
+            print("Edit user: Other error")
         }
         return nil
     }

@@ -15,13 +15,13 @@ class CinemaFetcher {
             let cinemas = try await networkingService.getAllCinemas(for: cityId)
             return cinemas
         } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
+            print("Get all cinemas by city: Invalid url")
         } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
+            print("Get all cinemas by city: Invalid response")
         } catch NetworkingErrors.invalidData {
-            print("Invalid data")
+            print("Get all cinemas by city: Invalid data")
         } catch {
-            print("Other error")
+            print("Get all cinemas by city: Other error")
         }
         return nil
     }

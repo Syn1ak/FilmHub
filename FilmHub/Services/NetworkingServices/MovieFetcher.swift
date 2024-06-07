@@ -15,29 +15,13 @@ class MovieFetcher {
             let movies = try await networkingService.getMovies(filters: filters)
             return movies
         } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
+            print("Get movies with filters: Invalid url")
         } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
+            print("Get movies with filters: Invalid response")
         } catch NetworkingErrors.invalidData {
-            print("Invalid data")
+            print("Get movies with filters: Invalid data")
         } catch {
-            print("Other error")
-        }
-        return nil
-    }
-    
-    func getMovies(for movieId: String) async -> MovieAdditionalInfo?{
-        do {
-            let movieInfo = try await networkingService.getMovieFullInfo(for: movieId)
-            return movieInfo
-        } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
-        } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
-        } catch NetworkingErrors.invalidData {
-            print("Invalid data")
-        } catch {
-            print("Other error")
+            print("Get movies with filters: Other error")
         }
         return nil
     }
@@ -47,13 +31,13 @@ class MovieFetcher {
             let futureMovies = try await networkingService.getFutureMovies()
             return futureMovies
         } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
+            print("Get future movies: Invalid url")
         } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
+            print("Get future movies: Invalid response")
         } catch NetworkingErrors.invalidData {
-            print("Invalid data")
+            print("Get future movies: Invalid data")
         } catch {
-            print("Other error")
+            print("Get future movies: Other error")
         }
         return nil
     }
@@ -63,13 +47,13 @@ class MovieFetcher {
             let info = try await networkingService.getMovieFullInfo(for: movieId)
             return info
         } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
+            print("Get movie full info: Invalid url")
         } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
+            print("Get movie full info: Invalid response")
         } catch NetworkingErrors.invalidData {
-            print("Invalid data")
+            print("Get movie full info: Invalid data")
         } catch {
-            print("Other error")
+            print("Get movie full info: Other error")
         }
         return nil
     }
@@ -81,11 +65,11 @@ class MovieFetcher {
                                                       comment: comment,
                                                       rating: rating)
         } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
+            print("Add review: Invalid url")
         } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
+            print("Add review: Invalid response")
         } catch {
-            print("Other error")
+            print("Add review: Other error")
         }
     }
     

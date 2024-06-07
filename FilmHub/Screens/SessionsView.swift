@@ -22,6 +22,7 @@ struct SessionsView: View {
     var body: some View {
         VStack {
             HallView(seats: sessionDataService.currentSession?.seats, selectedSeats: $sessionDataService.selectedSeats)
+                .transition(.opacity)
             createFooter()
                 .offset(y: -40)
         }
@@ -34,6 +35,7 @@ struct SessionsView: View {
                 .foregroundColor(.white)
             }
         }
+        .animation(.easeInOut, value: sessionDataService.currentSession)
     }
     
     @ViewBuilder
@@ -74,6 +76,7 @@ struct SessionsView: View {
             HStack (spacing: 20){
                 ForEach(sessionDataService.allSessions, id: \.id) { session in
                     Button(action: {
+                        sessionDataService.selectedSeats = []
                         sessionDataService.selectedTime = session.startTime
                         sessionDataService.currentSession = session
                     }, label: {

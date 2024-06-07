@@ -152,7 +152,7 @@ class Networking {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
             decoder.dateDecodingStrategy = .formatted(dateFormatter)
-            let sessions = try! decoder.decode([Session].self, from: data)
+            let sessions = try decoder.decode([Session].self, from: data)
             return sessions
         } catch {
             throw NetworkingErrors.invalidData
@@ -196,7 +196,7 @@ class Networking {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
             decoder.dateDecodingStrategy = .formatted(dateFormatter)
-            let tickets = try decoder.decode([Ticket].self, from: data)
+            let tickets = try! decoder.decode([Ticket].self, from: data)
             return tickets
         } catch {
             throw NetworkingErrors.invalidData

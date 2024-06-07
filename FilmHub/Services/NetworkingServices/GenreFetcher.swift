@@ -16,13 +16,13 @@ class GenreFetcher {
             let genres = try await networkingService.getAllGenres()
             return genres
         } catch NetworkingErrors.invalidURL {
-            print("Invalid url")
+            print("Get all genres: Invalid url")
         } catch NetworkingErrors.invalidResponse {
-            print("Invalid response")
+            print("Get all genres: Invalid response")
         } catch NetworkingErrors.invalidData {
-            print("Invalid data")
+            print("Get all genres: Invalid data")
         } catch {
-            print("Other error")
+            print("Get all genres: Other error")
         }
         return nil
     }
