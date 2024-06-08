@@ -1,0 +1,67 @@
+[
+  {
+    "user": {
+      "$oid": "42eac04c8edce82e0a9b1005"
+    },
+    "movie": {
+      "$oid": "665625047aee2eb5aea70a16"
+    },
+    "rating": 1,
+    "comment": "Not my taste.",
+    "review_date": {
+      "$date": "2024-02-11T14:08:18.316589Z"
+    }
+  },
+  {
+    "user": {
+      "$oid": "665625047aee2eb5aea70a16"
+    },
+    "movie": {
+      "$oid": "0fb2a93aabc27c9c3a5aefaf"
+    },
+    "rating": 3,
+    "comment": "Not my taste.",
+    "review_date": {
+      "$date": "2024-04-18T06:06:18.875703Z"
+    }
+  },
+  {
+    "user": {
+      "$oid": "665625047aee2eb5aea70a16"
+    },
+    "movie": {
+      "$oid": "4abe4439522816daa868eefa"
+    },
+    "rating": 4,
+    "comment": "Could be better.",
+    "review_date": {
+      "$date": "2023-01-02T22:12:38.574324Z"
+    }
+  },
+  {
+    "user": {
+      "$oid": "e2413720e9306fd4ba85665b"
+    },
+    "movie": {
+      "$oid": "665625047aee2eb5aea70a16"
+    },
+    "rating": 2,
+    "comment": "Great movie!",
+    "review_date": {
+      "$date": "2023-03-03T08:57:46.347383Z"
+    }
+  },
+  {
+    "user": {
+      "$oid": "f362e67863b8e17b4b14e354"
+    },
+    "movie": {
+      "$oid": "665625047aee2eb5aea70a16"
+    },
+    "rating": 2,
+    "comment": "Not bad.",
+    "review_date": {
+      "$date": "2023-02-11T23:57:42.395878Z"
+    }
+  }
+]

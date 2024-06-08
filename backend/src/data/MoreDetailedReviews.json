@@ -1,0 +1,652 @@
+[
+    {
+        "user": {
+            "$oid": "495ed9fb03a530813ee8457e"
+        },
+        "movie": {
+            "$oid": "fcb94eb58a0c4f887d47f8d4"
+        },
+        "rating": 3,
+        "comment": "Not bad. The story was a bit predictable but still enjoyable.",
+        "review_date": {
+            "$date": "2023-01-26T05:28:35.230204Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "0dcd77679ee7b69c3ccd4d8c"
+        },
+        "movie": {
+            "$oid": "3df81d3caeca61bda9a5c4d8"
+        },
+        "rating": 2,
+        "comment": "It was okay. Some parts were great, but others were lacking in depth.",
+        "review_date": {
+            "$date": "2024-03-17T15:31:36.765989Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "35ce0d239428f15839296fe1"
+        },
+        "movie": {
+            "$oid": "892847b0800c3f9414359541"
+        },
+        "rating": 4,
+        "comment": "It was okay. Some parts were great, but others were lacking in depth.",
+        "review_date": {
+            "$date": "2024-05-15T23:26:09.371627Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "921dd9eb519fd7762dba97bc"
+        },
+        "movie": {
+            "$oid": "503922b8ea32860a37cc3938"
+        },
+        "rating": 3,
+        "comment": "Not my taste. I found it quite boring and uneventful.",
+        "review_date": {
+            "$date": "2023-07-27T23:07:44.210230Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "4109258f143a7e3164956d7b"
+        },
+        "movie": {
+            "$oid": "667652de5297b000c7a0c3bc"
+        },
+        "rating": 5,
+        "comment": "Fantastic! A must-watch for everyone who loves a good thriller.",
+        "review_date": {
+            "$date": "2023-02-12T08:24:15.347450Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "5f245e4a111143549811d303"
+        },
+        "movie": {
+            "$oid": "b4b5b9297831d2dbf29d2c89"
+        },
+        "rating": 2,
+        "comment": "Fantastic! A must-watch for everyone who loves a good thriller.",
+        "review_date": {
+            "$date": "2023-06-12T14:33:11.902400Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "80e02fa081e94c4ae2dd2065"
+        },
+        "movie": {
+            "$oid": "532a33351325ce150f63230c"
+        },
+        "rating": 4,
+        "comment": "Terrible. I couldn't even finish watching it.",
+        "review_date": {
+            "$date": "2023-09-16T02:42:35.583994Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "072cd7cce5cd6d131bacf48c"
+        },
+        "movie": {
+            "$oid": "f34bc9454b30e2ba54418c7b"
+        },
+        "rating": 5,
+        "comment": "Fantastic! A must-watch for everyone who loves a good thriller.",
+        "review_date": {
+            "$date": "2023-03-23T10:01:28.732224Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "b8102c2806457272c2407b22"
+        },
+        "movie": {
+            "$oid": "741b8fbdb62f60e81eea4a25"
+        },
+        "rating": 1,
+        "comment": "Loved it! The cinematography was stunning and the soundtrack was perfect.",
+        "review_date": {
+            "$date": "2023-10-08T20:58:13.133781Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "c7c674585259a08ba7eeec36"
+        },
+        "movie": {
+            "$oid": "95754ce68d7a098fb51589d8"
+        },
+        "rating": 4,
+        "comment": "Not bad. The story was a bit predictable but still enjoyable.",
+        "review_date": {
+            "$date": "2023-03-27T04:06:58.749882Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "77d0008fc42c46be22b20eaa"
+        },
+        "movie": {
+            "$oid": "5c1805766549b39db04d89e1"
+        },
+        "rating": 1,
+        "comment": "Not my taste. I found it quite boring and uneventful.",
+        "review_date": {
+            "$date": "2023-07-17T05:17:10.259530Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "7ee83d496a3e6719c2d81739"
+        },
+        "movie": {
+            "$oid": "551b1a59823447056bbcdd5c"
+        },
+        "rating": 1,
+        "comment": "Excellent! A brilliant film with a powerful message.",
+        "review_date": {
+            "$date": "2023-03-17T10:11:45.277035Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "13b49f107ca7ae453bd2f568"
+        },
+        "movie": {
+            "$oid": "3ede0de1c72bc86889317a86"
+        },
+        "rating": 5,
+        "comment": "Excellent! A brilliant film with a powerful message.",
+        "review_date": {
+            "$date": "2023-05-06T04:57:11.805430Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "905f60cf928f7649233792ef"
+        },
+        "movie": {
+            "$oid": "67cc4585a3ec01ee51291324"
+        },
+        "rating": 1,
+        "comment": "Would watch again. It had a lot of memorable moments and great performances.",
+        "review_date": {
+            "$date": "2024-03-18T12:08:59.410117Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "d8950110d86ed84543f0ab63"
+        },
+        "movie": {
+            "$oid": "cea026b5e97c6453155e6d2f"
+        },
+        "rating": 2,
+        "comment": "Could be better. The acting was subpar and the pacing was too slow for my taste.",
+        "review_date": {
+            "$date": "2023-09-10T12:02:02.216051Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "e229baecf72fb0ed414d9309"
+        },
+        "movie": {
+            "$oid": "b1ec44009b03ade9242efc0b"
+        },
+        "rating": 2,
+        "comment": "Terrible. I couldn't even finish watching it.",
+        "review_date": {
+            "$date": "2023-08-12T15:15:30.582738Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "d6702e69be556d1b7063fe12"
+        },
+        "movie": {
+            "$oid": "4378178831d21d23e111e27e"
+        },
+        "rating": 4,
+        "comment": "Loved it! The cinematography was stunning and the soundtrack was perfect.",
+        "review_date": {
+            "$date": "2024-04-10T03:22:05.103005Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "add3979fb5aa48d9ff9fb56c"
+        },
+        "movie": {
+            "$oid": "e0868cb6eb24b34dfcc20636"
+        },
+        "rating": 3,
+        "comment": "Not my taste. I found it quite boring and uneventful.",
+        "review_date": {
+            "$date": "2023-12-21T02:38:44.342851Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "d15c6431f2003b7866efc3d9"
+        },
+        "movie": {
+            "$oid": "7094f99013073ed44de1612a"
+        },
+        "rating": 2,
+        "comment": "Could be better. The acting was subpar and the pacing was too slow for my taste.",
+        "review_date": {
+            "$date": "2023-04-28T08:38:06.664546Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "ef0f8fb414ba90f5f97df47c"
+        },
+        "movie": {
+            "$oid": "fa4da2dad397eee84abe2c0d"
+        },
+        "rating": 2,
+        "comment": "Excellent! A brilliant film with a powerful message.",
+        "review_date": {
+            "$date": "2023-04-18T17:21:58.144930Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "248fc2d381adcd40714c144e"
+        },
+        "movie": {
+            "$oid": "3e87f270caa09eb2899dc806"
+        },
+        "rating": 1,
+        "comment": "Not bad. The story was a bit predictable but still enjoyable.",
+        "review_date": {
+            "$date": "2023-01-11T20:29:30.963779Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "33dde19f7126a643d3874fba"
+        },
+        "movie": {
+            "$oid": "8f0d1a35efee8bf2adc0e459"
+        },
+        "rating": 2,
+        "comment": "Loved it! The cinematography was stunning and the soundtrack was perfect.",
+        "review_date": {
+            "$date": "2023-09-05T13:37:15.858196Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "cc6b64071b8f321f4a297a8b"
+        },
+        "movie": {
+            "$oid": "a3cf2b85131e9e85debb1f58"
+        },
+        "rating": 5,
+        "comment": "Not my taste. I found it quite boring and uneventful.",
+        "review_date": {
+            "$date": "2023-07-30T05:11:29.835924Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "5fa2936065d1be9fae389fba"
+        },
+        "movie": {
+            "$oid": "93dba69ed07a8c750c7433ea"
+        },
+        "rating": 1,
+        "comment": "Loved it! The cinematography was stunning and the soundtrack was perfect.",
+        "review_date": {
+            "$date": "2023-11-15T05:27:59.909779Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "c1322b7f8d5d729f05cf9a73"
+        },
+        "movie": {
+            "$oid": "26de65ed834c8cac1d83c6ab"
+        },
+        "rating": 5,
+        "comment": "Great movie! The plot was intriguing and the characters were well-developed.",
+        "review_date": {
+            "$date": "2023-06-29T13:05:26.623597Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "3d0933104356245a71636f1b"
+        },
+        "movie": {
+            "$oid": "9bf25f1ad3015d96cc614428"
+        },
+        "rating": 2,
+        "comment": "Terrible. I couldn't even finish watching it.",
+        "review_date": {
+            "$date": "2023-12-05T11:56:15.143720Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "7f839150c540db7b08b6cc96"
+        },
+        "movie": {
+            "$oid": "1a7bcdd6d471957d32d6997a"
+        },
+        "rating": 2,
+        "comment": "Terrible. I couldn't even finish watching it.",
+        "review_date": {
+            "$date": "2023-05-11T05:00:17.572158Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "f0f07f7bec007532cfbd31fa"
+        },
+        "movie": {
+            "$oid": "7b9525e95168360ed7b1dda4"
+        },
+        "rating": 3,
+        "comment": "Not my taste. I found it quite boring and uneventful.",
+        "review_date": {
+            "$date": "2023-09-21T12:59:45.854205Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "c1d68a22cee6b803b68ffcc4"
+        },
+        "movie": {
+            "$oid": "9c4476c8c1d57ce3ffb5f766"
+        },
+        "rating": 2,
+        "comment": "Fantastic! A must-watch for everyone who loves a good thriller.",
+        "review_date": {
+            "$date": "2024-01-10T18:33:44.981942Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "0187554c500f4ce719752608"
+        },
+        "movie": {
+            "$oid": "be81f1feeea1eeeb96a363db"
+        },
+        "rating": 2,
+        "comment": "Would watch again. It had a lot of memorable moments and great performances.",
+        "review_date": {
+            "$date": "2023-07-05T13:03:28.986332Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "d85cff0ebc188717b5f583ad"
+        },
+        "movie": {
+            "$oid": "31c45e04ccc9984a86bbd9f3"
+        },
+        "rating": 5,
+        "comment": "Excellent! A brilliant film with a powerful message.",
+        "review_date": {
+            "$date": "2023-08-14T15:23:53.825065Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "0f712bd7071ba7aa23728e2c"
+        },
+        "movie": {
+            "$oid": "5ffd9b314a567195308f5098"
+        },
+        "rating": 5,
+        "comment": "It was okay. Some parts were great, but others were lacking in depth.",
+        "review_date": {
+            "$date": "2023-10-02T08:31:08.323020Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "afd845ed62cd43e5c43d6b3a"
+        },
+        "movie": {
+            "$oid": "f241f149f763315f4d02c075"
+        },
+        "rating": 5,
+        "comment": "It was okay. Some parts were great, but others were lacking in depth.",
+        "review_date": {
+            "$date": "2023-06-26T05:44:08.843624Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "e38d70ef11bed9587659cb6c"
+        },
+        "movie": {
+            "$oid": "b4140a1fded8f9b59eb86493"
+        },
+        "rating": 5,
+        "comment": "Terrible. I couldn't even finish watching it.",
+        "review_date": {
+            "$date": "2023-05-02T09:51:20.386956Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "f7d222f86abb0df8f7d0da29"
+        },
+        "movie": {
+            "$oid": "ad8ecbacb6b0e09bcce8bddb"
+        },
+        "rating": 3,
+        "comment": "Would watch again. It had a lot of memorable moments and great performances.",
+        "review_date": {
+            "$date": "2023-04-14T21:29:23.700729Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "02970c91acc116af9cdc3df4"
+        },
+        "movie": {
+            "$oid": "9d29a7c9377632efef5a67fe"
+        },
+        "rating": 1,
+        "comment": "Could be better. The acting was subpar and the pacing was too slow for my taste.",
+        "review_date": {
+            "$date": "2023-05-23T03:53:43.729948Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "6b2f96473bb661e118d880c0"
+        },
+        "movie": {
+            "$oid": "8ac280929b1050eb322096f1"
+        },
+        "rating": 5,
+        "comment": "Would watch again. It had a lot of memorable moments and great performances.",
+        "review_date": {
+            "$date": "2023-03-09T11:52:25.204381Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "cfd7447281127c54f8099d81"
+        },
+        "movie": {
+            "$oid": "53a271b6b4f812277a1a1ad4"
+        },
+        "rating": 3,
+        "comment": "Terrible. I couldn't even finish watching it.",
+        "review_date": {
+            "$date": "2023-11-12T19:49:07.614329Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "109a44b8b498a9594719fe29"
+        },
+        "movie": {
+            "$oid": "91750bb7f8c07d45588e502f"
+        },
+        "rating": 3,
+        "comment": "Loved it! The cinematography was stunning and the soundtrack was perfect.",
+        "review_date": {
+            "$date": "2023-10-29T20:39:14.750637Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "4f40fa2ee0aa7d83f9396c27"
+        },
+        "movie": {
+            "$oid": "e7dc20978648825dad1aa7f5"
+        },
+        "rating": 1,
+        "comment": "Fantastic! A must-watch for everyone who loves a good thriller.",
+        "review_date": {
+            "$date": "2023-06-23T03:02:54.429336Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "15c378854bc61119e9cb375e"
+        },
+        "movie": {
+            "$oid": "ccb5c1e3a1497ea0105ff1e7"
+        },
+        "rating": 2,
+        "comment": "Would watch again. It had a lot of memorable moments and great performances.",
+        "review_date": {
+            "$date": "2024-04-21T15:55:19.890791Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "353bf4960794a92a178cdf0d"
+        },
+        "movie": {
+            "$oid": "0e5434ae72088daad22df62a"
+        },
+        "rating": 1,
+        "comment": "Not my taste. I found it quite boring and uneventful.",
+        "review_date": {
+            "$date": "2023-07-15T03:36:45.591131Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "ffef3028d074fdfa0d872732"
+        },
+        "movie": {
+            "$oid": "ae3d7f0a0de296c42e2a4aaa"
+        },
+        "rating": 1,
+        "comment": "Fantastic! A must-watch for everyone who loves a good thriller.",
+        "review_date": {
+            "$date": "2024-05-10T17:49:47.587245Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "14e49dbdbc73eb4c93a28c73"
+        },
+        "movie": {
+            "$oid": "0937217e4f7df90b357fbde8"
+        },
+        "rating": 5,
+        "comment": "Would watch again. It had a lot of memorable moments and great performances.",
+        "review_date": {
+            "$date": "2023-07-02T15:26:08.422092Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "ca113ba054ba3244c0b694bf"
+        },
+        "movie": {
+            "$oid": "26fd59f11c5457c712de76cc"
+        },
+        "rating": 3,
+        "comment": "Fantastic! A must-watch for everyone who loves a good thriller.",
+        "review_date": {
+            "$date": "2023-09-11T19:30:53.120630Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "729fec166f331efdd2e7aac0"
+        },
+        "movie": {
+            "$oid": "93d9ac9c6418688e610d41f3"
+        },
+        "rating": 1,
+        "comment": "It was okay. Some parts were great, but others were lacking in depth.",
+        "review_date": {
+            "$date": "2023-05-20T23:01:24.229402Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "8de5b3e212ac570160cfbeea"
+        },
+        "movie": {
+            "$oid": "fe59e01c5e0e1e5f71687c09"
+        },
+        "rating": 4,
+        "comment": "Not my taste. I found it quite boring and uneventful.",
+        "review_date": {
+            "$date": "2024-03-03T17:09:31.778052Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "d3258f51883a8f5ed00875e0"
+        },
+        "movie": {
+            "$oid": "1b121c28f84552b13252f617"
+        },
+        "rating": 3,
+        "comment": "Great movie! The plot was intriguing and the characters were well-developed.",
+        "review_date": {
+            "$date": "2023-02-16T20:52:24.920464Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "f7d61151f2704941ab60ac35"
+        },
+        "movie": {
+            "$oid": "fd56d389db1641fee8c17324"
+        },
+        "rating": 5,
+        "comment": "Could be better. The acting was subpar and the pacing was too slow for my taste.",
+        "review_date": {
+            "$date": "2024-04-19T06:31:00.130861Z"
+        }
+    },
+    {
+        "user": {
+            "$oid": "47ea3fcff980785ddd1e9673"
+        },
+        "movie": {
+            "$oid": "f76e523e71bf2adb2b5ead23"
+        },
+        "rating": 5,
+        "comment": "Loved it! The cinematography was stunning and the soundtrack was perfect.",
+        "review_date": {
+            "$date": "2024-02-22T18:09:57.878846Z"
+        }
+    }
+]

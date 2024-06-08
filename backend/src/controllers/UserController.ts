@@ -42,10 +42,6 @@ const getAllUserTickets = async (req: Request, res: Response) => {
                     },
                 ],
             });
-
-
-
-
         res.json(allTickets);
     } catch (error) {
         console.log(error);

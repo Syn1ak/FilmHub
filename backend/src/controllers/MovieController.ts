@@ -70,11 +70,31 @@ const getListOfMovies = async (req: Request, res: Response) => {
         }
 
         if (date) {
-            const moviesIdsWithDate = await Movie.find({releaseDate: date});
-            const ids = moviesIdsWithDate.map(item => item._id.toString());
+            console.log("DATE", date)
+            const moviesByDateSession = await Session.aggregate([
+                {
+                    $match: {
+                        $expr: {
+                            $eq: [
+                                date,
+                                {
+                                    $dateToString: {date: "$start_time", format: "%Y-%m-%d"},
+                                },
+                            ],
+                        }
+                    }
+                },
+                {
+                    $group: {
+                        _id: null,
+                        movies: { $addToSet: "$movie" }
+                    }
+                },
+            ]);
+            const ids = moviesByDateSession[0].movies.map((item: { _id: any }) => item._id.toString());
             if (!city && !cinema && !genres) moviesIds = new Set<string>([...ids]);
-            else moviesIds = new Set<string>(ids.filter(i => moviesIds.has(i)));
-            console.log("moviesIdsWithDate", moviesIds)
+            else moviesIds = new Set<string>(ids.filter((i: string) => moviesIds.has(i)));
+            console.log("moviesIdsWithDate", moviesIds);
         }
 
         if (actor) {
@@ -106,6 +126,7 @@ const getListOfMovies = async (req: Request, res: Response) => {
         }
 
         const movies = await Movie.find({_id: {$in: Array.from(moviesIds)}, releaseDate: {$lt: today}});
+        console.log(movies.length)
 
         res.json(movies);
     } catch (error) {

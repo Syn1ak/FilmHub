@@ -27,12 +27,6 @@ function getSeats(size: number) {
   }
   return result;
 }
-const deleteOldSessions = async () => {
-  const now = new Date();
-  await Session.deleteMany({ end_time: { $lt: now } });
-};
-
-
 const fillSessions = async () => {
   const movies = await Movie.find({ releaseDate: { $lt: new Date() } });
   const halls = await Hall.find();
@@ -75,9 +69,6 @@ const fillSessions = async () => {
 
 export async function initialSetUp() {
   await User.find();
-  deleteOldSessions().then(() => console.log("Deleted old sessions"));
   fillSessions().then(() => console.log("Filled sesssions"));
-
-  setInterval(() => deleteOldSessions, 86400000);
   setInterval(() => fillSessions(), 604800000);
 }

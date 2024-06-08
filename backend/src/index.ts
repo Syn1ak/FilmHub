@@ -22,11 +22,11 @@ mongoose
   .then(() => console.log("Connected to database!"));
 
 // initialSetUp().then(() => console.log("Finished initial set up!"));
-
-getAllUsers();
-async function getAllUsers() {
-  await User.find();
-}
+//
+// getAllUsers();
+// async function getAllUsers() {
+//   await User.find();
+// }
 
 const app = express();
 app.use(express.json());
@@ -34,7 +34,7 @@ app.use(cors());
 
 app.use("/api/auth", authRoute);
 
-app.use(sessionCheck);
+// app.use(sessionCheck);
 
 app.use("/api/movies", movieRoute);
 app.use("/api/cities", cityRoute);
