@@ -162,7 +162,7 @@ struct ProfileView: View {
             
         }
         .ignoresSafeArea()
-        .frame(width: Const.screenWidth, height: 94)
+        .frame(width: Const.screenWidth, height: Const.screenHeight * 0.11)
         .background(Color("BackgroundColor"))
     }
     

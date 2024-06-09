@@ -25,6 +25,9 @@ struct FilmView: View {
                 .foregroundStyle(.white)
                 .font(.title)
                 .bold()
+                .minimumScaleFactor(0.6)
+                .frame(width: Const.screenWidth * 0.9)
+
         }
         
     }

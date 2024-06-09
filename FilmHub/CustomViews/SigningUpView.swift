@@ -162,6 +162,10 @@ struct SigningUpView: View {
                      buttonWidth: 150,
                      buttonHeight: 50)
         .padding(.top, 50)
+        CustomButton(buttonTitlte: "Back",
+                     buttonAction: { self.isSignUp.toggle() },
+                     buttonWidth: 150,
+                     buttonHeight: 50)
        
     }
     @ViewBuilder
