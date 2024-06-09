@@ -177,12 +177,14 @@ const addReviewToMovie = async (req: Request, res: Response) => {
         if (!movie_id || !user_id || !comment || !rating) {
             return res.status(400).json({error: 'All fields are required and rating must be a number'});
         }
-
+        const today = new Date();
+        today.setHours(today.getHours()+3);
         const newReview = new Review({
             movie: new mongoose.Types.ObjectId(movie_id as string),
             user: new mongoose.Types.ObjectId(user_id as string),
             rating: +rating,
-            comment: comment
+            comment: comment,
+            review_date: today
         });
 
         await newReview.save();

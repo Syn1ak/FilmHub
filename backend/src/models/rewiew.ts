@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import moment from "moment-timezone";
 
 const reviewSchema = new mongoose.Schema({
     user: {
@@ -18,7 +19,6 @@ const reviewSchema = new mongoose.Schema({
     },
     review_date:{
         type: Date,
-        default: Date.now(),
         required: true
     }
 })
