@@ -13,7 +13,7 @@ class ProfileViewModel: ObservableObject {
     @Published var surname: String
     @Published var age: String
     @Published var email: String
-    @Published var dataError = false
+    @Published var dataError: DataValidationError?
     
     init() {
         let user = AuthorizationService.currentUser!
@@ -25,17 +25,52 @@ class ProfileViewModel: ObservableObject {
     }
     
     func getUser() -> User? {
-        guard let age = Int(age) else {
-            dataError = true
+        validate()
+        if dataError == nil {
+            return User(id: "",
+                        firstName: name,
+                        lastName: surname,
+                        password: "",
+                        email: email,
+                        age: Int(age)!,
+                        phone: phoneNumber)
+        } else {
             return nil
         }
-        return User(id: AuthorizationService.currentUser!.id,
-             firstName: name,
-             lastName: surname,
-             password: "",
-             email: email,
-             age: age,
-             phone: phoneNumber)
+    }
+    
+    func validate(){
+        if phoneNumber.count == 13 {
+            if phoneNumber[phoneNumber.startIndex...phoneNumber.index(phoneNumber.startIndex, offsetBy: 3)] != "+380" {
+                dataError = .phone
+                return
+            }
+        } else {
+            dataError = .phone
+            return
+        }
+        if name.count == 0 {
+            dataError = .name
+            return
+        }
+        if surname.count == 0 {
+            dataError = .surname
+            return
+        }
+        if let age = Int(age) {
+            if age > 100 || age < 3 {
+                dataError = .age
+                return
+            }
+        } else {
+            dataError = .age
+            return
+        }
+        if !email.contains("@") {
+            dataError = .email
+            return
+        }
+        dataError = nil
     }
 }
 
@@ -64,6 +99,9 @@ struct ProfileView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color("BackgroundColor"), lineWidth: 2)
                         }
+                    if profileViewModel.dataError == .phone {
+                        createErrorView(error: .phone)
+                    }
                     AdditionalInfo(text: "Name")
                         .padding(.top, 10)
                     CustomTextField(textValue: $profileViewModel.name, placeholder: "")
@@ -74,6 +112,9 @@ struct ProfileView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color("BackgroundColor"), lineWidth: 2)
                         }
+                    if profileViewModel.dataError == .name {
+                        createErrorView(error: .name)
+                    }
                     AdditionalInfo(text: "Surname")
                         .padding(.top, 10)
                     CustomTextField(textValue: $profileViewModel.surname, placeholder: "")
@@ -84,6 +125,9 @@ struct ProfileView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color("BackgroundColor"), lineWidth: 2)
                         }
+                    if profileViewModel.dataError == .surname {
+                        createErrorView(error: .surname)
+                    }
                     AdditionalInfo(text: "Age")
                         .padding(.top, 10)
                     CustomTextField(textValue: $profileViewModel.age, placeholder: "")
@@ -94,6 +138,9 @@ struct ProfileView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color("BackgroundColor"), lineWidth: 2)
                         }
+                    if profileViewModel.dataError == .age {
+                        createErrorView(error: .age)
+                    }
                     AdditionalInfo(text: "Email address")
                         .padding(.top, 10)
                     CustomTextField(textValue: $profileViewModel.email, placeholder: "")
@@ -104,6 +151,9 @@ struct ProfileView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color("BackgroundColor"), lineWidth: 2)
                         }
+                    if profileViewModel.dataError == .email {
+                        createErrorView(error: .email)
+                    }
                 }
                 
                 if isEditing {
@@ -111,6 +161,7 @@ struct ProfileView: View {
                                  buttonAction: {
                                  if let user = profileViewModel.getUser() {
                                      userDataService.editUser(user: user)
+                                     profileViewModel.dataError = nil
                                      isEditing.toggle()
                                     }
                                  },
@@ -132,6 +183,7 @@ struct ProfileView: View {
         }
         .ignoresSafeArea(.all)
         .animation(.easeInOut, value: isEditing)
+        .animation(.easeInOut, value: profileViewModel.dataError  )
     }
     
     @ViewBuilder
@@ -166,6 +218,13 @@ struct ProfileView: View {
         .background(Color("BackgroundColor"))
     }
     
+    @ViewBuilder
+    func createErrorView(error: DataValidationError) -> some View {
+        Text(error.rawValue)
+            .foregroundStyle(.red)
+            .font(.system(size: 14))
+            .transition(.opacity)
+    }
     
 }
 

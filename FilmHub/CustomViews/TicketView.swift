@@ -30,11 +30,11 @@ struct TicketView: View {
                 }
                 HStack(spacing: 10) {
                     VStack(alignment: .leading) {
-                        AdditionalTitle(title: "Дата")
+                        AdditionalTitle(title: "Date")
                         AdditionalInfo(text: ticket.formattedDate)
                     }
                     VStack(alignment: .leading) {
-                        AdditionalTitle(title: "Час")
+                        AdditionalTitle(title: "Time")
                         AdditionalInfo(text: ticket.session.formattedStartTime)
                     }
                 }
