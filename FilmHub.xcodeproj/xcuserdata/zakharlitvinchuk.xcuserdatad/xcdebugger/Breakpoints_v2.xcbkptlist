@@ -82,6 +82,36 @@
             endingLineNumber = "43"
             landmarkName = "applyFilters(filmListDataService:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E5FA8D11-10B5-4CC5-B0F1-382FF034B2F5 - fdea2841eeb28af3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FilmHub.FilterDataService.applyFilters(filmListDataService: FilmHub.FilmListDataService) -&gt; ()"
+                  moduleName = "FilmHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zakharlitvinchuk/Practice_iOS/FilmHub/FilmHub/Services/DataServices/FilterDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43">
+               </Location>
+               <Location
+                  uuid = "E5FA8D11-10B5-4CC5-B0F1-382FF034B2F5 - c5fcc746abe0beb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (FilmHub.Genre) -&gt; Swift.String in FilmHub.FilterDataService.applyFilters(filmListDataService: FilmHub.FilmListDataService) -&gt; ()"
+                  moduleName = "FilmHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zakharlitvinchuk/Practice_iOS/FilmHub/FilmHub/Services/DataServices/FilterDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -114,6 +144,22 @@
             endingLineNumber = "74"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DB946AB-FC58-436C-BCEC-A1680C8D0146"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FilmHub/Services/NetworkingServices/Networking.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "getSessions(movieId:date:cinemaId:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -23,14 +23,6 @@ struct Ticket: Decodable {
         return outputDateFormatter.string(from: session.startTime)
     }
     
-    var formattedTime: String {
-        let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "HH:mm"
-        timeFormatter.locale = Locale(identifier: "en_US_POSIX")
-        timeFormatter.timeZone = TimeZone(secondsFromGMT: 0)
-        return timeFormatter.string(from: session.startTime)
-    }
-    
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case session

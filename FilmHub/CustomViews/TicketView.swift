@@ -35,7 +35,7 @@ struct TicketView: View {
                     }
                     VStack(alignment: .leading) {
                         AdditionalTitle(title: "Час")
-                        AdditionalInfo(text: ticket.formattedTime)
+                        AdditionalInfo(text: ticket.session.formattedStartTime)
                     }
                 }
                 .padding(.top, 2)

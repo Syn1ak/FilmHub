@@ -23,6 +23,8 @@ struct Session: Codable, Equatable {
     var formattedStartTime: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
         return formatter.string(from: startTime)
     }
     
