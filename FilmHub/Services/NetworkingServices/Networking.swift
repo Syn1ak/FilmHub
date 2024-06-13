@@ -20,13 +20,20 @@ class Networking {
     }
     
     func getMovies(filters: [String : String]) async throws -> [Movie]? {
+        var formattedDate = ""
+        if let filter = filters["date"] {
+            if filter.count > 0 {
+                let index = filter.index(filter.startIndex, offsetBy: 10)
+                formattedDate = String(filter[..<index])
+            }
+        }
         let params = [URLQueryItem(name: "city", value: filters["city"]),
-                      URLQueryItem(name: "cinema", value: filters["cinema"]),
-                      URLQueryItem(name: "genres", value: filters["genres"]),
-                      URLQueryItem(name: "date", value: filters["date"]),
-                      URLQueryItem(name: "actor", value: filters["actor"]),
-                      URLQueryItem(name: "query", value: filters["query"])
-                      ]
+                              URLQueryItem(name: "cinema_id", value: filters["cinema"]),
+                              URLQueryItem(name: "genres", value: filters["genres"]),
+                              URLQueryItem(name: "date", value: formattedDate),
+                              URLQueryItem(name: "actor", value: filters["actor"]),
+                              URLQueryItem(name: "query", value: filters["query"])
+                              ]
         guard let reqUrl = createUrl(for: "movies", params: params)
         else { throw NetworkingErrors.invalidURL }
         print(reqUrl)
@@ -137,26 +144,26 @@ class Networking {
     
     func getSessions(movieId: String, date: Date, cinemaId: String) async throws -> [Session] {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        guard let reqUrl = createUrl(for: "sessions/getSessionByMovieAndDate", params: [URLQueryItem(name: "movie_id", value: movieId),
-                                                                                        URLQueryItem(name: "date", value: dateFormatter.string(from: date)),
-                                                                                        URLQueryItem(name: "cinema_id", value: cinemaId)])
-        else { throw NetworkingErrors.invalidURL }
-        print(reqUrl)
-        let (data, response) = try await URLSession.shared.data(from: reqUrl)
-        if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
-            throw NetworkingErrors.invalidResponse
-        }
-        do {
-            let decoder = JSONDecoder()
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-            decoder.dateDecodingStrategy = .formatted(dateFormatter)
-            let sessions = try decoder.decode([Session].self, from: data)
-            return sessions
-        } catch {
-            throw NetworkingErrors.invalidData
-        }
+               dateFormatter.dateFormat = "yyyy-MM-dd"
+               guard let reqUrl = createUrl(for: "sessions/getSessionByMovieAndDate", params: [URLQueryItem(name: "movie_id", value: movieId),
+                                                                                               URLQueryItem(name: "date", value: dateFormatter.string(from: date)),
+                                                                                               URLQueryItem(name: "cinema_id", value: cinemaId)])
+               else { throw NetworkingErrors.invalidURL }
+               print(reqUrl)
+               let (data, response) = try await URLSession.shared.data(from: reqUrl)
+               if let response = response as? HTTPURLResponse, response.statusCode >= 400  {
+                   throw NetworkingErrors.invalidResponse
+               }
+               do {
+                   let decoder = JSONDecoder()
+                   let dateFormatter = DateFormatter()
+                   dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                   decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                   let sessions = try decoder.decode([Session].self, from: data)
+                   return sessions
+               } catch {
+                   throw NetworkingErrors.invalidData
+               }
     }
     
     

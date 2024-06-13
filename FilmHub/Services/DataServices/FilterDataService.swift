@@ -25,7 +25,7 @@ class FilterDataService: ObservableObject {
     init(actorName: String, cureentGenresIds: [String], date: String) {
         self.actorName = actorName
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
         self.date = dateFormatter.date(from: date) ?? Date()
         
         Task {

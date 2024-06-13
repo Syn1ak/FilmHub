@@ -16,6 +16,7 @@ class SessionsDataService: ObservableObject {
     @Published var selectedDate: Date = Date() {
         didSet {
             downloadSessions()
+            selectedSeats = []
         }
     }
     @Published var selectedTime: Date?
